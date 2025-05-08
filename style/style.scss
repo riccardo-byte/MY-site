@@ -21,15 +21,14 @@ body {
         //margin: 24px auto;
         width: 100%;
         min-height: 100px; /* Aggiungi un'altezza minima */
-        max-height: 100px;
         position: fixed;
         top: auto;
         z-index: 1000;
-    }
+    }  
+}
 
-    .body {
-        min-height: 50rem;
-        margin: 0;
-        background-color: orange;
-    }
+.body {
+    min-height: min(50px, 30%);
+    margin: 0;
+    color: red;
 }

@@ -17,13 +17,13 @@ body {
   background-color: rgb(192, 109, 192);
   width: 100%;
   min-height: 100px; /* Aggiungi un'altezza minima */
-  max-height: 100px;
   position: fixed;
   top: auto;
   z-index: 1000;
 }
-.father .body {
-  min-height: 50rem;
+
+.body {
+  min-height: min(50px, 30%);
   margin: 0;
-  background-color: orange;
+  color: red;
 }
