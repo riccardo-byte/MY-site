@@ -14,18 +14,28 @@ body {
   flex-direction: column;
 }
 
-.heroSection {
+.hero-section {
   background-color: rgb(192, 109, 192);
-  margin: 24px auto;
   width: 100%;
-  min-height: 50px; /* Aggiungi un'altezza minima */
+  min-height: 100px; /* Aggiungi un'altezza minima */
+  max-height: 100px;
   position: fixed;
   top: auto;
   z-index: 1000;
 }
+.hero-section .hero-row {
+  display: flex;
+  margin: 42px 40px;
+}
+.hero-section .hero-row .btn-home {
+  flex-grow: 2;
+}
+.hero-section .hero-row .hero-subContainer {
+  margin: 0 32px;
+}
 
 .container {
-  margin: 100px auto;
+  margin: 124px auto;
 }
 .container .row {
   margin: 0 24px;
