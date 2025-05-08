@@ -13,8 +13,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.hero-section {
+.father .hero-section {
   background-color: rgb(192, 109, 192);
   width: 100%;
   min-height: 100px; /* Aggiungi un'altezza minima */
@@ -23,27 +22,8 @@ body {
   top: auto;
   z-index: 1000;
 }
-.hero-section .hero-row {
-  display: flex;
-  margin: 42px 40px;
-}
-.hero-section .hero-row .btn-home {
-  flex-grow: 2;
-}
-.hero-section .hero-row .hero-subContainer {
-  margin: 0 32px;
-}
-
-.container {
-  margin: 124px auto;
-}
-.container .row {
-  margin: 0 24px;
-}
-.container .row .col-sm {
-  margin: 4px 4px;
-  background-color: red;
-}
-.container .row .col-sm .tt3 {
-  font-weight: 100;
+.father .body {
+  min-height: 50rem;
+  margin: 0;
+  background-color: orange;
 }
