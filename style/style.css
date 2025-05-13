@@ -15,6 +15,10 @@ body {
   display: flex;
   align-items: center;
 }
+.hero-section .home-button h1 {
+  font-family: "Figtree", sans-serif;
+  font-weight: lighter;
+}
 .hero-section .logo {
   background-color: transparent;
   border-color: transparent;

@@ -1,6 +1,7 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 
+$secondary-font: "Figtree", sans-serif; 
 
 body{
   background-color: $background-color;
@@ -19,6 +20,11 @@ body{
     gap: 4px;
     display: flex;
     align-items: center;
+    
+    h1{
+      font-family: $secondary-font;
+      font-weight: lighter;
+    }
   }
   
   .logo{
