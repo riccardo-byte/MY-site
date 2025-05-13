@@ -1,49 +1,29 @@
-$body-color: whitesmoke;
-$immage-walpapper: url('https://images.unsplash.com/photo-1746311460525-31a29b35f4c6?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+$background-color: #FFFFFF;
+$secondary-color: #1D1D1D;
 
-body {
-    background-image: $body-color;
+
+body{
+  background-color: $background-color;
 }
 
-
-.autolayout {
-    padding: 0, 32px;
-    background-color: powderblue;
-}
-
-.header{
-    padding: 80px 0;
-    background-color: orange;
-}
-
-.footer{
-    padding: 40px 0;
-    background-color: salmon;
-}
-
-li {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* Stili per schermi con larghezza maggiore o uguale a 1440px */
-@media (min-width: 1440px) {
-    body {
-      background-color: purple;
-    }
+.hero-section{
+  width: 100%;
+  background-color: pink;
+  
+  .home-button{
+    background-color: transparent;
+    //border-color: transparent;
+    height: fit-content;
+    width:fit-content;
+    padding: 8px 16px;
+    gap: 4px;
+    display: flex;
+    align-items: center;
   }
   
-  /* Stili per schermi tra 744px e 1440px */
-  @media (min-width: 744px) and (max-width: 1440px) {
-    body {
-      background-color: red;
+  .logo{
+      background-color: transparent;
+      border-color: transparent;
+      width: 32px;
     }
-  }
-  
-  /* Stili per schermi più piccoli di 744px */
-  @media (max-width: 744px) {
-    body {
-      background-color: pink;
-    }
-  }
-  
+}
