@@ -28,50 +28,33 @@
 
     
     <div class="forum">
-        <div class="container mt-5 mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center mb-5">
-                        <p class="small mb-1">hey</p>
-                        <h1 class="display-4 fw-bold">Facciamo due chiacchiere</h1>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center">
-                            <label class="me-3 fs-3 fw-bold">mi chiamo</label>
-                            <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0" placeholder="nome e cognome">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center">
-                            <label class="me-3 fs-3 fw-bold">lavoro</label>
-                            <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0" placeholder="azienda">
-                            <span class="ms-3 me-3 fs-3 fw-bold">e ho un</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center">
-                            <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0" placeholder="sito, applicazione...">
-                            <span class="ms-3 fs-3 fw-bold">che ha bisogno di auto. Puoi contattarmi</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center">
-                            <input type="email" class="form-control form-control-lg border-0 border-bottom rounded-0" placeholder="email">
-                            <span class="ms-3 fs-3 fw-bold">per iniziare.</span>
-                        </div>
-                    </div>
-                    
-                    <div class="text-end mt-5">
-                        <button type="submit" class="btn btn-dark btn-lg rounded-pill px-4">
-                            invia <span class="ms-2">→</span>
-                        </button>
-                    </div>
+        <div class="intro">
+            <p>hey</p>
+            <h1>Facciamo due chiacchiere</h1>
+        </div>
+        <div class="message">
+            <form action="dati.php" method="post" class="message-container">
+                <div class="message-block">
+                    <h1>mi chiamo</h1>
+                    <input type="text" name="nome" class="input" placeholder="nome e cognome" required>
                 </div>
-            </div>
+                <div class="message-block">
+                    <h1>lavoro</h1>
+                    <input type="text" name="lavoro" class="input" placeholder="azienda">
+                    <h1>e ho</h1>
+                </div>
+                <div class="message-block">
+                    <h1>un</h1>
+                    <input type="text" name="oggetto" class="input" placeholder="sito, applicazione..." required>
+                    <h1>che ha</h1>
+                </div>
+                <h1>bisogno di auto. Puoi contattarmi</h1>
+                <div class="message-block">
+                    <input type="email" name="email" class="input" placeholder="email" required>
+                    <h1>per iniziare.</h1>
+                </div>
+                <button type="submit" class="pulsante"> <h1>invia</h1> <img src="../img/arrow.png" alt="freccia" class="arrow"></button>
+            </form>
         </div>
     </div>
 
