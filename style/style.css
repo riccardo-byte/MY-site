@@ -387,13 +387,6 @@ body {
   background-color: #E4E4E4;
   justify-content: end;
 }
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 40px 80px;
-    gap: 40px;
-  }
-}
 .footer h1 {
   font-family: "Figtree", sans-serif;
   font-weight: 500;
@@ -419,7 +412,7 @@ body {
   gap: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .footer .social-area .social-link a {
   font-family: "Times New Roman", Times, serif;
@@ -502,25 +495,33 @@ body {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 16px 80px;
+    padding: 8px 16px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;
   }
   .intro {
-    padding: 60px 80px;
+    padding: 60px 16px;
   }
   .intro h1 {
     letter-spacing: -4px;
   }
   .definition {
-    padding: 40px 80px;
+    padding: 40px 16px;
     gap: 40px;
   }
   .programs {
-    padding: 40px 80px;
+    padding: 40px 16px;
   }
   .presentation {
-    padding: 40px 80px;
+    padding: 40px 16px;
+  }
+  .faq {
+    padding: 80px 16px;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 40px 16px;
+    gap: 56px;
   }
 }

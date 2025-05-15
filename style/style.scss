@@ -451,12 +451,6 @@ body {
   gap: 80px;
   background-color: $softgray-color;
   justify-content: end; // Added to position content properly
-  
-  @media (max-width: $mobile-breakpoint) {
-    flex-direction: column;
-    padding: 40px 80px; // Maintained 80px horizontal padding
-    gap: 40px; 
-  }
 
   h1 {
     font-family: $primary-font;
@@ -484,7 +478,7 @@ body {
       gap: 16px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; // Right align social links
+      align-items: center;
 
       a {
         font-family: $secondary-font;
@@ -581,7 +575,7 @@ body {
 // Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px 80px; // Maintained 80px horizontal padding
+    padding: 8px 16px; // Maintained 80px horizontal padding
     
     .home-button h1 {
       font-size: 20px; // Smaller on mobile
@@ -589,7 +583,7 @@ body {
   }
   
   .intro {
-    padding: 60px 80px; // Maintained 80px horizontal padding
+    padding: 60px 16px; // Maintained 80px horizontal padding
     
     h1 {
       letter-spacing: -4px; // Reduced letter spacing on mobile
@@ -597,15 +591,25 @@ body {
   }
   
   .definition {
-    padding: 40px 80px; // Maintained 80px horizontal padding
+    padding: 40px 16px; // Maintained 80px horizontal padding
     gap: 40px;
   }
   
   .programs {
-    padding: 40px 80px; // Maintained 80px horizontal padding
+    padding: 40px 16px; // Maintained 80px horizontal padding
   }
   
   .presentation {
-    padding: 40px 80px; // Maintained 80px horizontal padding
+    padding: 40px 16px; // Maintained 80px horizontal padding
+  }
+
+  .faq {
+    padding: 80px 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 40px 16px; // Maintained 80px horizontal padding
+    gap: 56px; 
   }
 }

@@ -314,9 +314,14 @@ body {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 16px 80px;
+    padding: 8px 16px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 40px 16px;
+    gap: 56px;
   }
 }

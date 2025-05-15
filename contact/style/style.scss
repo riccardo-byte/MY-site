@@ -391,10 +391,16 @@ body {
 // Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px 80px;
+    padding: 8px 16px; // Maintained 80px horizontal padding
     
     .home-button h1 {
-      font-size: 20px;
+      font-size: 20px; // Smaller on mobile
     }
+  }
+  
+  .footer {
+    flex-direction: column;
+    padding: 40px 16px; // Maintained 80px horizontal padding
+    gap: 56px; 
   }
 }
