@@ -44,6 +44,9 @@ body {
   font-size: 24px;
   margin: 0;
 }
+.hero-section a {
+  text-decoration: none;
+}
 .hero-section .logo {
   width: 32px;
   height: auto;
@@ -125,7 +128,7 @@ body {
   background-color: #1D1D1D;
   border: none;
   padding: 24px 40px;
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 100px;
   cursor: pointer;
   display: flex;
@@ -167,23 +170,26 @@ body {
     padding: 40px 20px;
   }
   .forum .intro h1 {
-    font-size: 80px;
+    font-size: 43px;
   }
   .forum .intro p {
-    font-size: 32px;
+    font-size: 21px;
   }
   .forum .message .message-container .message-block {
     flex-wrap: wrap;
   }
   .forum .message .message-container .message-block h1 {
-    font-size: 48px;
+    font-size: 32px;
   }
   .forum .message .message-container .message-block .input {
-    font-size: 32px;
+    font-size: 16px;
     width: 100%;
   }
   .forum .message .message-container h1 {
-    font-size: 48px;
+    font-size: 32px;
+  }
+  .forum .message .message-container .pulsante {
+    padding: 16px 32px;
   }
 }
 
@@ -318,6 +324,9 @@ body {
   }
   .hero-section .home-button h1 {
     font-size: 20px;
+  }
+  .forum {
+    padding: 80px 12px;
   }
   .footer {
     flex-direction: column;
