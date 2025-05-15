@@ -488,11 +488,11 @@ body {
         font-family: $secondary-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none; // Added 
-        transition: color 0.3s ease; // Added
+        text-decoration: none;
+        transition: color 0.3s ease;
         
         &:hover {
-          color: $accent-color; // Added hover state
+          color: $accent-color;
         }
       }
     }
@@ -502,12 +502,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: flex-start; // Right align buttons
+    align-items: flex-start;
     
     @media (max-width: $mobile-breakpoint) {
       width: 100%;
       align-items: center;
     }
+
 
     .button {
       display: flex;
@@ -618,6 +619,6 @@ body {
   .footer {
     flex-direction: column;
     padding: 40px 16px; // Maintained 80px horizontal padding
-    gap: 56px; 
+    gap: 56px;
   }
 }
