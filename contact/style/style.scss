@@ -337,6 +337,10 @@ body {
       gap: 16px;
       align-items: flex-start;
 
+      a {
+        text-decoration: none;
+      }
+
       button {
         display: flex;
         flex-direction: row;

@@ -515,13 +515,17 @@ body {
       gap: 16px;
       align-items: flex-start; // Right align buttons
 
+      a {
+        text-decoration: none;
+      }
+
       button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; // Changed from fixed width
-        max-width: 400px; // Added max-width
+        width: 100%; 
+        max-width: 400px; 
         align-items: center;
         border-radius: 16px;
         gap: 16px;
