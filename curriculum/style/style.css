@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+  color: #1D1D1D;
+  line-height: 1.5;
+}
+
 .hero-section {
   width: 100%;
   height: auto;
@@ -58,6 +67,8 @@
 }
 .introduction .area-destra img {
   height: 500px;
+  max-width: 500px;
+  object-fit: contain;
 }
 .introduction .area-sinistra {
   display: flex;
@@ -76,6 +87,12 @@
   padding: 24px 40px;
   border-radius: 100px;
   background-color: #1D1D1D;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.introduction .area-sinistra button:hover {
+  background-color: #373737;
 }
 .introduction .area-sinistra button h6 {
   font-family: "Figtree", sans-serif;
@@ -93,35 +110,89 @@
 .obbiettivi h1 {
   font-family: "Figtree", sans-serif;
   font-size: 51px;
+  margin: 0 0 40px 0;
 }
-.obbiettivi .reference {
+.obbiettivi .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.obbiettivi .skill-item {
   display: flex;
-  gap: auto;
+  gap: 24px;
+  align-items: flex-start;
 }
-.obbiettivi .reference .block {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
+.obbiettivi .skill-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
-.obbiettivi .reference .block img {
-  border: 1px solid #1D1D1D;
-  height: 56px;
-  width: 56px;
+.obbiettivi .skill-item .skill-content {
+  flex: 1;
 }
-.obbiettivi .reference .block .text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 50%;
-}
-.obbiettivi .reference .block .text h1 {
+.obbiettivi .skill-item .skill-content h3 {
   font-family: "Figtree", sans-serif;
-  font-size: 51px;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+.obbiettivi .skill-item .skill-content h3 .complementare {
+  font-size: 18px;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+.obbiettivi .skill-item .skill-content p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0;
 }
-.obbiettivi .reference .block .text p {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 28px;
+@media (max-width: 992px) {
+  .obbiettivi {
+    padding: 60px 40px;
+  }
+  .obbiettivi h1 {
+    font-size: 42px;
+    margin-bottom: 32px;
+  }
+  .obbiettivi .skills-grid {
+    gap: 32px;
+  }
+  .obbiettivi .skill-item {
+    gap: 16px;
+  }
+  .obbiettivi .skill-item .skill-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .obbiettivi {
+    padding: 40px 20px;
+  }
+  .obbiettivi h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .obbiettivi .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .obbiettivi .skill-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .obbiettivi .skill-item img {
+    margin-bottom: 16px;
+  }
+  .obbiettivi .skill-item .skill-content h3 {
+    text-align: center;
+  }
+  .obbiettivi .skill-item .skill-content p {
+    text-align: center;
+  }
 }
 
 .skils {
@@ -143,6 +214,7 @@
   overflow: hidden;
   position: relative;
   padding: 20px 0;
+  margin: 0;
 }
 .skils .slider {
   display: inline-flex;
@@ -152,7 +224,7 @@
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 20s linear infinite;
+  animation: slide 10s linear infinite;
 }
 .skils .slider::-webkit-scrollbar {
   display: none;
@@ -171,16 +243,17 @@
   align-items: center;
   gap: 8px;
   flex: 0 0 auto;
-  width: 150px;
+  width: fit-content;
 }
 .skils .slider .skil img {
-  height: 32px;
-  width: 32px;
+  height: 48px;
+  width: 48px;
   object-fit: contain;
 }
-.skils .slider .skil h1 {
-  font-size: 18px;
-  font-weight: 400;
+.skils .slider .skil p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 38px;
+  font-weight: 100;
   margin: 0;
   text-align: left;
 }
@@ -204,6 +277,7 @@
   overflow: hidden;
   position: relative;
   padding: 20px 0;
+  margin: 0;
 }
 .certificati .slider {
   display: inline-flex;
@@ -213,7 +287,7 @@
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 20s linear infinite;
+  animation: slide 10s linear infinite;
 }
 .certificati .slider::-webkit-scrollbar {
   display: none;
@@ -240,6 +314,8 @@
 }
 .istruzione h1 {
   font-family: "Figtree", sans-serif;
+  font-size: 51px;
+  margin: 0 0 20px 0;
 }
 .istruzione .reference-container {
   display: flex;
@@ -254,17 +330,27 @@
 .istruzione .reference-container .content img {
   height: 56px;
   width: 56px;
+  object-fit: contain;
 }
 .istruzione .reference-container .content .text {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 .istruzione .reference-container .content .text h1 {
   font-family: "Figtree", sans-serif;
   font-size: 38px;
+  margin: 0;
 }
 .istruzione .reference-container .content .text p {
   font-family: "Times New Roman", Times, serif;
   font-size: 28px;
+  margin: 0;
+}
+.istruzione .reference-container .content .text .data {
+  font-size: 24px;
+  font-weight: 300;
+  color: #a4a4a4;
 }
 
 .footer {
@@ -277,13 +363,14 @@
   padding: 60px 80px;
   gap: 80px;
   background-color: #E4E4E4;
-  justify-content: end;
+  justify-content: space-between;
 }
 .footer h1 {
   font-family: "Figtree", sans-serif;
   font-weight: 500;
   color: #a4a4a4;
   margin-top: 0;
+  font-size: 32px;
 }
 .footer .footer-title {
   font-size: 48px;
@@ -293,18 +380,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-@media (max-width: 768px) {
-  .footer .social-area {
-    width: 100%;
-    align-items: center;
-  }
+  flex: 1;
 }
 .footer .social-area .social-link {
   gap: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .footer .social-area .social-link a {
   font-family: "Times New Roman", Times, serif;
@@ -321,21 +403,18 @@
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
-}
-@media (max-width: 768px) {
-  .footer .button-area {
-    width: 100%;
-    align-items: center;
-  }
+  flex: 1;
 }
 .footer .button-area .button {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
+  width: 100%;
 }
 .footer .button-area .button a {
   text-decoration: none;
+  width: 100%;
 }
 .footer .button-area .button button {
   display: flex;
@@ -384,23 +463,211 @@
   margin: 0;
   opacity: 0.8;
 }
-.footer .button-area .button a {
-  width: 100%;
-}
 
+@media (max-width: 992px) {
+  .introduction {
+    padding: 60px 40px;
+  }
+  .introduction .area-destra {
+    width: 400px;
+    height: 400px;
+  }
+  .introduction .area-destra img {
+    height: 400px;
+  }
+  .introduction .area-sinistra p {
+    font-size: 32px;
+  }
+  .introduction .area-sinistra button {
+    padding: 20px 32px;
+  }
+  .introduction .area-sinistra button h6 {
+    font-size: 20px;
+  }
+  .obbiettivi {
+    padding: 60px 40px;
+  }
+  .obbiettivi h1 {
+    font-size: 42px;
+  }
+  .obbiettivi .reference .block .text h1 {
+    font-size: 42px;
+  }
+  .obbiettivi .reference .block .text p {
+    font-size: 24px;
+  }
+  .skils, .certificati {
+    padding: 60px 40px;
+  }
+  .skils h1, .certificati h1 {
+    font-size: 42px;
+  }
+  .skils .slider .skil p, .certificati .slider .skil p {
+    font-size: 32px;
+  }
+  .istruzione {
+    padding: 60px 40px;
+  }
+  .istruzione h1 {
+    font-size: 42px;
+  }
+  .istruzione .reference-container .content .text h1 {
+    font-size: 32px;
+  }
+  .istruzione .reference-container .content .text p {
+    font-size: 24px;
+  }
+  .footer {
+    padding: 60px 40px;
+    gap: 60px;
+  }
+}
 @media (max-width: 768px) {
   .hero-section {
-    padding: 8px 16px;
+    padding: 16px 20px;
+  }
+  .hero-section .home-button {
+    padding: 8px 12px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;
   }
-  .programs {
-    padding: 40px 16px;
+  .hero-section .logo {
+    width: 24px;
+  }
+  .introduction {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .introduction .area-destra {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+  }
+  .introduction .area-destra img {
+    height: 300px;
+  }
+  .introduction .area-sinistra {
+    width: 100%;
+  }
+  .introduction .area-sinistra p {
+    font-size: 24px;
+    text-align: center;
+  }
+  .introduction .area-sinistra button {
+    padding: 16px 28px;
+    margin: 0 auto;
+  }
+  .introduction .area-sinistra button h6 {
+    font-size: 18px;
+  }
+  .obbiettivi {
+    padding: 40px 20px;
+  }
+  .obbiettivi h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .obbiettivi .reference .block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .obbiettivi .reference .block img {
+    margin-bottom: 16px;
+  }
+  .obbiettivi .reference .block .text {
+    width: 100%;
+    text-align: center;
+  }
+  .obbiettivi .reference .block .text h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .obbiettivi .reference .block .text p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .skils, .certificati {
+    padding: 40px 20px;
+  }
+  .skils h1, .certificati h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .skils .slider, .certificati .slider {
+    gap: 24px;
+  }
+  .skils .slider .skil, .certificati .slider .skil {
+    gap: 6px;
+  }
+  .skils .slider .skil img, .certificati .slider .skil img {
+    height: 36px;
+    width: 36px;
+  }
+  .skils .slider .skil p, .certificati .slider .skil p {
+    font-size: 24px;
+  }
+  .skils .slider img, .certificati .slider img {
+    height: 200px;
+    width: 200px;
+  }
+  .istruzione {
+    padding: 40px 20px;
+  }
+  .istruzione h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .istruzione .reference-container {
+    gap: 40px;
+  }
+  .istruzione .reference-container .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .istruzione .reference-container .content img {
+    margin-bottom: 8px;
+  }
+  .istruzione .reference-container .content .text {
+    text-align: center;
+  }
+  .istruzione .reference-container .content .text h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .istruzione .reference-container .content .text p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .istruzione .reference-container .content .text .data {
+    font-size: 16px;
   }
   .footer {
+    padding: 40px 20px;
     flex-direction: column;
-    padding: 40px 16px;
-    gap: 56px;
+    gap: 40px;
+  }
+  .footer h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .footer .social-area {
+    width: 100%;
+    align-items: center;
+  }
+  .footer .social-area .social-link {
+    align-items: center;
+  }
+  .footer .button-area {
+    width: 100%;
+    align-items: center;
+  }
+  .footer .button-area .button {
+    align-items: center;
+  }
+  .footer .button-area .button button {
+    width: 100%;
   }
 }
