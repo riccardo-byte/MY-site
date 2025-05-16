@@ -132,8 +132,8 @@ body {
 }
 .obbiettivi .skill-item .skill-content h3 {
   font-family: "Figtree", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 38px;
+  font-weight: 200;
   margin: 0 0 16px 0;
 }
 .obbiettivi .skill-item .skill-content h3 .complementare {
@@ -143,7 +143,7 @@ body {
 }
 .obbiettivi .skill-item .skill-content p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 28px;
   line-height: 1.5;
   margin: 0;
 }
@@ -363,14 +363,13 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: #E4E4E4;
-  justify-content: space-between;
+  justify-content: end;
 }
 .footer h1 {
   font-family: "Figtree", sans-serif;
   font-weight: 500;
   color: #a4a4a4;
   margin-top: 0;
-  font-size: 32px;
 }
 .footer .footer-title {
   font-size: 48px;
@@ -380,13 +379,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex: 1;
+}
+@media (max-width: 768px) {
+  .footer .social-area {
+    width: 100%;
+    align-items: center;
+  }
 }
 .footer .social-area .social-link {
   gap: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .footer .social-area .social-link a {
   font-family: "Times New Roman", Times, serif;
@@ -403,18 +407,21 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
-  flex: 1;
+}
+@media (max-width: 768px) {
+  .footer .button-area {
+    width: 100%;
+    align-items: center;
+  }
 }
 .footer .button-area .button {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
-  width: 100%;
 }
 .footer .button-area .button a {
   text-decoration: none;
-  width: 100%;
 }
 .footer .button-area .button button {
   display: flex;
@@ -462,6 +469,9 @@ body {
   font-size: 14px;
   margin: 0;
   opacity: 0.8;
+}
+.footer .button-area .button a {
+  width: 100%;
 }
 
 @media (max-width: 992px) {
@@ -524,16 +534,10 @@ body {
 }
 @media (max-width: 768px) {
   .hero-section {
-    padding: 16px 20px;
-  }
-  .hero-section .home-button {
-    padding: 8px 12px;
+    padding: 8px 16px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;
-  }
-  .hero-section .logo {
-    width: 24px;
   }
   .introduction {
     padding: 40px 20px;
@@ -645,29 +649,8 @@ body {
     font-size: 16px;
   }
   .footer {
-    padding: 40px 20px;
     flex-direction: column;
-    gap: 40px;
-  }
-  .footer h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-  .footer .social-area {
-    width: 100%;
-    align-items: center;
-  }
-  .footer .social-area .social-link {
-    align-items: center;
-  }
-  .footer .button-area {
-    width: 100%;
-    align-items: center;
-  }
-  .footer .button-area .button {
-    align-items: center;
-  }
-  .footer .button-area .button button {
-    width: 100%;
+    padding: 40px 16px;
+    gap: 56px;
   }
 }

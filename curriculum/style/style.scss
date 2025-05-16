@@ -166,8 +166,8 @@ body {
             
             h3 {
                 font-family: $primary-font;
-                font-size: 24px;
-                font-weight: 500;
+                font-size: 38px;
+                font-weight: 200;
                 margin: 0 0 16px 0;
                 
                 .complementare {
@@ -179,7 +179,7 @@ body {
             
             p {
                 font-family: $secondary-font;
-                font-size: 16px;
+                font-size: 28px;
                 line-height: 1.5;
                 margin: 0;
             }
@@ -422,39 +422,42 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; // Added wrap for better mobile support
   width: 100%;
-  height: auto;
-  align-items: flex-start;
-  padding: 60px 80px;
+  height: auto; // Changed from fixed height
+  align-items: flex-start; // Changed from baseline
+  padding: 60px 80px; // Changed from 20px to 80px
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: space-between;
+  justify-content: end; // Added to position content properly
 
   h1 {
     font-family: $primary-font;
     font-weight: 500;
     color: $text-color-muted;
-    margin-top: 0;
-    font-size: 32px;
+    margin-top: 0; // Reset top margin
   }
   
   .footer-title {
-    font-size: 48px;
-    margin-top: auto;
+    font-size: 48px; // Added font size
+    margin-top: auto; // Push to bottom
   }
 
   .social-area {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1;
+    
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      align-items: center; // Right align on mobile
+    }
 
     .social-link {
       gap: 16px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
 
       a {
         font-family: $secondary-font;
@@ -475,18 +478,21 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    flex: 1;
+    
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      align-items: center;
+    }
+
 
     .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: flex-start;
-      width: 100%;
+      align-items: flex-start; // Right align buttons
 
       a {
         text-decoration: none;
-        width: 100%;
       }
 
       button {
@@ -494,25 +500,25 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%;
-        max-width: 400px;
+        width: 100%; 
+        max-width: 400px; 
         align-items: center;
         border-radius: 16px;
         gap: 16px;
-        border: none;
+        border: none; // Added
         background-color: $secondary-color;
-        padding: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        padding: 16px; // Added padding
+        cursor: pointer; // Added
+        transition: background-color 0.3s ease; // Added
         
         &:hover {
-          background-color: lighten($secondary-color, 10%);
+          background-color: lighten($secondary-color, 10%); // Added hover effect
         }
         
         img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1); // Ensure icon is white
         }
   
         .area {
@@ -525,22 +531,26 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px;
+            gap: 4px; // Added gap
     
             h6 {
               color: $text-color-light;
-              font-size: 18px;
-              margin: 0;
+              font-size: 18px; // Reduced from 24px
+              margin: 0; // Reset margin
             }
     
             p {
               color: $text-color-light;
-              font-size: 14px;
-              margin: 0;
-              opacity: 0.8;
+              font-size: 14px; // Reduced from 16px
+              margin: 0; // Reset margin
+              opacity: 0.8; // Added
             }
           }
         }
+      }
+
+      a{
+        width: 100%;
       }
     }
   }
@@ -631,18 +641,10 @@ body {
 
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px 20px;
+    padding: 8px 16px; // Maintained 80px horizontal padding
     
-    .home-button {
-      padding: 8px 12px;
-      
-      h1 {
-        font-size: 20px;
-      }
-    }
-    
-    .logo {
-      width: 24px;
+    .home-button h1 {
+      font-size: 20px; // Smaller on mobile
     }
   }
 
@@ -786,35 +788,8 @@ body {
   }
   
   .footer {
-    padding: 40px 20px;
     flex-direction: column;
-    gap: 40px;
-    
-    h1 {
-      font-size: 28px;
-      text-align: center;
-    }
-    
-    .social-area {
-      width: 100%;
-      align-items: center;
-      
-      .social-link {
-        align-items: center;
-      }
-    }
-    
-    .button-area {
-      width: 100%;
-      align-items: center;
-      
-      .button {
-        align-items: center;
-        
-        button {
-          width: 100%;
-        }
-      }
-    }
+    padding: 40px 16px; // Maintained 80px horizontal padding
+    gap: 56px;
   }
 }
