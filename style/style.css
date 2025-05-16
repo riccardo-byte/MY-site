@@ -445,6 +445,9 @@ body {
   gap: 16px;
   align-items: flex-start;
 }
+.footer .button-area .button a {
+  text-decoration: none;
+}
 .footer .button-area .button button {
   display: flex;
   flex-direction: row;

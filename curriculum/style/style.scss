@@ -1,0 +1,224 @@
+// Variables
+$background-color: #FFFFFF;
+$secondary-color: #1D1D1D;
+$softgray-color: #E4E4E4;
+$accent-color: #007AFF; // For interactive elements
+$text-color-light: #FFFFFF;
+$text-color-muted: #a4a4a4;
+
+// Typography
+$primary-font: "Figtree", sans-serif; 
+$secondary-font: 'Times New Roman', Times, serif;
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 992px;
+
+// Reset and base styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Header/Hero section
+.hero-section {
+  width: 100%;
+  height: auto;
+  padding: 24px 80px; // Changed from 40px to 80px
+  background-color: $softgray-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  .home-button {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    h1 {
+      font-family: $primary-font;
+      font-weight: 300;
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 32px;
+    height: auto;
+  }
+}
+
+
+
+// Footer section
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; // Added wrap for better mobile support
+  width: 100%;
+  height: auto; // Changed from fixed height
+  align-items: flex-start; // Changed from baseline
+  padding: 60px 80px; // Changed from 20px to 80px
+  gap: 80px;
+  background-color: $softgray-color;
+  justify-content: end; // Added to position content properly
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: 500;
+    color: $text-color-muted;
+    margin-top: 0; // Reset top margin
+  }
+  
+  .footer-title {
+    font-size: 48px; // Added font size
+    margin-top: auto; // Push to bottom
+  }
+
+  .social-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      align-items: center; // Right align on mobile
+    }
+
+    .social-link {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        font-family: $secondary-font;
+        color: $secondary-color;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .button-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      align-items: center;
+    }
+
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start; // Right align buttons
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%; 
+        max-width: 400px; 
+        align-items: center;
+        border-radius: 16px;
+        gap: 16px;
+        border: none; // Added
+        background-color: $secondary-color;
+        padding: 16px; // Added padding
+        cursor: pointer; // Added
+        transition: background-color 0.3s ease; // Added
+        
+        &:hover {
+          background-color: lighten($secondary-color, 10%); // Added hover effect
+        }
+        
+        img {
+          height: 24px;
+          width: 24px;
+          filter: brightness(0) invert(1); // Ensure icon is white
+        }
+  
+        .area {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+          
+          .text-zone {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            gap: 4px; // Added gap
+    
+            h6 {
+              color: $text-color-light;
+              font-size: 18px; // Reduced from 24px
+              margin: 0; // Reset margin
+            }
+    
+            p {
+              color: $text-color-light;
+              font-size: 14px; // Reduced from 16px
+              margin: 0; // Reset margin
+              opacity: 0.8; // Added
+            }
+          }
+        }
+      }
+
+      a{
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Global media queries
+@media (max-width: $mobile-breakpoint) {
+  .hero-section {
+    padding: 8px 16px; // Maintained 80px horizontal padding
+    
+    .home-button h1 {
+      font-size: 20px; // Smaller on mobile
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 40px 16px; // Maintained 80px horizontal padding
+    gap: 56px;
+  }
+}
