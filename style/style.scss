@@ -40,7 +40,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  
+
   .home-button {
     background-color: transparent;
     border: none;
@@ -73,6 +73,25 @@ body {
     width: 32px;
     height: auto;
   }
+  
+  .contact-menu {
+    .desktop-text {
+      display: inline;
+    }
+
+    .mobile-text {
+      display: none;
+    }
+
+    span {
+      font-family: $primary-font;
+      font-weight: 300;
+      font-size: 24px;
+      margin: 0;
+
+    }
+  }
+
 }
 
 // Introduction section
@@ -587,7 +606,26 @@ body {
     padding: 8px 16px; // Maintained 80px horizontal padding
     
     .home-button h1 {
-      font-size: 20px; // Smaller on mobile
+      font-size: 20px;
+    }
+
+    .contact-menu {
+      .desktop-text {
+        display: none;
+      }
+
+      .mobile-text {
+        display: flex;
+        align-items: center;
+        padding: 8px 40px;
+        border-radius: 100px;
+        background-color: $secondary-color;
+      }
+
+      img {
+        height: 32px;
+        width: 32px;
+      }
     }
   }
   
