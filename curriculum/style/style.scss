@@ -2,7 +2,8 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$accent-color: #007AFF; // For interactive elements
+$deactivate-button-color: #909090;
+$accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
@@ -473,7 +474,7 @@ body {
     }
 
     .social-link {
-      gap: 16px;
+      gap: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -482,12 +483,12 @@ body {
         font-family: $secondary-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none;
-        transition: color 0.3s ease;
+        text-decoration: line-through;
+        //transition: color 0.3s ease;
         
-        &:hover {
-          color: $accent-color;
-        }
+        //&:hover {
+        //  color: $accent-color;
+        //}
       }
     }
   }
@@ -524,14 +525,14 @@ body {
         align-items: center;
         border-radius: 16px;
         gap: 16px;
-        border: none; // Added
+        border: none;
         background-color: $secondary-color;
-        padding: 16px; // Added padding
-        cursor: pointer; // Added
-        transition: background-color 0.3s ease; // Added
+        padding: 16px;
+        cursor: pointer;
+        transition: background-color 0.1s ease;
         
         &:hover {
-          background-color: lighten($secondary-color, 10%); // Added hover effect
+          background-color: lighten($accent-color, 10%); // Added hover effect
         }
         
         img {
@@ -566,6 +567,17 @@ body {
             }
           }
         }
+      }
+      
+      .deactivate{
+        background-color: $deactivate-button-color;
+
+        transition: background-color 0s;
+        
+        &:hover {
+          background-color: $deactivate-button-color;
+        }
+
       }
 
       a{

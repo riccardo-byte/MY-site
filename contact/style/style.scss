@@ -2,7 +2,8 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$accent-color: #007AFF; // For interactive elements
+$deactivate-button-color: #909090;
+$accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
@@ -177,7 +178,7 @@ body {
       
       .pulsante {
         align-self: flex-end;
-        background-color: $secondary-color;
+        background-color: $deactivate-button-color;
         border: none;
         padding: 24px 40px;
         font-size: 24px;
@@ -282,31 +283,25 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // wrap for better mobile support
+  flex-wrap: wrap; // Added wrap for better mobile support
   width: 100%;
-  height: auto;
-  align-items: flex-start;
-  padding: 60px 80px;
+  height: auto; // Changed from fixed height
+  align-items: flex-start; // Changed from baseline
+  padding: 60px 80px; // Changed from 20px to 80px
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: end;
-  
-  @media (max-width: $mobile-breakpoint) {
-    flex-direction: column;
-    padding: 40px 80px;
-    gap: 40px; 
-  }
+  justify-content: end; // Added to position content properly
 
   h1 {
     font-family: $primary-font;
     font-weight: 500;
     color: $text-color-muted;
-    margin-top: 0;
+    margin-top: 0; // Reset top margin
   }
   
   .footer-title {
-    font-size: 48px;
-    margin-top: auto;
+    font-size: 48px; // Added font size
+    margin-top: auto; // Push to bottom
   }
 
   .social-area {
@@ -316,11 +311,11 @@ body {
     
     @media (max-width: $mobile-breakpoint) {
       width: 100%;
-      align-items: center;
+      align-items: center; // Right align on mobile
     }
 
     .social-link {
-      gap: 16px;
+      gap: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -329,12 +324,12 @@ body {
         font-family: $secondary-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none;
-        transition: color 0.3s ease;
+        text-decoration: line-through;
+        //transition: color 0.3s ease;
         
-        &:hover {
-          color: $accent-color;
-        }
+        //&:hover {
+        //  color: $accent-color;
+        //}
       }
     }
   }
@@ -350,11 +345,12 @@ body {
       align-items: center;
     }
 
+
     .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: flex-start;
+      align-items: flex-start; // Right align buttons
 
       a {
         text-decoration: none;
@@ -365,8 +361,8 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%;
-        max-width: 400px;
+        width: 100%; 
+        max-width: 400px; 
         align-items: center;
         border-radius: 16px;
         gap: 16px;
@@ -374,16 +370,16 @@ body {
         background-color: $secondary-color;
         padding: 16px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.1s ease;
         
         &:hover {
-          background-color: lighten($secondary-color, 10%);
+          background-color: lighten($accent-color, 10%); // Added hover effect
         }
         
         img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1); // Ensure icon is white
         }
   
         .area {
@@ -396,22 +392,33 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px;
+            gap: 4px; // Added gap
     
             h6 {
               color: $text-color-light;
-              font-size: 18px;
-              margin: 0;
+              font-size: 18px; // Reduced from 24px
+              margin: 0; // Reset margin
             }
     
             p {
               color: $text-color-light;
-              font-size: 14px;
-              margin: 0;
-              opacity: 0.8;
+              font-size: 14px; // Reduced from 16px
+              margin: 0; // Reset margin
+              opacity: 0.8; // Added
             }
           }
         }
+      }
+      
+      .deactivate{
+        background-color: $deactivate-button-color;
+
+        transition: background-color 0s;
+        
+        &:hover {
+          background-color: $deactivate-button-color;
+        }
+
       }
 
       a{

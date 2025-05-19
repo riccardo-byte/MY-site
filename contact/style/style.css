@@ -137,7 +137,7 @@ body {
 }
 .forum .message .message-container .pulsante {
   align-self: flex-end;
-  background-color: #1D1D1D;
+  background-color: #909090;
   border: none;
   padding: 24px 40px;
   font-size: 24px;
@@ -217,13 +217,6 @@ body {
   background-color: #E4E4E4;
   justify-content: end;
 }
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 40px 80px;
-    gap: 40px;
-  }
-}
 .footer h1 {
   font-family: "Figtree", sans-serif;
   font-weight: 500;
@@ -246,7 +239,7 @@ body {
   }
 }
 .footer .social-area .social-link {
-  gap: 16px;
+  gap: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,11 +248,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: #1D1D1D;
   font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.footer .social-area .social-link a:hover {
-  color: #007AFF;
+  text-decoration: line-through;
 }
 .footer .button-area {
   display: flex;
@@ -296,10 +285,10 @@ body {
   background-color: #1D1D1D;
   padding: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 .footer .button-area .button button:hover {
-  background-color: #373737;
+  background-color: #3395ff;
 }
 .footer .button-area .button button img {
   height: 24px;
@@ -328,6 +317,13 @@ body {
   font-size: 14px;
   margin: 0;
   opacity: 0.8;
+}
+.footer .button-area .button .deactivate {
+  background-color: #909090;
+  transition: background-color 0s;
+}
+.footer .button-area .button .deactivate:hover {
+  background-color: #909090;
 }
 .footer .button-area .button a {
   width: 100%;

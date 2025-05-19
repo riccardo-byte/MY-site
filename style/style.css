@@ -341,13 +341,13 @@ body {
   width: 100%;
   padding: 16px 24px;
   border-radius: 100px;
-  border: 1px solid #1D1D1D;
+  border: none;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background-color: #616161;
+  background-color: #909090;
 }
 .faq .faq-leftContainer button img {
   height: 24px;
@@ -499,11 +499,11 @@ body {
   opacity: 0.8;
 }
 .footer .button-area .button .deactivate {
-  background-color: #616161;
+  background-color: #909090;
   transition: background-color 0s;
 }
 .footer .button-area .button .deactivate:hover {
-  background-color: #616161;
+  background-color: #909090;
 }
 .footer .button-area .button a {
   width: 100%;

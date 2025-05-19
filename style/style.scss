@@ -2,7 +2,7 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #616161;
+$deactivate-button-color: #909090;
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
@@ -402,7 +402,7 @@ body {
       width: 100%;
       padding: 16px 24px; // Reduced padding 
       border-radius: 100px;
-      border: 1px solid $secondary-color;
+      border: none;
       text-align: center;
       display: flex;
       justify-content: center; // Center content

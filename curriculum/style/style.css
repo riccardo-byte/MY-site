@@ -399,7 +399,7 @@ body {
   }
 }
 .footer .social-area .social-link {
-  gap: 16px;
+  gap: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,11 +408,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: #1D1D1D;
   font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.footer .social-area .social-link a:hover {
-  color: #007AFF;
+  text-decoration: line-through;
 }
 .footer .button-area {
   display: flex;
@@ -449,10 +445,10 @@ body {
   background-color: #1D1D1D;
   padding: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 .footer .button-area .button button:hover {
-  background-color: #373737;
+  background-color: #3395ff;
 }
 .footer .button-area .button button img {
   height: 24px;
@@ -481,6 +477,13 @@ body {
   font-size: 14px;
   margin: 0;
   opacity: 0.8;
+}
+.footer .button-area .button .deactivate {
+  background-color: #909090;
+  transition: background-color 0s;
+}
+.footer .button-area .button .deactivate:hover {
+  background-color: #909090;
 }
 .footer .button-area .button a {
   width: 100%;
