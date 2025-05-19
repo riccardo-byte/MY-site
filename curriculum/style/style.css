@@ -51,6 +51,18 @@ body {
   width: 32px;
   height: auto;
 }
+.hero-section .contact-menu .desktop-text {
+  display: inline;
+}
+.hero-section .contact-menu .mobile-text {
+  display: none;
+}
+.hero-section .contact-menu span {
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+}
 
 .introduction {
   display: flex;
@@ -534,10 +546,24 @@ body {
 }
 @media (max-width: 768px) {
   .hero-section {
-    padding: 8px 16px;
+    padding: 16px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;
+  }
+  .hero-section .contact-menu .desktop-text {
+    display: none;
+  }
+  .hero-section .contact-menu .mobile-text {
+    display: flex;
+    align-items: center;
+    padding: 8px 40px;
+    border-radius: 100px;
+    background-color: #1D1D1D;
+  }
+  .hero-section .contact-menu img {
+    height: 32px;
+    width: 32px;
   }
   .introduction {
     padding: 40px 20px;

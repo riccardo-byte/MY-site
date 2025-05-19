@@ -513,7 +513,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 8px 16px;
+    padding: 16px;
   }
   .hero-section .home-button h1 {
     font-size: 20px;

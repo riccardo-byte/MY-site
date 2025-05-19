@@ -603,7 +603,7 @@ body {
 // Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 8px 16px; // Maintained 80px horizontal padding
+    padding: 16px; // Maintained 80px horizontal padding
     
     .home-button h1 {
       font-size: 20px;
