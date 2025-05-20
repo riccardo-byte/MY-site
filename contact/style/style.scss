@@ -7,9 +7,10 @@ $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
+
 // Typography
-$primary-font: "Figtree", sans-serif; 
-$secondary-font: 'Times New Roman', Times, serif;
+$hFamily-font: "Figtree", sans-serif; 
+$pFamily-font: 'Times New Roman', Times, serif;
 
 // Breakpoints
 $mobile-breakpoint: 768px;
@@ -24,7 +25,7 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
-  font-family: $primary-font;
+  font-family: $hFamily-font;
   color: $secondary-color;
   line-height: 1.5;
 }
@@ -59,7 +60,7 @@ body {
     }
     
     h1 {
-      font-family: $primary-font;
+      font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
@@ -85,7 +86,7 @@ body {
     }
 
     span {
-      font-family: $primary-font;
+      font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
@@ -109,7 +110,8 @@ body {
       font-size: 51px;
       margin-bottom: 10px;
       text-align: center;
-      font-family: $primary-font;
+      font-family: $pFamily-font;
+      margin: 0;
     }
     
     h1 {
@@ -117,7 +119,7 @@ body {
       font-weight: 900;
       line-height: 1.1;
       text-align: center;
-      font-family: $primary-font;
+      font-family: $hFamily-font;
       margin: 0;
     }
   }
@@ -130,7 +132,7 @@ body {
     .message-container {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 48px;
       width: 100%;
       
       .message-block {
@@ -140,17 +142,12 @@ body {
         gap: 16px;
         width: 100%;
         
-        h1 {
-          font-size: 76px;
-          font-weight: 900;
-          margin: 0;
-          white-space: nowrap;
-        }
-        
         .input {
           border: none;
           border-bottom: 1px solid #999;
           background: transparent;
+          font-weight: 900;
+          font-family: $pFamily-font;
           font-size: 51px;
           padding: 5px 0;
           color: $text-color-muted;
@@ -170,7 +167,7 @@ body {
         }
       }
       
-      h1 {
+      h2 {
         font-size: 76px;
         font-weight: 900;
         margin: 10px 0;
@@ -188,11 +185,12 @@ body {
         align-items: center;
         gap: 12px;
         
-        h1 {
-            font-family: $primary-font;
+        h5 {
+            font-family: $hFamily-font;
             color: #FFFFFF;
             font-size: 24px;
-            font-weight: 400;
+            font-weight: 500;
+            margin: 0;
         }
 
         .arrow {
@@ -251,6 +249,8 @@ body {
     
     .message {
       .message-container {
+        gap: 16px;
+
         .message-block {
           flex-wrap: wrap;
           
@@ -264,7 +264,7 @@ body {
           }
         }
         
-        h1 {
+        h2 {
           font-size: 32px;
         }
 
@@ -283,25 +283,31 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // Added wrap for better mobile support
+  flex-wrap: wrap; // wrap for better mobile support
   width: 100%;
-  height: auto; // Changed from fixed height
-  align-items: flex-start; // Changed from baseline
-  padding: 60px 80px; // Changed from 20px to 80px
+  height: auto;
+  align-items: flex-start;
+  padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: end; // Added to position content properly
+  justify-content: end;
+  
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    padding: 40px 80px;
+    gap: 40px; 
+  }
 
   h1 {
-    font-family: $primary-font;
+    font-family: $hFamily-font;
     font-weight: 500;
     color: $text-color-muted;
-    margin-top: 0; // Reset top margin
+    margin-top: 0;
   }
   
   .footer-title {
-    font-size: 48px; // Added font size
-    margin-top: auto; // Push to bottom
+    font-size: 48px;
+    margin-top: auto;
   }
 
   .social-area {
@@ -311,25 +317,25 @@ body {
     
     @media (max-width: $mobile-breakpoint) {
       width: 100%;
-      align-items: center; // Right align on mobile
+      align-items: center;
     }
 
     .social-link {
-      gap: 8px;
+      gap: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       a {
-        font-family: $secondary-font;
+        font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: line-through;
-        //transition: color 0.3s ease;
+        text-decoration: none;
+        transition: color 0.3s ease;
         
-        //&:hover {
-        //  color: $accent-color;
-        //}
+        &:hover {
+          color: $accent-color;
+        }
       }
     }
   }
@@ -345,12 +351,11 @@ body {
       align-items: center;
     }
 
-
     .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: flex-start; // Right align buttons
+      align-items: flex-start;
 
       a {
         text-decoration: none;
@@ -361,8 +366,8 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; 
-        max-width: 400px; 
+        width: 100%;
+        max-width: 400px;
         align-items: center;
         border-radius: 16px;
         gap: 16px;
@@ -370,16 +375,16 @@ body {
         background-color: $secondary-color;
         padding: 16px;
         cursor: pointer;
-        transition: background-color 0.1s ease;
+        transition: background-color 0.3s ease;
         
         &:hover {
-          background-color: lighten($accent-color, 10%); // Added hover effect
+          background-color: lighten($secondary-color, 10%);
         }
         
         img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Ensure icon is white
+          filter: brightness(0) invert(1);
         }
   
         .area {
@@ -392,33 +397,22 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px; // Added gap
+            gap: 4px;
     
             h6 {
               color: $text-color-light;
-              font-size: 18px; // Reduced from 24px
-              margin: 0; // Reset margin
+              font-size: 18px;
+              margin: 0;
             }
     
             p {
               color: $text-color-light;
-              font-size: 14px; // Reduced from 16px
-              margin: 0; // Reset margin
-              opacity: 0.8; // Added
+              font-size: 14px;
+              margin: 0;
+              opacity: 0.8;
             }
           }
         }
-      }
-      
-      .deactivate{
-        background-color: $deactivate-button-color;
-
-        transition: background-color 0s;
-        
-        &:hover {
-          background-color: $deactivate-button-color;
-        }
-
       }
 
       a{

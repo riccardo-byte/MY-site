@@ -12,20 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero-section">
-            <a href="../index.html">
-                <button class="home-button">
-                <img class="logo" src="../img/Logo-V3.png" alt="simbolo di una molecola">
+    <!-- Intestazione principale con navigazione -->
+    <header class="hero-section">
+        <a href="index.html">
+            <button class="home-button" aria-label="Torna alla home">
+                <img class="logo" src="../img/Logo-V3.png" alt="Logo professionale">
                 <h1>HOME</h1>
-                </button>
-            </a>
-            <a href="../contact/" class="contact-menu">
-                <button class="home-button">
+            </button>
+        </a>
+        <a href="contact/" class="contact-menu">
+            <button class="home-button" aria-label="Contattami">
                 <span class="desktop-text">CONTATTAMI</span>
-                <span class="mobile-text"><img src="../img/bubble.png" alt="immagine di un messaggio"></span>
-                </button>
-            </a>
-        </div>
+                <span class="mobile-text"><img src="img/bubble.png" alt="Icona messaggio"></span>
+            </button>
+        </a>
+    </header>
 
     
     <div class="forum">
@@ -36,71 +37,71 @@
         <div class="message">
             <form action="dati.php" method="post" class="message-container">
                 <div class="message-block">
-                    <h1>mi chiamo</h1>
+                    <h2>mi chiamo</h2>
                     <input type="text" name="nome" class="input" placeholder="nome e cognome" required>
                 </div>
                 <div class="message-block">
-                    <h1>lavoro</h1>
+                    <h2>lavoro</h2>
                     <input type="text" name="lavoro" class="input" placeholder="azienda">
-                    <h1>e ho</h1>
+                    <h2>e ho</h2>
                 </div>
                 <div class="message-block">
-                    <h1>un</h1>
+                    <h2>un</h2>
                     <input type="text" name="oggetto" class="input" placeholder="sito, applicazione..." required>
-                    <h1>che ha</h1>
+                    <h2>che ha</h2>
                 </div>
-                <h1>bisogno di auto. Puoi contattarmi</h1>
+                <h2>bisogno di auto. Puoi contattarmi</h2>
                 <div class="message-block">
                     <input type="email" name="email" class="input" placeholder="email" required>
-                    <h1>per iniziare.</h1>
+                    <h2>per iniziare.</h2>
                 </div>
-                <button type="submit" class="pulsante"> <h1>invia</h1> <img src="../img/arrow.png" alt="freccia" class="arrow"></button>
+                <button type="submit" class="pulsante"> <h5>invia</h5> <img src="../img/arrow.png" alt="freccia" class="arrow"></button>
             </form>
         </div>
     </div>
 
 
-     <div class="footer">
-            <div class="social-area">
-                <h1>I miei social</h1>
-                <div class="social-link">
-                    <a href="">Instagram</a>
-                    <a href="">Facebook</a>
-                    <a href="">Linkedin</a>
-                    <a href="">Youtube</a>
-                </div>
-            </div>
-            <div class="button-area">
-                <h1>Scopri anche</h1>
-                
-                <div class="button">
-                    
-                    <a>
-                        <button class="deactivate">
-                            <div class="area">
-                                <img src="" alt="">
-                                <div class="text-zone">
-                                <h6>A cosa sto lavorando</h6>
-                                <p>Scopri i miei porgetti</p>
-                                </div>
-                            </div>
-                            <img src="img/arrow.png" alt="freccia">
-                        </button>
-                    </a>
-                    <a href="../curriculum/index.html">
-                        <button>
-                            <div class="area">
-                                <img src="" alt="">
-                                <div class="text-zone">
-                                <h6>Il mio curriculum vitae</h6>
-                                <p>Formato HTML o scaricabile PDF</p>
-                                </div>
-                            </div>
-                            <img src="img/arrow.png" alt="freccia">
-                        </button>
-                    </a>
-                </div>
+    <!-- Footer con contatti e link utili -->
+    <footer class="footer">
+        <div class="social-area">
+            <h3>Canali social</h3>
+            <div class="social-link">
+                <a href="" aria-label="Instagram">Instagram</a>
+                <a href="" aria-label="Facebook">Facebook</a>
+                <a href="" aria-label="LinkedIn">LinkedIn</a>
+                <a href="" aria-label="YouTube">YouTube</a>
             </div>
         </div>
+        <div class="button-area">
+            <h3>Scopri anche</h3>
+            
+            <div class="button">
+                <a>
+                    <button class="deactivate" aria-label="Progetti correnti">
+                        <div class="area">
+                            <img src="" alt="">
+                            <div class="text-zone">
+                                <h6>Progetti in corso</h6>
+                                <p>Scopri i miei progetti attuali</p>
+                            </div>
+                        </div>
+                        <img src="img/arrow.png" alt="Freccia">
+                    </button>
+                </a>
+                <a href="curriculum/index.html">
+                    <button aria-label="Curriculum vitae">
+                        <div class="area">
+                            <img src="" alt="">
+                            <div class="text-zone">
+                                <h6>Il mio curriculum vitae</h6>
+                                <p>Formato HTML o scaricabile PDF</p>
+                            </div>
+                        </div>
+                        <img src="img/arrow.png" alt="Freccia">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

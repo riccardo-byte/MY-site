@@ -1,242 +1,244 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <!-- Stile -->
-        <link rel="stylesheet" type="text/css" href="style/style.css">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionale</title>
+    <!-- File di stile principali -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 
-        <!-- Font -->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Importazione font accessibile -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:ital,wght@0,300..900;1,300..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-         <!-- Bootstrap -->
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
-    
-    </head>
-    <body>
-        <div class="hero-section">
-            <a href="index.html">
-                <button class="home-button">
-                <img class="logo" src="img/Logo-V3.png" alt="simbolo di una molecola">
+    <!-- Framework Bootstrap per layout responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Intestazione principale con navigazione -->
+    <header class="hero-section">
+        <a href="index.html">
+            <button class="home-button" aria-label="Torna alla home">
+                <img class="logo" src="img/Logo-V3.png" alt="Logo professionale">
                 <h1>HOME</h1>
-                </button>
-            </a>
-            <a href="contact/" class="contact-menu">
-                <button class="home-button">
+            </button>
+        </a>
+        <a href="contact/" class="contact-menu">
+            <button class="home-button" aria-label="Contattami">
                 <span class="desktop-text">CONTATTAMI</span>
-                <span class="mobile-text"><img src="img/bubble.png" alt="immagine di un messaggio"></span>
-                </button>
-            </a>
+                <span class="mobile-text"><img src="img/bubble.png" alt="Icona messaggio"></span>
+            </button>
+        </a>
+    </header>
+
+    <!-- Sezione introduttiva -->
+    <section class="intro">
+        <div class="intro-comment">
+            <img class="intro-logo" src="img/hand.png" alt="Icona saluto">
+            <p>Benvenuto</p>
+        </div>
+        <h1>Design</h1>
+    </section>
+
+    <!-- Presentazione professionale -->
+    <section class="definition">
+        <div class="definition-intro">
+            <p>Designer Professionista</p>
+            <h1>Mi occupo di sviluppare nuove <br> esperienze creative</h1>
         </div>
 
-        <div class="intro">
-            <div class="intro-comment">
-                <img class="intro-logo" src="img/hand.png" alt="immagine di una mano che saluta">
-                <p>hey there</p>
-            </div>
-            <h1>design</h1>
-        </div>
+        <img class="definition-img" src="img/walkman.png" alt="Illustrazione concettuale del design">
+    
+        <!-- Metodologia di lavoro -->
+        <div class="definition-cards">
+            <p>Processo di lavoro</p>
 
-        <div class="definition">
-            <div class="definition-intro">
-                <p>Sono un designer</p>
-                <h1>Mi occupo di sviluppare nuove <br> esperienze creative</h1>
-            </div>
-
-            <img class="definition-img" src="img/walkman.png" alt="immagine illustrata di un ragazzo che cammina in un parco">
-        
-            <div class="definition-cards">
-                <p>flusso semplificato</p>
-
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <h1>Preparation</h1>
-                                <img src="img/preparation.png" alt="Uomo che lavora alla lavagna">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <h1>Frame</h1>
-                                <img src="img/frame.png" alt="uomo che lavora al computer">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <h1>Aprove</h1>
-                                <img src="img/aprove.png" alt="pagina web con una spunta di aprovazione">
-                            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <h2>Pianificazione</h2>
+                            <img src="img/preparation.png" alt="Fase di pianificazione">
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="programs">
-            <h1>programmi che utilizzo</h1>
-
-            <div class="container">
-                <div class="slider">
-
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-                    
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-                    
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-                    
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-                    
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-                    
-                    <div class="program">
-                        <img src="" alt="">
-                        <h1>programma</h1>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="presentation">
-            <div class="presentation-intro">
-                <h1>Piacere di conoscerti io sono Riccardo</h1>
-                <p>Sottotitoli di presentazione</p>
-            </div>
-            <div class="presentation-card">
-                <img src="img/Croods Standing.png" alt="un omino con le braccia incorcate">
-            </div>
-            
-        </div>
-
-        <div class="faq">
-            <div class="faq-leftContainer">
-                <div class="faq-textContainer">
-                    <h3>Bisogno di aiuto specializzato?</h3>
-                    <p>Iniziamo con una breve chiaccherata introduttiva</p>
-                </div>
-                <button>
-                    <h5>prenota una call</h5>
-                    <img src="img/arrow.png" alt="telefono">
-                </button>
-            </div>
-            <div class="faq-rightContainer">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <!-- contenuto 1-->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
+                    <div class="col">
+                        <div class="card">
+                            <h2>Progettazione</h2>
+                            <img src="img/frame.png" alt="Fase di progettazione">
                         </div>
                     </div>
-                    <!-- contenuto 2-->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        Accordion Item #2
-      </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- contenuto 3-->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
+                    <div class="col">
+                        <div class="card">
+                            <h2>Approvazione</h2>
+                            <img src="img/aprove.png" alt="Fase di approvazione">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <div class="social-area">
-                <h1>I miei social</h1>
-                <div class="social-link">
-                    <a href="">Instagram</a>
-                    <a href="">Facebook</a>
-                    <a href="">Linkedin</a>
-                    <a href="">Youtube</a>
+<!-- Competenze tecniche -->
+    <section class="programmi-tecnici">
+        <h2>Competenze software</h2>
+
+        <div class="container">
+            <div class="slider">
+                <!-- Carousel di software professionali -->
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>Adobe Photoshop</h3>
                 </div>
-            </div>
-            <div class="button-area">
-                <h1>Scopri anche</h1>
+
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>Adobe Illustrator</h3>
+                </div>
+
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>Figma</h3>
+                </div>
                 
-                <div class="button">
-                    
-                    <a>
-                        <button class="deactivate">
-                            <div class="area">
-                                <img src="" alt="">
-                                <div class="text-zone">
-                                <h6>A cosa sto lavorando</h6>
-                                <p>Scopri i miei porgetti</p>
-                                </div>
-                            </div>
-                            <img src="img/arrow.png" alt="freccia">
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>Sketch</h3>
+                </div>
+                
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>Adobe XD</h3>
+                </div>
+                
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>InVision</h3>
+                </div>
+                
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>WordPress</h3>
+                </div>
+                
+                <div class="programma">
+                    <img src="" alt="Logo software">
+                    <h3>HTML/CSS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentazione personale -->
+    <section class="presentazione-profilo">
+        <div class="presentation-intro">
+            <h2>Piacere di conoscerti, io sono Riccardo</h2>
+            <p>Designer specializzato in UI/UX e sviluppo web</p>
+        </div>
+        <div class="presentation-card">
+            <img src="img/Croods Standing.png" alt="Immagine del professionista">
+        </div>
+    </section>
+
+    <!-- Sezione FAQ e contatti -->
+    <section class="faq">
+        <div class="faq-leftContainer">
+            <div class="faq-textContainer">
+                <h3>Bisogno di consulenza professionale?</h3>
+                <p>Iniziamo con una breve conversazione introduttiva</p>
+            </div>
+            <button aria-label="Prenota una consulenza">
+                <h5>Prenota una consulenza</h5>
+                <img src="img/arrow.png" alt="Freccia">
+            </button>
+        </div>
+        <div class="faq-rightContainer">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <!-- Domanda frequente 1 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Quali servizi di design offri?
                         </button>
-                    </a>
-                    <a href="curriculum/index.html">
-                        <button>
-                            <div class="area">
-                                <img src="" alt="">
-                                <div class="text-zone">
+                    </h3>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>Servizi completi di design digitale.</strong> Offro un pacchetto completo che include UI/UX design, sviluppo frontend, consulenza di branding e ottimizzazione per l'accessibilità. Ogni progetto viene personalizzato in base alle esigenze specifiche del cliente.
+                        </div>
+                    </div>
+                </div>
+                <!-- Domanda frequente 2 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Quali sono i tempi di realizzazione?
+                        </button>
+                    </h3>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Tempistiche flessibili in base al progetto.</strong> I tempi variano in base alla complessità del progetto. Generalmente, un sito web completo richiede da 4 a 8 settimane, mentre progetti di design più semplici possono essere completati in 2-3 settimane. Ogni fase del progetto viene pianificata con scadenze chiare.
+                        </div>
+                    </div>
+                </div>
+                <!-- Domanda frequente 3 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Come si sviluppa la collaborazione?
+                        </button>
+                    </h3>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Processo collaborativo e trasparente.</strong> La collaborazione inizia con una consultazione approfondita per comprendere obiettivi e requisiti. Durante tutto il processo, manteniamo una comunicazione costante con aggiornamenti regolari e opportunità di feedback. Ogni modifica viene implementata rapidamente per garantire la soddisfazione del cliente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer con contatti e link utili -->
+    <footer class="footer">
+        <div class="social-area">
+            <h3>Canali social</h3>
+            <div class="social-link">
+                <a href="" aria-label="Instagram">Instagram</a>
+                <a href="" aria-label="Facebook">Facebook</a>
+                <a href="" aria-label="LinkedIn">LinkedIn</a>
+                <a href="" aria-label="YouTube">YouTube</a>
+            </div>
+        </div>
+        <div class="button-area">
+            <h3>Scopri anche</h3>
+            
+            <div class="button">
+                <a>
+                    <button class="deactivate" aria-label="Progetti correnti">
+                        <div class="area">
+                            <img src="" alt="">
+                            <div class="text-zone">
+                                <h6>Progetti in corso</h6>
+                                <p>Scopri i miei progetti attuali</p>
+                            </div>
+                        </div>
+                        <img src="img/arrow.png" alt="Freccia">
+                    </button>
+                </a>
+                <a href="curriculum/index.html">
+                    <button aria-label="Curriculum vitae">
+                        <div class="area">
+                            <img src="" alt="">
+                            <div class="text-zone">
                                 <h6>Il mio curriculum vitae</h6>
                                 <p>Formato HTML o scaricabile PDF</p>
-                                </div>
                             </div>
-                            <img src="img/arrow.png" alt="freccia">
-                        </button>
-                    </a>
-                </div>
+                        </div>
+                        <img src="img/arrow.png" alt="Freccia">
+                    </button>
+                </a>
             </div>
         </div>
-        
-    </body>
-    </html>
+    </footer>
+</body>
+</html>

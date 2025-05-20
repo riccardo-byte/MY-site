@@ -489,64 +489,6 @@ body {
   width: 100%;
 }
 
-@media (max-width: 992px) {
-  .introduction {
-    padding: 60px 40px;
-  }
-  .introduction .area-destra {
-    width: 400px;
-    height: 400px;
-  }
-  .introduction .area-destra img {
-    height: 400px;
-  }
-  .introduction .area-sinistra p {
-    font-size: 32px;
-  }
-  .introduction .area-sinistra button {
-    padding: 20px 32px;
-  }
-  .introduction .area-sinistra button h6 {
-    font-size: 20px;
-  }
-  .obbiettivi {
-    padding: 60px 40px;
-  }
-  .obbiettivi h1 {
-    font-size: 42px;
-  }
-  .obbiettivi .reference .block .text h1 {
-    font-size: 42px;
-  }
-  .obbiettivi .reference .block .text p {
-    font-size: 24px;
-  }
-  .skils, .certificati {
-    padding: 60px 40px;
-  }
-  .skils h1, .certificati h1 {
-    font-size: 42px;
-  }
-  .skils .slider .skil p, .certificati .slider .skil p {
-    font-size: 32px;
-  }
-  .istruzione {
-    padding: 60px 40px;
-  }
-  .istruzione h1 {
-    font-size: 42px;
-  }
-  .istruzione .reference-container .content .text h1 {
-    font-size: 32px;
-  }
-  .istruzione .reference-container .content .text p {
-    font-size: 24px;
-  }
-  .footer {
-    padding: 60px 40px;
-    gap: 60px;
-  }
-}
 @media (max-width: 768px) {
   .hero-section {
     padding: 16px;

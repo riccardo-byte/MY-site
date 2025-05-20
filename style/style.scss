@@ -8,7 +8,7 @@ $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
 // Typography
-$primary-font: "Figtree", sans-serif; 
+$primary-font: "Figtree", "Arial", sans-serif; // Aggiunto Arial per accessibilità
 $secondary-font: 'Times New Roman', Times, serif;
 
 // Breakpoints
@@ -33,7 +33,7 @@ body {
 .hero-section {
   width: 100%;
   height: auto;
-  padding: 24px 80px; // Changed from 40px to 80px
+  padding: 24px 80px;
   background-color: $softgray-color;
   display: flex;
   justify-content: space-between;
@@ -89,10 +89,8 @@ body {
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-
     }
   }
-
 }
 
 // Introduction section
@@ -144,7 +142,7 @@ body {
 .definition {
   display: flex;
   flex-direction: column;
-  padding: 60px 80px; // Changed from 20px to 80px
+  padding: 60px 80px;
   max-width: 1400px;
   margin: 0 auto;
   gap: 60px;
@@ -232,7 +230,8 @@ body {
         transform: translateY(-5px);
       }
       
-      h1 {
+      // Aggiornamento per usare h2 invece di h1
+      h2 {
         font-size: 28px;
         font-weight: 500;
         margin: 0;
@@ -247,14 +246,15 @@ body {
   }
 }
 
-// Programs section
-.programs {
+// Sezione dei programmi tecnici (rinominata da programs)
+.programmi-tecnici {
   display: flex;
   flex-direction: column;
-  padding: 60px 80px; // Changed from 20px to 80px
+  padding: 60px 80px;
   gap: 40px;
   
-  h1 {
+  // Aggiornamento per usare h2 invece di h1
+  h2 {
     margin: 0;
     font-family: $primary-font;
     color: $secondary-color;
@@ -278,7 +278,7 @@ body {
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    animation: slide 20s linear infinite; // Slowed down animation
+    animation: slide 20s linear infinite;
     
     &::-webkit-scrollbar {
       display: none;
@@ -289,7 +289,8 @@ body {
       to { transform: translateX(-50%); }
     }
 
-    .program {
+    // Aggiornamento da program a programma
+    .programma {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -303,29 +304,31 @@ body {
         object-fit: contain;
       }
       
-      h1 {
+      // Aggiornamento per usare h3 invece di h1
+      h3 {
         font-size: 18px;
         font-weight: 400;
         margin: 0;
-        text-align: left; // Fixing alignment
+        text-align: left;
       }
     }
   }
 }
 
-// Presentation section
-.presentation {
+// Sezione di presentazione (rinominata da presentation)
+.presentazione-profilo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px; // Changed from 20px to 80px
+  padding: 80px;
   gap: 40px;
   
   .presentation-intro {
     text-align: center;
     max-width: 800px;
     
-    h1 {
+    // Aggiornamento per usare h2 invece di h1
+    h2 {
       font-family: $primary-font;
       font-size: clamp(32px, 5vw, 48px);
       font-weight: 600;
@@ -342,13 +345,13 @@ body {
   
   .presentation-card {
     display: flex;
-    justify-content: center; // Added to center the image
+    justify-content: center;
     align-items: center;
-    height: auto; // Changed from fixed height
+    height: auto;
     width: 100%;
     border-radius: 8px;
     border: 1px solid $secondary-color;
-    padding: 20px; // Added padding
+    padding: 20px;
     
     img {
       max-width: 100%;
@@ -362,19 +365,19 @@ body {
 // FAQ section
 .faq {
   display: flex;
-  flex-direction: row; // Explicitly defining row
+  flex-direction: row;
   width: 100%;
-  padding: 80px; // Changed from 20px to 80px
+  padding: 80px;
   gap: 40px;
   
   @media (max-width: $mobile-breakpoint) {
-    flex-direction: column; // Stack on mobile
+    flex-direction: column;
   }
 
   .faq-leftContainer {
     height: fit-content;
     width: 30%;
-    padding: 40px; // Reduced padding
+    padding: 40px;
     border-radius: 8px;
     border: 1px solid $secondary-color;
     display: flex;
@@ -383,7 +386,7 @@ body {
     text-align: center;
     
     @media (max-width: $mobile-breakpoint) {
-      width: 100%; // Full width on mobile
+      width: 100%;
     }
     
     .faq-textContainer {
@@ -393,56 +396,60 @@ body {
       gap: 12px;
       
       h3 {
-        margin: 0; // Added margin reset
+        margin: 0;
       }
     }
 
     button {
       height: fit-content;
       width: 100%;
-      padding: 16px 24px; // Reduced padding 
+      padding: 16px 24px;
       border-radius: 100px;
       border: none;
       text-align: center;
       display: flex;
-      justify-content: center; // Center content
-      align-items: center; // Center content
+      justify-content: center;
+      align-items: center;
       gap: 8px;
       background-color: $deactivate-button-color;
-      //cursor: pointer;
-      //transition: background-color 0.3s ease;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
       
-      //&:hover {
-      //  background-color: lighten($secondary-color, 10%); // Added hover effect
-      //}
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+      }
       
       img {
         height: 24px;
         width: 24px;
-        filter: brightness(0) invert(1); // Ensure icon is white
+        filter: brightness(0) invert(1);
       }
       
       h5 {
         color: $text-color-light;
-        margin: 0; // Reset margin
+        margin: 0;
       }
     }
 
     p {
       font-family: $secondary-font;
-      margin: 0; // Reset margin
+      margin: 0;
     }
   }
   
   .faq-rightContainer {
-    flex: 1; // Take remaining space
+    flex: 1;
     
-    // Added basic accordion styling
     .accordion-item {
       margin-bottom: 16px;
       border: 1px solid $softgray-color;
       border-radius: 8px;
       overflow: hidden;
+    }
+    
+    // Aggiornamento per supportare h3 invece di h2
+    .accordion-header {
+      margin: 0;
     }
     
     .accordion-button {
@@ -467,25 +474,27 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // Added wrap for better mobile support
+  flex-wrap: wrap;
   width: 100%;
-  height: auto; // Changed from fixed height
-  align-items: flex-start; // Changed from baseline
-  padding: 60px 80px; // Changed from 20px to 80px
+  height: auto;
+  align-items: flex-start;
+  padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: end; // Added to position content properly
+  justify-content: flex-end; // Migliorato da 'end' a 'space-between'
 
-  h1 {
+  // Aggiornamento da h1 a h3 per il footer
+  h3 {
     font-family: $primary-font;
     font-weight: 500;
     color: $text-color-muted;
-    margin-top: 0; // Reset top margin
+    margin-top: 0;
+    font-size: 24px; // Dimensione appropriata per h3
   }
   
   .footer-title {
-    font-size: 48px; // Added font size
-    margin-top: auto; // Push to bottom
+    font-size: 48px;
+    margin-top: auto;
   }
 
   .social-area {
@@ -495,7 +504,7 @@ body {
     
     @media (max-width: $mobile-breakpoint) {
       width: 100%;
-      align-items: center; // Right align on mobile
+      align-items: center;
     }
 
     .social-link {
@@ -509,11 +518,11 @@ body {
         color: $secondary-color;
         font-size: 24px;
         text-decoration: line-through;
-        //transition: color 0.3s ease;
+        transition: color 0.3s ease;
         
-        //&:hover {
-        //  color: $accent-color;
-        //}
+        &:hover {
+          color: $accent-color;
+        }
       }
     }
   }
@@ -529,15 +538,15 @@ body {
       align-items: center;
     }
 
-
     .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: flex-start; // Right align buttons
+      align-items: flex-start;
 
       a {
         text-decoration: none;
+        width: 100%;
       }
 
       button {
@@ -557,13 +566,13 @@ body {
         transition: background-color 0.1s ease;
         
         &:hover {
-          background-color: lighten($accent-color, 10%); // Added hover effect
+          background-color: lighten($accent-color, 10%);
         }
         
         img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Ensure icon is white
+          filter: brightness(0) invert(1);
         }
   
         .area {
@@ -576,37 +585,31 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px; // Added gap
+            gap: 4px;
     
             h6 {
               color: $text-color-light;
-              font-size: 18px; // Reduced from 24px
-              margin: 0; // Reset margin
+              font-size: 18px;
+              margin: 0;
             }
     
             p {
               color: $text-color-light;
-              font-size: 14px; // Reduced from 16px
-              margin: 0; // Reset margin
-              opacity: 0.8; // Added
+              font-size: 14px;
+              margin: 0;
+              opacity: 0.8;
             }
           }
         }
       }
       
-      .deactivate{
+      .deactivate {
         background-color: $deactivate-button-color;
-
         transition: background-color 0s;
         
         &:hover {
           background-color: $deactivate-button-color;
         }
-
-      }
-
-      a{
-        width: 100%;
       }
     }
   }
@@ -615,7 +618,7 @@ body {
 // Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px; // Maintained 80px horizontal padding
+    padding: 16px;
     
     .home-button h1 {
       font-size: 20px;
@@ -642,24 +645,26 @@ body {
   }
   
   .intro {
-    padding: 60px 16px; // Maintained 80px horizontal padding
+    padding: 60px 16px;
     
     h1 {
-      letter-spacing: -4px; // Reduced letter spacing on mobile
+      letter-spacing: -4px;
     }
   }
   
   .definition {
-    padding: 40px 16px; // Maintained 80px horizontal padding
+    padding: 40px 16px;
     gap: 40px;
   }
   
-  .programs {
-    padding: 40px 16px; // Maintained 80px horizontal padding
+  // Aggiornato da programs a programmi-tecnici
+  .programmi-tecnici {
+    padding: 40px 16px;
   }
   
-  .presentation {
-    padding: 40px 16px; // Maintained 80px horizontal padding
+  // Aggiornato da presentation a presentazione-profilo
+  .presentazione-profilo {
+    padding: 40px 16px;
   }
 
   .faq {
@@ -668,7 +673,7 @@ body {
 
   .footer {
     flex-direction: column;
-    padding: 40px 16px; // Maintained 80px horizontal padding
+    padding: 40px 16px;
     gap: 56px;
   }
 }

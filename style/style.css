@@ -6,7 +6,7 @@ body {
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ body {
   opacity: 0.8;
 }
 .hero-section .home-button h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -58,7 +58,7 @@ body {
   display: none;
 }
 .hero-section .contact-menu span {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -94,7 +94,7 @@ body {
   margin: 0;
 }
 .intro h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 800;
   font-size: clamp(80px, 15vw, 180px);
   line-height: 1.2;
@@ -127,7 +127,7 @@ body {
   margin: 0;
 }
 .definition .definition-intro h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: clamp(36px, 5vw, 57px);
   font-weight: 400;
   text-align: center;
@@ -187,7 +187,7 @@ body {
 .definition .definition-cards .card:hover {
   transform: translateY(-5px);
 }
-.definition .definition-cards .card h1 {
+.definition .definition-cards .card h2 {
   font-size: 28px;
   font-weight: 500;
   margin: 0;
@@ -198,27 +198,27 @@ body {
   object-fit: contain;
 }
 
-.programs {
+.programmi-tecnici {
   display: flex;
   flex-direction: column;
   padding: 60px 80px;
   gap: 40px;
 }
-.programs h1 {
+.programmi-tecnici h2 {
   margin: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   font-weight: 300;
   font-size: 32px;
   text-align: center;
 }
-.programs .container {
+.programmi-tecnici .container {
   width: 100%;
   overflow: hidden;
   position: relative;
   padding: 20px 0;
 }
-.programs .slider {
+.programmi-tecnici .slider {
   display: inline-flex;
   flex-wrap: nowrap;
   gap: 40px;
@@ -228,7 +228,7 @@ body {
   scrollbar-width: none;
   animation: slide 20s linear infinite;
 }
-.programs .slider::-webkit-scrollbar {
+.programmi-tecnici .slider::-webkit-scrollbar {
   display: none;
 }
 @keyframes slide {
@@ -239,7 +239,7 @@ body {
     transform: translateX(-50%);
   }
 }
-.programs .slider .program {
+.programmi-tecnici .slider .programma {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -247,42 +247,42 @@ body {
   flex: 0 0 auto;
   width: 150px;
 }
-.programs .slider .program img {
+.programmi-tecnici .slider .programma img {
   height: 32px;
   width: 32px;
   object-fit: contain;
 }
-.programs .slider .program h1 {
+.programmi-tecnici .slider .programma h3 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   text-align: left;
 }
 
-.presentation {
+.presentazione-profilo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 80px;
   gap: 40px;
 }
-.presentation .presentation-intro {
+.presentazione-profilo .presentation-intro {
   text-align: center;
   max-width: 800px;
 }
-.presentation .presentation-intro h1 {
-  font-family: "Figtree", sans-serif;
+.presentazione-profilo .presentation-intro h2 {
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 600;
   margin: 0 0 16px 0;
 }
-.presentation .presentation-intro p {
+.presentazione-profilo .presentation-intro p {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: 300;
   margin: 0;
 }
-.presentation .presentation-card {
+.presentazione-profilo .presentation-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,7 +292,7 @@ body {
   border: 1px solid #1D1D1D;
   padding: 20px;
 }
-.presentation .presentation-card img {
+.presentazione-profilo .presentation-card img {
   max-width: 100%;
   height: auto;
   max-height: 500px;
@@ -348,6 +348,11 @@ body {
   align-items: center;
   gap: 8px;
   background-color: #909090;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.faq .faq-leftContainer button:hover {
+  background-color: #373737;
 }
 .faq .faq-leftContainer button img {
   height: 24px;
@@ -371,9 +376,12 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
+.faq .faq-rightContainer .accordion-header {
+  margin: 0;
+}
 .faq .faq-rightContainer .accordion-button {
   background-color: #FFFFFF;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
 }
 .faq .faq-rightContainer .accordion-button:focus {
@@ -395,13 +403,14 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: #E4E4E4;
-  justify-content: end;
+  justify-content: flex-end;
 }
-.footer h1 {
-  font-family: "Figtree", sans-serif;
+.footer h3 {
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
   color: #767676;
   margin-top: 0;
+  font-size: 24px;
 }
 .footer .footer-title {
   font-size: 48px;
@@ -429,6 +438,10 @@ body {
   color: #1D1D1D;
   font-size: 24px;
   text-decoration: line-through;
+  transition: color 0.3s ease;
+}
+.footer .social-area .social-link a:hover {
+  color: #007AFF;
 }
 .footer .button-area {
   display: flex;
@@ -450,6 +463,7 @@ body {
 }
 .footer .button-area .button a {
   text-decoration: none;
+  width: 100%;
 }
 .footer .button-area .button button {
   display: flex;
@@ -505,9 +519,6 @@ body {
 .footer .button-area .button .deactivate:hover {
   background-color: #909090;
 }
-.footer .button-area .button a {
-  width: 100%;
-}
 
 @media (max-width: 768px) {
   .hero-section {
@@ -540,10 +551,10 @@ body {
     padding: 40px 16px;
     gap: 40px;
   }
-  .programs {
+  .programmi-tecnici {
     padding: 40px 16px;
   }
-  .presentation {
+  .presentazione-profilo {
     padding: 40px 16px;
   }
   .faq {
