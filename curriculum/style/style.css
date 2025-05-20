@@ -234,7 +234,7 @@ body {
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
 }
 .skils .slider::-webkit-scrollbar {
   display: none;
@@ -298,7 +298,7 @@ body {
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
 }
 .certificati .slider::-webkit-scrollbar {
   display: none;
