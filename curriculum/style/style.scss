@@ -8,8 +8,8 @@ $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
 // Typography
-$primary-font: "Figtree", sans-serif; 
-$secondary-font: 'Times New Roman', Times, serif;
+$hFamily-font: "Figtree", "Arial", sans-serif; // Maintained original variable name from first file
+$pFamily-font: 'Times New Roman', Times, serif; // Maintained original variable name from first file
 
 // Breakpoints
 $mobile-breakpoint: 768px;
@@ -24,7 +24,7 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
-  font-family: $primary-font;
+  font-family: $hFamily-font;
   color: $secondary-color;
   line-height: 1.5;
 }
@@ -33,7 +33,7 @@ body {
 .hero-section {
   width: 100%;
   height: auto;
-  padding: 24px 80px; // Changed from 40px to 80px
+  padding: 24px 80px;
   background-color: $softgray-color;
   display: flex;
   justify-content: space-between;
@@ -59,7 +59,7 @@ body {
     }
     
     h1 {
-      font-family: $primary-font;
+      font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
@@ -85,14 +85,12 @@ body {
     }
 
     span {
-      font-family: $primary-font;
+      font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-
     }
   }
-
 }
 
 // Introduction myself section
@@ -122,7 +120,7 @@ body {
         margin: 16px 0;
 
         p {
-            font-family: $secondary-font;
+            font-family: $pFamily-font;
             font-size: 38px;
             margin: 0;
         }
@@ -137,12 +135,8 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease;
             
-            //&:hover {
-            //    background-color: lighten($secondary-color, 10%);
-            //}
-
             h6 {
-                font-family: $primary-font;
+                font-family: $hFamily-font;
                 font-size: 24px;
                 margin: 0;
                 color: $background-color;
@@ -159,7 +153,7 @@ body {
     flex-direction: column;
 
     h1 {
-        font-family: $primary-font;
+        font-family: $hFamily-font;
         font-size: 51px;
         margin: 0 0 40px 0;
     }
@@ -185,7 +179,7 @@ body {
             flex: 1;
             
             h3 {
-                font-family: $primary-font;
+                font-family: $hFamily-font;
                 font-size: 38px;
                 font-weight: 200;
                 margin: 0 0 16px 0;
@@ -198,7 +192,7 @@ body {
             }
             
             p {
-                font-family: $secondary-font;
+                font-family: $pFamily-font;
                 font-size: 28px;
                 line-height: 1.5;
                 margin: 0;
@@ -206,7 +200,6 @@ body {
         }
     }
     
-    // Responsive breakpoints
     @media (max-width: $tablet-breakpoint) {
         padding: 60px 40px;
         
@@ -223,47 +216,14 @@ body {
             gap: 16px;
             
             .skill-content h3 {
-                font-size: 22px;
+                font-size: 32px;
                 margin-bottom: 12px;
-            }
-        }
-    }
-    
-    @media (max-width: $mobile-breakpoint) {
-        padding: 40px 20px;
-        
-        h1 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 24px;
-        }
-        
-        .skills-grid {
-            grid-template-columns: 1fr;
-            gap: 32px;
-        }
-        
-        .skill-item {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            
-            img {
-                margin-bottom: 16px;
-            }
-            
-            .skill-content h3 {
-                text-align: center;
-            }
-            
-            .skill-content p {
-                text-align: center;
             }
         }
     }
 }
 
-// Programs section (Skills)
+// Skills section
 .skils {
   display: flex;
   flex-direction: column;
@@ -272,7 +232,7 @@ body {
   
   h1 {
     margin: 0;
-    font-family: $primary-font;
+    font-family: $hFamily-font;
     color: $secondary-color;
     font-weight: 500;
     font-size: 51px;
@@ -322,7 +282,7 @@ body {
       }
       
       p {
-        font-family: $secondary-font;
+        font-family: $pFamily-font;
         font-size: 38px;
         font-weight: 100;
         margin: 0;
@@ -332,7 +292,7 @@ body {
   }
 }
 
-// certificati section
+// Certificati section
 .certificati {
   display: flex;
   flex-direction: column;
@@ -341,7 +301,7 @@ body {
   
   h1 {
     margin: 0;
-    font-family: $primary-font;
+    font-family: $hFamily-font;
     color: $secondary-color;
     font-weight: 500;
     font-size: 51px;
@@ -384,7 +344,7 @@ body {
   }
 }
 
-// istruzione section
+// Istruzione section
 .istruzione {
     padding: 80px;
     gap: 40px;
@@ -392,7 +352,7 @@ body {
     flex-direction: column;
 
     h1 {
-        font-family: $primary-font;
+        font-family: $hFamily-font;
         font-size: 51px;
         margin: 0 0 20px 0;
     }
@@ -419,13 +379,13 @@ body {
                 gap: 16px;
                 
                 h1 {
-                    font-family: $primary-font;
+                    font-family: $hFamily-font;
                     font-size: 38px;
                     margin: 0;
                 }
 
                 p {
-                    font-family: $secondary-font;
+                    font-family: $pFamily-font;
                     font-size: 28px;
                     margin: 0;
                 }
@@ -444,25 +404,26 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // Added wrap for better mobile support
+  flex-wrap: wrap;
   width: 100%;
-  height: auto; // Changed from fixed height
-  align-items: flex-start; // Changed from baseline
-  padding: 60px 80px; // Changed from 20px to 80px
+  height: auto;
+  align-items: flex-start;
+  padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: end; // Added to position content properly
+  justify-content: flex-end; // Changed from 'end' to 'flex-end' for better browser compatibility
 
-  h1 {
-    font-family: $primary-font;
+  h3 {
+    font-family: $hFamily-font;
     font-weight: 500;
     color: $text-color-muted;
-    margin-top: 0; // Reset top margin
+    margin-top: 0;
+    font-size: 24px;
   }
   
   .footer-title {
-    font-size: 48px; // Added font size
-    margin-top: auto; // Push to bottom
+    font-size: 48px;
+    margin-top: auto;
   }
 
   .social-area {
@@ -472,7 +433,7 @@ body {
     
     @media (max-width: $mobile-breakpoint) {
       width: 100%;
-      align-items: center; // Right align on mobile
+      align-items: center;
     }
 
     .social-link {
@@ -482,15 +443,15 @@ body {
       align-items: center;
 
       a {
-        font-family: $secondary-font;
+        font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
         text-decoration: line-through;
-        //transition: color 0.3s ease;
+        transition: color 0.3s ease;
         
-        //&:hover {
-        //  color: $accent-color;
-        //}
+        &:hover {
+          color: $accent-color;
+        }
       }
     }
   }
@@ -506,15 +467,15 @@ body {
       align-items: center;
     }
 
-
     .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: flex-start; // Right align buttons
+      align-items: flex-start;
 
       a {
         text-decoration: none;
+        width: 100%;
       }
 
       button {
@@ -534,13 +495,13 @@ body {
         transition: background-color 0.1s ease;
         
         &:hover {
-          background-color: lighten($accent-color, 10%); // Added hover effect
+          background-color: lighten($accent-color, 10%);
         }
         
         img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Ensure icon is white
+          filter: brightness(0) invert(1);
         }
   
         .area {
@@ -553,46 +514,40 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px; // Added gap
+            gap: 4px;
     
             h6 {
               color: $text-color-light;
-              font-size: 18px; // Reduced from 24px
-              margin: 0; // Reset margin
+              font-size: 18px;
+              margin: 0;
             }
     
             p {
               color: $text-color-light;
-              font-size: 14px; // Reduced from 16px
-              margin: 0; // Reset margin
-              opacity: 0.8; // Added
+              font-size: 14px;
+              margin: 0;
+              opacity: 0.8;
             }
           }
         }
       }
       
-      .deactivate{
+      .deactivate {
         background-color: $deactivate-button-color;
-
         transition: background-color 0s;
         
         &:hover {
           background-color: $deactivate-button-color;
         }
-
-      }
-
-      a{
-        width: 100%;
       }
     }
   }
 }
 
-
+// Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px; // Maintained 80px horizontal padding
+    padding: 16px;
     
     .home-button h1 {
       font-size: 20px;
@@ -617,7 +572,7 @@ body {
       }
     }
   }
-
+  
   .introduction {
     padding: 40px 20px;
     flex-direction: column;
@@ -658,28 +613,32 @@ body {
     h1 {
       font-size: 36px;
       text-align: center;
+      margin-bottom: 24px;
     }
     
-    .reference .block {
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
+    .skill-item {
       flex-direction: column;
       align-items: center;
+      text-align: center;
       
       img {
         margin-bottom: 16px;
       }
       
-      .text {
-        width: 100%;
-        text-align: center;
-        
-        h1 {
-          font-size: 32px;
+      .skill-content {
+        h3 {
           text-align: center;
+          font-size: 24px;
         }
         
         p {
-          font-size: 20px;
           text-align: center;
+          font-size: 20px;
         }
       }
     }
@@ -756,10 +715,10 @@ body {
       }
     }
   }
-  
+
   .footer {
     flex-direction: column;
-    padding: 40px 16px; // Maintained 80px horizontal padding
+    padding: 40px 16px;
     gap: 56px;
   }
 }

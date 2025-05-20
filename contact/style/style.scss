@@ -7,9 +7,8 @@ $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
-
 // Typography
-$hFamily-font: "Figtree", sans-serif; 
+$hFamily-font: "Figtree", "Arial", sans-serif; // Added Arial for accessibility
 $pFamily-font: 'Times New Roman', Times, serif;
 
 // Breakpoints
@@ -34,7 +33,7 @@ body {
 .hero-section {
   width: 100%;
   height: auto;
-  padding: 24px 80px; // Changed from 40px to 80px
+  padding: 24px 80px;
   background-color: $softgray-color;
   display: flex;
   justify-content: space-between;
@@ -90,16 +89,14 @@ body {
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-
     }
   }
-
 }
 
 // Forum section
 .forum {
   width: 100%;
-  padding: 80px 80px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   
@@ -115,7 +112,7 @@ body {
     }
     
     h1 {
-      font-size: 180px;
+      font-size: clamp(80px, 15vw, 180px);
       font-weight: 900;
       line-height: 1.1;
       text-align: center;
@@ -200,84 +197,7 @@ body {
       }
     }
   }
-  
-  // Responsive styling
-  @media (max-width: $tablet-breakpoint) {
-    padding: 60px 40px;
-    
-    .intro {
-      h1 {
-        font-size: 120px;
-      }
-      
-      p {
-        font-size: 40px;
-      }
-    }
-    
-    .message {
-      .message-container {
-        .message-block {
-          h1 {
-            font-size: 60px;
-          }
-          
-          .input {
-            font-size: 40px;
-          }
-        }
-        
-        h1 {
-          font-size: 60px;
-        }
-      }
-    }
-  }
-  
-  @media (max-width: $mobile-breakpoint) {
-    padding: 40px 20px;
-    
-    .intro {
-      h1 {
-        font-size: 43px;
-      }
-      
-      p {
-        font-size: 21px;
-      }
-    }
-    
-    .message {
-      .message-container {
-        gap: 16px;
-
-        .message-block {
-          flex-wrap: wrap;
-          
-          h1 {
-            font-size: 32px;
-          }
-          
-          .input {
-            font-size: 18px;
-            width: 100%;
-          }
-        }
-        
-        h2 {
-          font-size: 32px;
-        }
-
-        .pulsante {
-          padding: 16px 32px;
-        }
-      }
-
-      
-    }
-  }
 }
-
 
 // Footer section
 .footer {
@@ -290,15 +210,14 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: flex-end; // Migliorato da 'end' a 'space-between'
+  justify-content: flex-end;
 
-  // Aggiornamento da h1 a h3 per il footer
   h3 {
     font-family: $hFamily-font;
     font-weight: 500;
     color: $text-color-muted;
     margin-top: 0;
-    font-size: 24px; // Dimensione appropriata per h3
+    font-size: 24px;
   }
   
   .footer-title {
@@ -311,11 +230,6 @@ body {
     flex-direction: column;
     gap: 20px;
     
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
-
     .social-link {
       gap: 8px;
       display: flex;
@@ -341,11 +255,6 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
 
     .button {
       display: flex;
@@ -427,7 +336,7 @@ body {
 // Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px; // Maintained 80px horizontal padding
+    padding: 16px;
     
     .home-button h1 {
       font-size: 20px;
@@ -454,13 +363,59 @@ body {
   }
   
   .forum {
-    padding: 80px 12px;
+    padding: 60px 16px;
+    
+    .intro {
+      h1 {
+        font-size: 43px;
+      }
+      
+      p {
+        font-size: 21px;
+      }
+    }
+    
+    .message {
+      .message-container {
+        gap: 16px;
+
+        .message-block {
+          flex-wrap: wrap;
+          
+          h1 {
+            font-size: 32px;
+          }
+          
+          .input {
+            font-size: 18px;
+            width: 100%;
+          }
+        }
+        
+        h2 {
+          font-size: 32px;
+        }
+
+        .pulsante {
+          padding: 16px 32px;
+        }
+      }
+    }
   }
 
   .footer {
     flex-direction: column;
     padding: 40px 16px;
-    gap: 56px; 
+    gap: 56px;
+    
+    .social-area {
+      width: 100%;
+      align-items: center;
+    }
+    
+    .button-area {
+      width: 100%;
+      align-items: center;
+    }
   }
-
 }

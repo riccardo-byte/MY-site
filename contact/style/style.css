@@ -6,7 +6,7 @@ body {
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ body {
   opacity: 0.8;
 }
 .hero-section .home-button h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -58,7 +58,7 @@ body {
   display: none;
 }
 .hero-section .contact-menu span {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -66,7 +66,7 @@ body {
 
 .forum {
   width: 100%;
-  padding: 80px 80px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
 }
@@ -81,11 +81,11 @@ body {
   margin: 0;
 }
 .forum .intro h1 {
-  font-size: 180px;
+  font-size: clamp(80px, 15vw, 180px);
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   margin: 0;
 }
 .forum .message {
@@ -145,7 +145,7 @@ body {
   gap: 12px;
 }
 .forum .message .message-container .pulsante h5 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 500;
@@ -154,56 +154,6 @@ body {
 .forum .message .message-container .pulsante .arrow {
   height: 24px;
   width: 24px;
-}
-@media (max-width: 992px) {
-  .forum {
-    padding: 60px 40px;
-  }
-  .forum .intro h1 {
-    font-size: 120px;
-  }
-  .forum .intro p {
-    font-size: 40px;
-  }
-  .forum .message .message-container .message-block h1 {
-    font-size: 60px;
-  }
-  .forum .message .message-container .message-block .input {
-    font-size: 40px;
-  }
-  .forum .message .message-container h1 {
-    font-size: 60px;
-  }
-}
-@media (max-width: 768px) {
-  .forum {
-    padding: 40px 20px;
-  }
-  .forum .intro h1 {
-    font-size: 43px;
-  }
-  .forum .intro p {
-    font-size: 21px;
-  }
-  .forum .message .message-container {
-    gap: 16px;
-  }
-  .forum .message .message-container .message-block {
-    flex-wrap: wrap;
-  }
-  .forum .message .message-container .message-block h1 {
-    font-size: 32px;
-  }
-  .forum .message .message-container .message-block .input {
-    font-size: 18px;
-    width: 100%;
-  }
-  .forum .message .message-container h2 {
-    font-size: 32px;
-  }
-  .forum .message .message-container .pulsante {
-    padding: 16px 32px;
-  }
 }
 
 .footer {
@@ -219,7 +169,7 @@ body {
   justify-content: flex-end;
 }
 .footer h3 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
   color: #767676;
   margin-top: 0;
@@ -233,12 +183,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-@media (max-width: 768px) {
-  .footer .social-area {
-    width: 100%;
-    align-items: center;
-  }
 }
 .footer .social-area .social-link {
   gap: 8px;
@@ -261,12 +205,6 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
-}
-@media (max-width: 768px) {
-  .footer .button-area {
-    width: 100%;
-    align-items: center;
-  }
 }
 .footer .button-area .button {
   display: flex;
@@ -355,11 +293,44 @@ body {
     width: 32px;
   }
   .forum {
-    padding: 80px 12px;
+    padding: 60px 16px;
+  }
+  .forum .intro h1 {
+    font-size: 43px;
+  }
+  .forum .intro p {
+    font-size: 21px;
+  }
+  .forum .message .message-container {
+    gap: 16px;
+  }
+  .forum .message .message-container .message-block {
+    flex-wrap: wrap;
+  }
+  .forum .message .message-container .message-block h1 {
+    font-size: 32px;
+  }
+  .forum .message .message-container .message-block .input {
+    font-size: 18px;
+    width: 100%;
+  }
+  .forum .message .message-container h2 {
+    font-size: 32px;
+  }
+  .forum .message .message-container .pulsante {
+    padding: 16px 32px;
   }
   .footer {
     flex-direction: column;
     padding: 40px 16px;
     gap: 56px;
+  }
+  .footer .social-area {
+    width: 100%;
+    align-items: center;
+  }
+  .footer .button-area {
+    width: 100%;
+    align-items: center;
   }
 }

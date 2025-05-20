@@ -6,7 +6,7 @@ body {
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ body {
   opacity: 0.8;
 }
 .hero-section .home-button h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -58,7 +58,7 @@ body {
   display: none;
 }
 .hero-section .contact-menu span {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -104,7 +104,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .introduction .area-sinistra button h6 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: 24px;
   margin: 0;
   color: #FFFFFF;
@@ -117,7 +117,7 @@ body {
   flex-direction: column;
 }
 .obbiettivi h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: 51px;
   margin: 0 0 40px 0;
 }
@@ -140,7 +140,7 @@ body {
   flex: 1;
 }
 .obbiettivi .skill-item .skill-content h3 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: 38px;
   font-weight: 200;
   margin: 0 0 16px 0;
@@ -171,36 +171,8 @@ body {
     gap: 16px;
   }
   .obbiettivi .skill-item .skill-content h3 {
-    font-size: 22px;
+    font-size: 32px;
     margin-bottom: 12px;
-  }
-}
-@media (max-width: 768px) {
-  .obbiettivi {
-    padding: 40px 20px;
-  }
-  .obbiettivi h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  .obbiettivi .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .obbiettivi .skill-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .obbiettivi .skill-item img {
-    margin-bottom: 16px;
-  }
-  .obbiettivi .skill-item .skill-content h3 {
-    text-align: center;
-  }
-  .obbiettivi .skill-item .skill-content p {
-    text-align: center;
   }
 }
 
@@ -212,7 +184,7 @@ body {
 }
 .skils h1 {
   margin: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   font-weight: 500;
   font-size: 51px;
@@ -276,7 +248,7 @@ body {
 }
 .certificati h1 {
   margin: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   font-weight: 500;
   font-size: 51px;
@@ -324,7 +296,7 @@ body {
   flex-direction: column;
 }
 .istruzione h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: 51px;
   margin: 0 0 20px 0;
 }
@@ -349,7 +321,7 @@ body {
   gap: 16px;
 }
 .istruzione .reference-container .content .text h1 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", "Arial", sans-serif;
   font-size: 38px;
   margin: 0;
 }
@@ -374,13 +346,14 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: #E4E4E4;
-  justify-content: end;
+  justify-content: flex-end;
 }
-.footer h1 {
-  font-family: "Figtree", sans-serif;
+.footer h3 {
+  font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
   color: #767676;
   margin-top: 0;
+  font-size: 24px;
 }
 .footer .footer-title {
   font-size: 48px;
@@ -408,6 +381,10 @@ body {
   color: #1D1D1D;
   font-size: 24px;
   text-decoration: line-through;
+  transition: color 0.3s ease;
+}
+.footer .social-area .social-link a:hover {
+  color: #007AFF;
 }
 .footer .button-area {
   display: flex;
@@ -429,6 +406,7 @@ body {
 }
 .footer .button-area .button a {
   text-decoration: none;
+  width: 100%;
 }
 .footer .button-area .button button {
   display: flex;
@@ -483,9 +461,6 @@ body {
 }
 .footer .button-area .button .deactivate:hover {
   background-color: #909090;
-}
-.footer .button-area .button a {
-  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -542,25 +517,27 @@ body {
   .obbiettivi h1 {
     font-size: 36px;
     text-align: center;
+    margin-bottom: 24px;
   }
-  .obbiettivi .reference .block {
+  .obbiettivi .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .obbiettivi .skill-item {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-  .obbiettivi .reference .block img {
+  .obbiettivi .skill-item img {
     margin-bottom: 16px;
   }
-  .obbiettivi .reference .block .text {
-    width: 100%;
+  .obbiettivi .skill-item .skill-content h3 {
     text-align: center;
+    font-size: 24px;
   }
-  .obbiettivi .reference .block .text h1 {
-    font-size: 32px;
+  .obbiettivi .skill-item .skill-content p {
     text-align: center;
-  }
-  .obbiettivi .reference .block .text p {
     font-size: 20px;
-    text-align: center;
   }
   .skils, .certificati {
     padding: 40px 20px;
