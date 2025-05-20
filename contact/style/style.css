@@ -216,20 +216,14 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: #E4E4E4;
-  justify-content: end;
+  justify-content: flex-end;
 }
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 40px 80px;
-    gap: 40px;
-  }
-}
-.footer h1 {
+.footer h3 {
   font-family: "Figtree", sans-serif;
   font-weight: 500;
   color: #767676;
   margin-top: 0;
+  font-size: 24px;
 }
 .footer .footer-title {
   font-size: 48px;
@@ -247,7 +241,7 @@ body {
   }
 }
 .footer .social-area .social-link {
-  gap: 16px;
+  gap: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,7 +250,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: #1D1D1D;
   font-size: 24px;
-  text-decoration: none;
+  text-decoration: line-through;
   transition: color 0.3s ease;
 }
 .footer .social-area .social-link a:hover {
@@ -282,6 +276,7 @@ body {
 }
 .footer .button-area .button a {
   text-decoration: none;
+  width: 100%;
 }
 .footer .button-area .button button {
   display: flex;
@@ -297,10 +292,10 @@ body {
   background-color: #1D1D1D;
   padding: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 .footer .button-area .button button:hover {
-  background-color: #373737;
+  background-color: #3395ff;
 }
 .footer .button-area .button button img {
   height: 24px;
@@ -330,8 +325,12 @@ body {
   margin: 0;
   opacity: 0.8;
 }
-.footer .button-area .button a {
-  width: 100%;
+.footer .button-area .button .deactivate {
+  background-color: #909090;
+  transition: background-color 0s;
+}
+.footer .button-area .button .deactivate:hover {
+  background-color: #909090;
 }
 
 @media (max-width: 768px) {

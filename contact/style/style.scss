@@ -283,26 +283,22 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // wrap for better mobile support
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
   align-items: flex-start;
   padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: end;
-  
-  @media (max-width: $mobile-breakpoint) {
-    flex-direction: column;
-    padding: 40px 80px;
-    gap: 40px; 
-  }
+  justify-content: flex-end; // Migliorato da 'end' a 'space-between'
 
-  h1 {
+  // Aggiornamento da h1 a h3 per il footer
+  h3 {
     font-family: $hFamily-font;
     font-weight: 500;
     color: $text-color-muted;
     margin-top: 0;
+    font-size: 24px; // Dimensione appropriata per h3
   }
   
   .footer-title {
@@ -321,7 +317,7 @@ body {
     }
 
     .social-link {
-      gap: 16px;
+      gap: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -330,7 +326,7 @@ body {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none;
+        text-decoration: line-through;
         transition: color 0.3s ease;
         
         &:hover {
@@ -359,6 +355,7 @@ body {
 
       a {
         text-decoration: none;
+        width: 100%;
       }
 
       button {
@@ -366,8 +363,8 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%;
-        max-width: 400px;
+        width: 100%; 
+        max-width: 400px; 
         align-items: center;
         border-radius: 16px;
         gap: 16px;
@@ -375,10 +372,10 @@ body {
         background-color: $secondary-color;
         padding: 16px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.1s ease;
         
         &:hover {
-          background-color: lighten($secondary-color, 10%);
+          background-color: lighten($accent-color, 10%);
         }
         
         img {
@@ -414,9 +411,14 @@ body {
           }
         }
       }
-
-      a{
-        width: 100%;
+      
+      .deactivate {
+        background-color: $deactivate-button-color;
+        transition: background-color 0s;
+        
+        &:hover {
+          background-color: $deactivate-button-color;
+        }
       }
     }
   }
