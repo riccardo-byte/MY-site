@@ -137,9 +137,9 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease;
             
-            &:hover {
-                background-color: lighten($secondary-color, 10%);
-            }
+            //&:hover {
+            //    background-color: lighten($secondary-color, 10%);
+            //}
 
             h6 {
                 font-family: $primary-font;
@@ -285,6 +285,7 @@ body {
     position: relative;
     padding: 20px 0;
     margin: 0;
+    max-width: fit-content;
   }
 
   .slider {
@@ -353,6 +354,7 @@ body {
     position: relative;
     padding: 20px 0;
     margin: 0;
+    max-width: fit-content;
   }
 
   .slider {

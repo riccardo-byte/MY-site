@@ -71,12 +71,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 0;
 }
 .intro .intro-comment {
   width: auto;
   height: auto;
-  gap: 8px;
+  gap: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,7 +147,7 @@ body {
 }
 .definition .definition-cards p {
   text-align: center;
-  margin: 0 0 40px 0;
+  margin: 0 0 16px 0;
   font-weight: normal;
   font-size: 16px;
   font-family: "Times New Roman", Times, serif;
@@ -217,6 +217,8 @@ body {
   overflow: hidden;
   position: relative;
   padding: 20px 0;
+  margin: 0;
+  max-width: fit-content;
 }
 .programmi-tecnici .slider {
   display: inline-flex;

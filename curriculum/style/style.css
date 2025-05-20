@@ -103,9 +103,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.introduction .area-sinistra button:hover {
-  background-color: #373737;
-}
 .introduction .area-sinistra button h6 {
   font-family: "Figtree", sans-serif;
   font-size: 24px;
@@ -227,6 +224,7 @@ body {
   position: relative;
   padding: 20px 0;
   margin: 0;
+  max-width: fit-content;
 }
 .skils .slider {
   display: inline-flex;
@@ -290,6 +288,7 @@ body {
   position: relative;
   padding: 20px 0;
   margin: 0;
+  max-width: fit-content;
 }
 .certificati .slider {
   display: inline-flex;
