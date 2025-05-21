@@ -8,8 +8,8 @@ $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
 // Typography
-$hFamily-font: "Figtree", "Arial", sans-serif; // Maintained original variable name from first file
-$pFamily-font: 'Times New Roman', Times, serif; // Maintained original variable name from first file
+$hFamily-font: "Figtree", "Arial", sans-serif;
+$pFamily-font: 'Times New Roman', Times, serif;
 
 // Breakpoints
 $mobile-breakpoint: 768px;
@@ -29,7 +29,7 @@ body {
   line-height: 1.5;
 }
 
-// Header/Hero section
+// Hero section
 .hero-section {
   width: 100%;
   height: auto;

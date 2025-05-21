@@ -8,7 +8,7 @@ $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
 
 // Typography
-$hFamily-font: "Figtree", "Arial", sans-serif; // Aggiunto Arial per accessibilità
+$hFamily-font: "Figtree", "Arial", sans-serif;
 $pFamily-font: 'Times New Roman', Times, serif;
 
 // Breakpoints
@@ -29,7 +29,7 @@ body {
   line-height: 1.5;
 }
 
-// Header/Hero section
+// Hero section
 .hero-section {
   width: 100%;
   height: auto;
