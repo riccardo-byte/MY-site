@@ -132,10 +132,10 @@ body {
             border-radius: 100px;
             background-color: $deactivate-button-color;
             border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            //cursor: pointer;
+            //transition: background-color 0.3s ease;
             
-            h6 {
+            h5 {
                 font-family: $hFamily-font;
                 font-size: 24px;
                 margin: 0;
@@ -152,10 +152,20 @@ body {
     display: flex;
     flex-direction: column;
 
-    h1 {
+    h3 {
+      margin: 0;
+      font-family: $hFamily-font;
+      color: $secondary-color;
+      font-weight: 500;
+      font-size: 57px;
+      text-align: left;
+  }
+
+    h4 {
         font-family: $hFamily-font;
-        font-size: 51px;
-        margin: 0 0 40px 0;
+        font-size: 32px;
+        font-weight: 500;
+        margin: 0 0 16px 0;
     }
     
     .skills-grid {
@@ -166,7 +176,7 @@ body {
     
     .skill-item {
         display: flex;
-        gap: 24px;
+        gap: 16px;
         align-items: flex-start;
         
         img {
@@ -230,12 +240,12 @@ body {
   padding: 60px 80px;
   gap: 40px;
   
-  h1 {
+  h3 {
     margin: 0;
     font-family: $hFamily-font;
     color: $secondary-color;
     font-weight: 500;
-    font-size: 51px;
+    font-size: 57px;
     text-align: left;
   }
 
@@ -283,7 +293,7 @@ body {
       
       p {
         font-family: $pFamily-font;
-        font-size: 38px;
+        font-size: 28px;
         font-weight: 100;
         margin: 0;
         text-align: left;
@@ -299,12 +309,12 @@ body {
   padding: 60px 80px;
   gap: 40px;
   
-  h1 {
+  h3 {
     margin: 0;
     font-family: $hFamily-font;
     color: $secondary-color;
     font-weight: 500;
-    font-size: 51px;
+    font-size: 57px;
     text-align: left;
   }
 
@@ -351,10 +361,13 @@ body {
     display: flex;
     flex-direction: column;
 
-    h1 {
-        font-family: $hFamily-font;
-        font-size: 51px;
-        margin: 0 0 20px 0;
+     h3 {
+      margin: 0;
+      font-family: $hFamily-font;
+      color: $secondary-color;
+      font-weight: 500;
+      font-size: 57px;
+      text-align: left;
     }
     
     .reference-container {
@@ -378,15 +391,16 @@ body {
                 flex-direction: column;
                 gap: 16px;
                 
-                h1 {
+                h4 {
                     font-family: $hFamily-font;
-                    font-size: 38px;
+                    font-size: 32px;
+                    font-weight: 500;
                     margin: 0;
                 }
 
                 p {
                     font-family: $pFamily-font;
-                    font-size: 28px;
+                    font-size: 21px;
                     margin: 0;
                 }
 
@@ -411,7 +425,8 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: flex-end; // Changed from 'end' to 'flex-end' for better browser compatibility
+  justify-content: flex-end;
+
 
   h3 {
     font-family: $hFamily-font;
@@ -490,7 +505,7 @@ body {
         gap: 16px;
         border: none;
         background-color: $secondary-color;
-        padding: 16px;
+        padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
         
@@ -514,17 +529,18 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px;
     
             h6 {
+              font-family: $hFamily-font;
               color: $text-color-light;
               font-size: 18px;
               margin: 0;
             }
     
             p {
+              font-family: $hFamily-font;
               color: $text-color-light;
-              font-size: 14px;
+              font-size: 16px;
               margin: 0;
               opacity: 0.8;
             }

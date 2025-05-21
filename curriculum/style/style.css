@@ -100,10 +100,8 @@ body {
   border-radius: 100px;
   background-color: #909090;
   border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-.introduction .area-sinistra button h6 {
+.introduction .area-sinistra button h5 {
   font-family: "Figtree", "Arial", sans-serif;
   font-size: 24px;
   margin: 0;
@@ -116,10 +114,19 @@ body {
   display: flex;
   flex-direction: column;
 }
-.obbiettivi h1 {
+.obbiettivi h3 {
+  margin: 0;
   font-family: "Figtree", "Arial", sans-serif;
-  font-size: 51px;
-  margin: 0 0 40px 0;
+  color: #1D1D1D;
+  font-weight: 500;
+  font-size: 57px;
+  text-align: left;
+}
+.obbiettivi h4 {
+  font-family: "Figtree", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
 }
 .obbiettivi .skills-grid {
   display: grid;
@@ -128,7 +135,7 @@ body {
 }
 .obbiettivi .skill-item {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   align-items: flex-start;
 }
 .obbiettivi .skill-item img {
@@ -182,12 +189,12 @@ body {
   padding: 60px 80px;
   gap: 40px;
 }
-.skils h1 {
+.skils h3 {
   margin: 0;
   font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   font-weight: 500;
-  font-size: 51px;
+  font-size: 57px;
   text-align: left;
 }
 .skils .container {
@@ -234,7 +241,7 @@ body {
 }
 .skils .slider .skil p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 100;
   margin: 0;
   text-align: left;
@@ -246,12 +253,12 @@ body {
   padding: 60px 80px;
   gap: 40px;
 }
-.certificati h1 {
+.certificati h3 {
   margin: 0;
   font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
   font-weight: 500;
-  font-size: 51px;
+  font-size: 57px;
   text-align: left;
 }
 .certificati .container {
@@ -295,10 +302,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-.istruzione h1 {
+.istruzione h3 {
+  margin: 0;
   font-family: "Figtree", "Arial", sans-serif;
-  font-size: 51px;
-  margin: 0 0 20px 0;
+  color: #1D1D1D;
+  font-weight: 500;
+  font-size: 57px;
+  text-align: left;
 }
 .istruzione .reference-container {
   display: flex;
@@ -320,14 +330,15 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-.istruzione .reference-container .content .text h1 {
+.istruzione .reference-container .content .text h4 {
   font-family: "Figtree", "Arial", sans-serif;
-  font-size: 38px;
+  font-size: 32px;
+  font-weight: 500;
   margin: 0;
 }
 .istruzione .reference-container .content .text p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 28px;
+  font-size: 21px;
   margin: 0;
 }
 .istruzione .reference-container .content .text .data {
@@ -420,7 +431,7 @@ body {
   gap: 16px;
   border: none;
   background-color: #1D1D1D;
-  padding: 16px;
+  padding: 16px 24px;
   cursor: pointer;
   transition: background-color 0.1s ease;
 }
@@ -442,16 +453,17 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 4px;
 }
 .footer .button-area .button button .area .text-zone h6 {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
   font-size: 18px;
   margin: 0;
 }
 .footer .button-area .button button .area .text-zone p {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   opacity: 0.8;
 }

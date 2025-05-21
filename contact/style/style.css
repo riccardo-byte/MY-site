@@ -74,18 +74,19 @@ body {
   margin-bottom: 60px;
 }
 .forum .intro p {
-  font-size: 51px;
+  font-size: 38px;
   margin-bottom: 10px;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   margin: 0;
 }
 .forum .intro h1 {
-  font-size: clamp(80px, 15vw, 180px);
-  font-weight: 900;
-  line-height: 1.1;
-  text-align: center;
   font-family: "Figtree", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: clamp(80px, 15vw, 180px);
+  line-height: 90%;
+  letter-spacing: -7px;
+  text-align: center;
   margin: 0;
 }
 .forum .message {
@@ -110,9 +111,9 @@ body {
   border: none;
   border-bottom: 1px solid #999;
   background: transparent;
-  font-weight: 900;
+  font-weight: 800;
   font-family: "Times New Roman", Times, serif;
-  font-size: 51px;
+  font-size: 76px;
   padding: 5px 0;
   color: #767676;
   flex: 1;
@@ -129,7 +130,7 @@ body {
 }
 .forum .message .message-container h2 {
   font-size: 76px;
-  font-weight: 900;
+  font-weight: 800;
   margin: 10px 0;
 }
 .forum .message .message-container .pulsante {
@@ -184,6 +185,12 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .footer .social-area {
+    width: 100%;
+    align-items: center;
+  }
+}
 .footer .social-area .social-link {
   gap: 8px;
   display: flex;
@@ -205,6 +212,12 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .footer .button-area {
+    width: 100%;
+    align-items: center;
+  }
 }
 .footer .button-area .button {
   display: flex;
@@ -228,7 +241,7 @@ body {
   gap: 16px;
   border: none;
   background-color: #1D1D1D;
-  padding: 16px;
+  padding: 16px 24px;
   cursor: pointer;
   transition: background-color 0.1s ease;
 }
@@ -250,16 +263,17 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 4px;
 }
 .footer .button-area .button button .area .text-zone h6 {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
   font-size: 18px;
   margin: 0;
 }
 .footer .button-area .button button .area .text-zone p {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   opacity: 0.8;
 }
@@ -297,6 +311,7 @@ body {
   }
   .forum .intro h1 {
     font-size: 43px;
+    letter-spacing: 0;
   }
   .forum .intro p {
     font-size: 21px;
@@ -311,7 +326,7 @@ body {
     font-size: 32px;
   }
   .forum .message .message-container .message-block .input {
-    font-size: 18px;
+    font-size: 21px;
     width: 100%;
   }
   .forum .message .message-container h2 {
