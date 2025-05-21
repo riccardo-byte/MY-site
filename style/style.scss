@@ -230,10 +230,10 @@ body {
         transform: translateY(-5px);
       }
       
-      // Aggiornamento per usare h2 invece di h1
       h2 {
         font-size: 28px;
         font-weight: 500;
+        font-family: $pFamily-font;
         margin: 0;
       }
       
