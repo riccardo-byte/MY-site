@@ -188,6 +188,7 @@ body {
   transform: translateY(-5px);
 }
 .definition .definition-cards .card h2 {
+  font-family: "Times New Roman", Times, serif;
   font-size: 28px;
   font-weight: 500;
   margin: 0;
@@ -204,11 +205,11 @@ body {
   padding: 60px 80px;
   gap: 40px;
 }
-.programmi-tecnici h2 {
+.programmi-tecnici h3 {
   margin: 0;
   font-family: "Figtree", "Arial", sans-serif;
   color: #1D1D1D;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 32px;
   text-align: center;
 }
@@ -254,7 +255,7 @@ body {
   width: 32px;
   object-fit: contain;
 }
-.programmi-tecnici .slider .programma h3 {
+.programmi-tecnici .slider .programma h6 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
@@ -272,16 +273,15 @@ body {
   text-align: center;
   max-width: 800px;
 }
-.presentazione-profilo .presentation-intro h2 {
+.presentazione-profilo .presentation-intro h3 {
   font-family: "Figtree", "Arial", sans-serif;
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 600;
-  margin: 0 0 16px 0;
+  font-size: clamp(32px, 5vw, 32px);
+  font-weight: 500;
 }
 .presentazione-profilo .presentation-intro p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 21px;
+  font-weight: 400;
   margin: 0;
 }
 .presentazione-profilo .presentation-card {
@@ -315,8 +315,8 @@ body {
 }
 .faq .faq-leftContainer {
   height: fit-content;
-  width: 30%;
-  padding: 40px;
+  width: 40%;
+  padding: 80px 40px;
   border-radius: 8px;
   border: 1px solid #1D1D1D;
   display: flex;
@@ -337,11 +337,13 @@ body {
 }
 .faq .faq-leftContainer .faq-textContainer h3 {
   margin: 0;
+  font-size: 32px;
+  font-weight: 500;
 }
 .faq .faq-leftContainer button {
   height: fit-content;
   width: 100%;
-  padding: 16px 24px;
+  padding: 24px 40px;
   border-radius: 100px;
   border: none;
   text-align: center;
@@ -350,11 +352,6 @@ body {
   align-items: center;
   gap: 8px;
   background-color: #909090;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.faq .faq-leftContainer button:hover {
-  background-color: #373737;
 }
 .faq .faq-leftContainer button img {
   height: 24px;
@@ -367,6 +364,7 @@ body {
 }
 .faq .faq-leftContainer p {
   font-family: "Times New Roman", Times, serif;
+  font-size: 21px;
   margin: 0;
 }
 .faq .faq-rightContainer {
@@ -385,14 +383,16 @@ body {
   background-color: #FFFFFF;
   font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
+  font-size: 32px;
 }
 .faq .faq-rightContainer .accordion-button:focus {
   box-shadow: none;
   border-color: #007AFF;
 }
 .faq .faq-rightContainer .accordion-body {
-  padding: 16px;
+  padding: 12px;
   font-family: "Times New Roman", Times, serif;
+  font-size: 21px;
 }
 
 .footer {
@@ -479,7 +479,7 @@ body {
   gap: 16px;
   border: none;
   background-color: #1D1D1D;
-  padding: 16px;
+  padding: 16px 24px;
   cursor: pointer;
   transition: background-color 0.1s ease;
 }
@@ -501,16 +501,17 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 4px;
 }
 .footer .button-area .button button .area .text-zone h6 {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
   font-size: 18px;
   margin: 0;
 }
 .footer .button-area .button button .area .text-zone p {
+  font-family: "Figtree", "Arial", sans-serif;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   opacity: 0.8;
 }

@@ -231,9 +231,9 @@ body {
       }
       
       h2 {
+        font-family: $pFamily-font;
         font-size: 28px;
         font-weight: 500;
-        font-family: $pFamily-font;
         margin: 0;
       }
       
@@ -253,11 +253,11 @@ body {
   padding: 60px 80px;
   gap: 40px;
   
-  h2 {
+  h3 {
     margin: 0;
     font-family: $hFamily-font;
     color: $secondary-color;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
   }
@@ -304,7 +304,7 @@ body {
         object-fit: contain;
       }
       
-      h3 {
+      h6 {
         font-size: 18px;
         font-weight: 400;
         margin: 0;
@@ -327,17 +327,16 @@ body {
     max-width: 800px;
     
     // Aggiornamento per usare h2 invece di h1
-    h2 {
+    h3 {
       font-family: $hFamily-font;
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 600;
-      margin: 0 0 16px 0;
+      font-size: clamp(32px, 5vw, 32px);
+      font-weight: 500;
     }
     
     p {
       font-family: $pFamily-font;
-      font-size: 18px;
-      font-weight: 300;
+      font-size: 21px;
+      font-weight: 400;
       margin: 0;
     }
   }
@@ -375,8 +374,8 @@ body {
 
   .faq-leftContainer {
     height: fit-content;
-    width: 30%;
-    padding: 40px;
+    width: 40%;
+    padding: 80px 40px;
     border-radius: 8px;
     border: 1px solid $secondary-color;
     display: flex;
@@ -396,13 +395,15 @@ body {
       
       h3 {
         margin: 0;
+        font-size: 32px;
+        font-weight: 500;
       }
     }
 
     button {
       height: fit-content;
       width: 100%;
-      padding: 16px 24px;
+      padding: 24px 40px;
       border-radius: 100px;
       border: none;
       text-align: center;
@@ -411,12 +412,12 @@ body {
       align-items: center;
       gap: 8px;
       background-color: $deactivate-button-color;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      //cursor: pointer;
+      //transition: background-color 0.3s ease;
       
-      &:hover {
-        background-color: lighten($secondary-color, 10%);
-      }
+      //&:hover {
+      //  background-color: lighten($secondary-color, 10%);
+      //}
       
       img {
         height: 24px;
@@ -432,6 +433,7 @@ body {
 
     p {
       font-family: $pFamily-font;
+      font-size: 21px;
       margin: 0;
     }
   }
@@ -446,7 +448,6 @@ body {
       overflow: hidden;
     }
     
-    // Aggiornamento per supportare h3 invece di h2
     .accordion-header {
       margin: 0;
     }
@@ -455,6 +456,7 @@ body {
       background-color: $background-color;
       font-family: $hFamily-font;
       font-weight: 500;
+      font-size: 32px;
       
       &:focus {
         box-shadow: none;
@@ -463,8 +465,9 @@ body {
     }
     
     .accordion-body {
-      padding: 16px;
+      padding: 12px;
       font-family: $pFamily-font;
+      font-size: 21px;
     }
   }
 }
@@ -480,15 +483,15 @@ body {
   padding: 60px 80px;
   gap: 80px;
   background-color: $softgray-color;
-  justify-content: flex-end; // Migliorato da 'end' a 'space-between'
+  justify-content: flex-end;
 
-  // Aggiornamento da h1 a h3 per il footer
+
   h3 {
     font-family: $hFamily-font;
     font-weight: 500;
     color: $text-color-muted;
     margin-top: 0;
-    font-size: 24px; // Dimensione appropriata per h3
+    font-size: 24px;
   }
   
   .footer-title {
@@ -560,7 +563,7 @@ body {
         gap: 16px;
         border: none;
         background-color: $secondary-color;
-        padding: 16px;
+        padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
         
@@ -584,17 +587,18 @@ body {
             display: flex;
             flex-direction: column;
             text-align: start;
-            gap: 4px;
     
             h6 {
+              font-family: $hFamily-font;
               color: $text-color-light;
               font-size: 18px;
               margin: 0;
             }
     
             p {
+              font-family: $hFamily-font;
               color: $text-color-light;
-              font-size: 14px;
+              font-size: 16px;
               margin: 0;
               opacity: 0.8;
             }
@@ -656,12 +660,11 @@ body {
     gap: 40px;
   }
   
-  // Aggiornato da programs a programmi-tecnici
   .programmi-tecnici {
     padding: 40px 16px;
   }
   
-  // Aggiornato da presentation a presentazione-profilo
+
   .presentazione-profilo {
     padding: 40px 16px;
   }
