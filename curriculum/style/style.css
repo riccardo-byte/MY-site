@@ -359,11 +359,11 @@ body {
   background-color: #E4E4E4;
   justify-content: flex-end;
 }
-.footer h3 {
+.footer h4 {
   font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
   color: #767676;
-  margin-top: 0;
+  margin: 0;
   font-size: 24px;
 }
 .footer .footer-title {
@@ -526,7 +526,7 @@ body {
   .obbiettivi {
     padding: 40px 20px;
   }
-  .obbiettivi h1 {
+  .obbiettivi h3 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 24px;
@@ -539,22 +539,24 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0;
   }
   .obbiettivi .skill-item img {
     margin-bottom: 16px;
   }
-  .obbiettivi .skill-item .skill-content h3 {
+  .obbiettivi .skill-item .skill-content h4 {
     text-align: center;
     font-size: 24px;
+    margin: 0 0 8px 0;
   }
   .obbiettivi .skill-item .skill-content p {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
   .skils, .certificati {
     padding: 40px 20px;
   }
-  .skils h1, .certificati h1 {
+  .skils h3, .certificati h3 {
     font-size: 36px;
     text-align: center;
   }
@@ -578,7 +580,7 @@ body {
   .istruzione {
     padding: 40px 20px;
   }
-  .istruzione h1 {
+  .istruzione h3 {
     font-size: 36px;
     text-align: center;
   }
@@ -596,7 +598,7 @@ body {
   .istruzione .reference-container .content .text {
     text-align: center;
   }
-  .istruzione .reference-container .content .text h1 {
+  .istruzione .reference-container .content .text h4 {
     font-size: 24px;
     text-align: center;
   }

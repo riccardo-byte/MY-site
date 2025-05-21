@@ -383,7 +383,7 @@ body {
   background-color: #FFFFFF;
   font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
 }
 .faq .faq-rightContainer .accordion-button:focus {
   box-shadow: none;
@@ -392,7 +392,7 @@ body {
 .faq .faq-rightContainer .accordion-body {
   padding: 12px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 21px;
+  font-size: 16px;
 }
 
 .footer {
@@ -407,11 +407,11 @@ body {
   background-color: #E4E4E4;
   justify-content: flex-end;
 }
-.footer h3 {
+.footer h4 {
   font-family: "Figtree", "Arial", sans-serif;
   font-weight: 500;
   color: #767676;
-  margin-top: 0;
+  margin: 0;
   font-size: 24px;
 }
 .footer .footer-title {
