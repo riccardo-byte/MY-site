@@ -279,7 +279,7 @@ body {
 }
 .presentazione-profilo .presentation-intro h4 {
   font-family: "Times New Roman", Times, serif;
-  font-size: clamp(32px, 5vw, 32px);
+  font-size: clamp(32px, 5vw, 38px);
   font-weight: 500;
   line-height: 1.3;
 }
