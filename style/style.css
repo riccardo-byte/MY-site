@@ -275,18 +275,13 @@ body {
 }
 .presentazione-profilo .presentation-intro {
   text-align: center;
-  max-width: 800px;
+  max-width: max-content;
 }
 .presentazione-profilo .presentation-intro h4 {
-  font-family: "Figtree", "Arial", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: clamp(32px, 5vw, 32px);
   font-weight: 500;
-}
-.presentazione-profilo .presentation-intro p {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 21px;
-  font-weight: 400;
-  margin: 0;
+  line-height: 1.3;
 }
 .presentazione-profilo .presentation-card {
   display: flex;
@@ -297,6 +292,7 @@ body {
   border-radius: 8px;
   border: 1px solid #1D1D1D;
   padding: 20px;
+  margin-bottom: 32px;
 }
 .presentazione-profilo .presentation-card img {
   max-width: 100%;
