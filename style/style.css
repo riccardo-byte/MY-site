@@ -76,9 +76,9 @@ body {
 .intro .intro-comment {
   width: auto;
   height: auto;
-  gap: 4px;
+  gap: 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .intro .intro-comment .intro-logo {
@@ -88,19 +88,20 @@ body {
 }
 .intro .intro-comment p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 300;
   line-height: 1.5;
   margin: 0;
+  text-align: center;
 }
 .intro h1 {
   font-family: "Figtree", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: clamp(80px, 15vw, 180px);
-  line-height: 1.2;
-  letter-spacing: -7px;
+  font-weight: 700;
+  font-size: clamp(57px, 15vw, 76px);
+  line-height: 1;
+  letter-spacing: 0;
   text-align: center;
-  margin: 0;
+  margin: 32px 0 0 0;
   text-transform: lowercase;
 }
 
@@ -128,11 +129,10 @@ body {
 }
 .definition .definition-intro h1 {
   font-family: "Figtree", "Arial", sans-serif;
-  font-size: clamp(36px, 5vw, 57px);
+  font-size: clamp(24px, 5vw, 57px);
   font-weight: 400;
   text-align: center;
   margin: 0;
-  line-height: 1.2;
 }
 .definition .definition-img {
   max-width: 100%;
@@ -551,8 +551,12 @@ body {
   .intro {
     padding: 60px 16px;
   }
+  .intro .intro-comment {
+    flex-direction: column;
+    gap: 4px;
+  }
   .intro h1 {
-    letter-spacing: -4px;
+    margin: 16px 0 0 0;
   }
   .definition {
     padding: 40px 16px;

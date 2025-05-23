@@ -74,7 +74,7 @@ body {
   margin-bottom: 60px;
 }
 .forum .intro p {
-  font-size: 38px;
+  font-size: 21px;
   margin-bottom: 10px;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -82,12 +82,11 @@ body {
 }
 .forum .intro h1 {
   font-family: "Figtree", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: clamp(80px, 15vw, 180px);
-  line-height: 90%;
-  letter-spacing: -7px;
+  font-weight: 700;
+  font-size: clamp(57px, 15vw, 76px);
   text-align: center;
   margin: 0;
+  line-height: 1;
 }
 .forum .message {
   width: 100%;
@@ -111,7 +110,7 @@ body {
   border: none;
   border-bottom: 1px solid #999;
   background: transparent;
-  font-weight: 800;
+  font-weight: 500;
   font-family: "Times New Roman", Times, serif;
   font-size: 76px;
   padding: 5px 0;
@@ -130,7 +129,7 @@ body {
 }
 .forum .message .message-container h2 {
   font-size: 76px;
-  font-weight: 800;
+  font-weight: 500;
   margin: 10px 0;
 }
 .forum .message .message-container .pulsante {

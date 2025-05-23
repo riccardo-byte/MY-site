@@ -106,9 +106,9 @@ body {
   .intro-comment {
     width: auto;
     height: auto;
-    gap: 4px;
+    gap: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 
     .intro-logo {
@@ -119,21 +119,22 @@ body {
 
     p {
       font-family: $pFamily-font;
-      font-size: 16px;
+      font-size: 21px;
       font-weight: 300;
       line-height: 1.5;
       margin: 0;
+      text-align: center;
     }
   }
 
   h1 {
     font-family: $hFamily-font;
-    font-weight: 800;
-    font-size: clamp(80px, 15vw, 180px);
-    line-height: 1.2;
-    letter-spacing: -7px;
+    font-weight: 700;
+    font-size: clamp(57px, 15vw, 76px);
+    line-height: 1;
+    letter-spacing: 0;
     text-align: center;
-    margin: 0;
+    margin: 32px 0 0 0;
     text-transform: lowercase;
   }
 }
@@ -164,11 +165,10 @@ body {
 
     h1 {
       font-family: $hFamily-font;
-      font-size: clamp(36px, 5vw, 57px);
+      font-size: clamp(24px, 5vw, 57px);
       font-weight: 400;
       text-align: center;
       margin: 0;
-      line-height: 1.2;
     }
   }
 
@@ -660,15 +660,21 @@ body {
   .intro {
     padding: 60px 16px;
     
+    .intro-comment{
+      flex-direction: column;
+      gap: 4px;
+    }
+
     h1 {
-      letter-spacing: -4px;
+      margin: 16px 0 0 0;
     }
   }
-  
+
   .definition {
     padding: 40px 16px;
     gap: 40px;
   }
+  
   
   .programmi-tecnici {
     padding: 40px 16px;
