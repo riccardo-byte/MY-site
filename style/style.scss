@@ -246,12 +246,13 @@ body {
   }
 }
 
-// Sezione programmi tecnici
+// Sezione programmi tecnici con carosello
 .programmi-tecnici {
   display: flex;
   flex-direction: column;
   padding: 60px 80px;
   gap: 40px;
+  overflow: hidden;
   
   h4 {
     margin: 0;
@@ -271,32 +272,33 @@ body {
     max-width: fit-content;
   }
 
-  .slider {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    gap: 40px;
-    overflow-x: auto;
-    padding: 10px 0;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    animation: slide 20s linear infinite;
-    
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 
-    @keyframes slide {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+  .carousel-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(200% + 2rem);
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .programma {
+      flex: 0 0 auto;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 4px;
-      flex: 0 0 auto;
-      width: 150px;
+      margin: 0 40px;
       
       img {
         height: 32px;
@@ -311,6 +313,11 @@ body {
         text-align: left;
       }
     }
+  }
+
+  // Pausa l'animazione al hover
+  .carousel:hover .carousel-track {
+    animation-play-state: paused;
   }
 }
 
@@ -662,6 +669,22 @@ body {
   
   .programmi-tecnici {
     padding: 40px 16px;
+
+    .carousel-track {
+      .programma {
+        margin: 0 10px;
+        width: 130px;
+        
+        img {
+          height: 28px;
+          width: 28px;
+        }
+        
+        h6 {
+          font-size: 16px;
+        }
+      }
+    }
   }
   
 

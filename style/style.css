@@ -204,6 +204,7 @@ body {
   flex-direction: column;
   padding: 60px 80px;
   gap: 40px;
+  overflow: hidden;
 }
 .programmi-tecnici h4 {
   margin: 0;
@@ -221,45 +222,45 @@ body {
   margin: 0;
   max-width: fit-content;
 }
-.programmi-tecnici .slider {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  gap: 40px;
-  overflow-x: auto;
-  padding: 10px 0;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  animation: slide 20s linear infinite;
+.programmi-tecnici .carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.programmi-tecnici .slider::-webkit-scrollbar {
-  display: none;
+.programmi-tecnici .carousel-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(200% + 2rem);
 }
-@keyframes slide {
-  from {
+@keyframes scroll {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
-.programmi-tecnici .slider .programma {
+.programmi-tecnici .carousel-track .programma {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  flex: 0 0 auto;
-  width: 150px;
+  margin: 0 40px;
 }
-.programmi-tecnici .slider .programma img {
+.programmi-tecnici .carousel-track .programma img {
   height: 32px;
   width: 32px;
   object-fit: contain;
 }
-.programmi-tecnici .slider .programma h6 {
+.programmi-tecnici .carousel-track .programma h6 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   text-align: left;
+}
+.programmi-tecnici .carousel:hover .carousel-track {
+  animation-play-state: paused;
 }
 
 .presentazione-profilo {
@@ -556,6 +557,17 @@ body {
   }
   .programmi-tecnici {
     padding: 40px 16px;
+  }
+  .programmi-tecnici .carousel-track .programma {
+    margin: 0 10px;
+    width: 130px;
+  }
+  .programmi-tecnici .carousel-track .programma img {
+    height: 28px;
+    width: 28px;
+  }
+  .programmi-tecnici .carousel-track .programma h6 {
+    font-size: 16px;
   }
   .presentazione-profilo {
     padding: 40px 16px;
