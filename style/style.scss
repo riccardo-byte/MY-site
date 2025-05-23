@@ -280,15 +280,15 @@ body {
 
   .carousel-track {
     display: flex;
-    animation: scroll 30s linear infinite;
-    width: calc(200% + 2rem);
+    animation: scroll 60s linear infinite;
+    width: fit-content;
 
     @keyframes scroll {
       0% {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
       }
     }
 
@@ -298,12 +298,14 @@ body {
       flex-direction: row;
       align-items: center;
       gap: 4px;
-      margin: 0 40px;
+      margin: 0 20px;
+      white-space: nowrap;
       
       img {
         height: 32px;
         width: 32px;
         object-fit: contain;
+        flex-shrink: 0;
       }
       
       h6 {
@@ -311,6 +313,7 @@ body {
         font-weight: 400;
         margin: 0;
         text-align: left;
+        flex-shrink: 0;
       }
     }
   }
@@ -672,8 +675,7 @@ body {
 
     .carousel-track {
       .programma {
-        margin: 0 10px;
-        width: 130px;
+        margin: 0 15px;
         
         img {
           height: 28px;
