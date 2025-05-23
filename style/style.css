@@ -255,8 +255,8 @@ body {
   object-fit: contain;
   flex-shrink: 0;
 }
-.programmi-tecnici .carousel-track .programma h6 {
-  font-size: 18px;
+.programmi-tecnici .carousel-track .programma h5 {
+  font-size: 25px;
   font-weight: 400;
   margin: 0;
   text-align: left;
