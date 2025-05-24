@@ -204,7 +204,6 @@ body {
   flex-direction: column;
   padding: 60px 80px;
   gap: 40px;
-  overflow: hidden;
 }
 .programmi-tecnici h4 {
   margin: 0;
@@ -219,8 +218,24 @@ body {
   overflow: hidden;
   position: relative;
   padding: 20px 0;
-  margin: 0;
   max-width: fit-content;
+}
+.programmi-tecnici .container::before, .programmi-tecnici .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+}
+.programmi-tecnici .container::before {
+  left: 0;
+  background: linear-gradient(to right, #FFFFFF, transparent);
+}
+.programmi-tecnici .container::after {
+  right: 0;
+  background: linear-gradient(to left, #FFFFFF, transparent);
 }
 .programmi-tecnici .carousel {
   width: 100%;
@@ -229,25 +244,21 @@ body {
 }
 .programmi-tecnici .carousel-track {
   display: flex;
-  animation: scroll 60s linear infinite;
   width: fit-content;
+  animation: scroll-infinite 60s linear infinite;
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.programmi-tecnici .carousel-track:hover {
+  animation-play-state: paused;
 }
 .programmi-tecnici .carousel-track .programma {
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
-  margin: 0 20px;
+  gap: 8px;
+  margin: 0 24px;
   white-space: nowrap;
+  min-width: fit-content;
 }
 .programmi-tecnici .carousel-track .programma img {
   height: 32px;
@@ -255,15 +266,21 @@ body {
   object-fit: contain;
   flex-shrink: 0;
 }
-.programmi-tecnici .carousel-track .programma h5 {
-  font-size: 25px;
+.programmi-tecnici .carousel-track .programma h5, .programmi-tecnici .carousel-track .programma h6 {
+  font-size: 24px;
   font-weight: 400;
   margin: 0;
   text-align: left;
   flex-shrink: 0;
+  font-family: "Figtree", "Arial", sans-serif;
 }
-.programmi-tecnici .carousel:hover .carousel-track {
-  animation-play-state: paused;
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .presentazione-profilo {
