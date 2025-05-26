@@ -266,7 +266,7 @@ body {
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    animation: slide 30s linear infinite;
+    animation: slide 60s linear infinite;
 
      // Pausa l'animazione al hover
     &:hover {
@@ -340,7 +340,7 @@ body {
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    animation: slide 50s linear infinite;
+    animation: slide 80s linear infinite;
     
     // Pausa l'animazione al hover
     &:hover {
@@ -677,7 +677,7 @@ body {
     }
     
     .carousel-track {
-      gap: 24px;
+      gap: 40px;
       
       .skil {
         gap: 6px;

@@ -213,7 +213,7 @@ body {
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 30s linear infinite;
+  animation: slide 60s linear infinite;
 }
 .skils .carousel-track:hover {
   animation-play-state: paused;
@@ -280,7 +280,7 @@ body {
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 50s linear infinite;
+  animation: slide 80s linear infinite;
 }
 .certificati .carousel-track:hover {
   animation-play-state: paused;
@@ -564,7 +564,7 @@ body {
     text-align: center;
   }
   .skils .carousel-track, .certificati .carousel-track {
-    gap: 24px;
+    gap: 40px;
   }
   .skils .carousel-track .skil, .certificati .carousel-track .skil {
     gap: 6px;
