@@ -249,7 +249,7 @@ body {
     text-align: left;
   }
 
-  .container {
+  .carousel {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -258,15 +258,20 @@ body {
     max-width: fit-content;
   }
 
-  .slider {
+  .carousel-track {
     display: inline-flex;
     flex-wrap: nowrap;
-    gap: 40px;
+    gap: 80px;
     overflow-x: auto;
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    animation: slide 20s linear infinite;
+    animation: slide 30s linear infinite;
+
+     // Pausa l'animazione al hover
+    &:hover {
+      animation-play-state: paused;
+    }
     
     &::-webkit-scrollbar {
       display: none;
@@ -318,7 +323,7 @@ body {
     text-align: left;
   }
 
-  .container {
+  .carousel {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -327,7 +332,7 @@ body {
     max-width: fit-content;
   }
 
-  .slider {
+  .carousel-track {
     display: inline-flex;
     flex-wrap: nowrap;
     gap: 40px;
@@ -335,10 +340,11 @@ body {
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    animation: slide 40s linear infinite;
+    animation: slide 50s linear infinite;
     
-    &::-webkit-scrollbar {
-      display: none;
+    // Pausa l'animazione al hover
+    &:hover {
+      animation-play-state: paused;
     }
 
     @keyframes slide {
@@ -670,7 +676,7 @@ body {
       text-align: center;
     }
     
-    .slider {
+    .carousel-track {
       gap: 24px;
       
       .skil {

@@ -197,7 +197,7 @@ body {
   font-size: 57px;
   text-align: left;
 }
-.skils .container {
+.skils .carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -205,17 +205,20 @@ body {
   margin: 0;
   max-width: fit-content;
 }
-.skils .slider {
+.skils .carousel-track {
   display: inline-flex;
   flex-wrap: nowrap;
-  gap: 40px;
+  gap: 80px;
   overflow-x: auto;
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 20s linear infinite;
+  animation: slide 30s linear infinite;
 }
-.skils .slider::-webkit-scrollbar {
+.skils .carousel-track:hover {
+  animation-play-state: paused;
+}
+.skils .carousel-track::-webkit-scrollbar {
   display: none;
 }
 @keyframes slide {
@@ -226,7 +229,7 @@ body {
     transform: translateX(-50%);
   }
 }
-.skils .slider .skil {
+.skils .carousel-track .skil {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -234,12 +237,12 @@ body {
   flex: 0 0 auto;
   width: fit-content;
 }
-.skils .slider .skil img {
+.skils .carousel-track .skil img {
   height: 48px;
   width: 48px;
   object-fit: contain;
 }
-.skils .slider .skil p {
+.skils .carousel-track .skil p {
   font-family: "Times New Roman", Times, serif;
   font-size: 28px;
   font-weight: 100;
@@ -261,7 +264,7 @@ body {
   font-size: 57px;
   text-align: left;
 }
-.certificati .container {
+.certificati .carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -269,7 +272,7 @@ body {
   margin: 0;
   max-width: fit-content;
 }
-.certificati .slider {
+.certificati .carousel-track {
   display: inline-flex;
   flex-wrap: nowrap;
   gap: 40px;
@@ -277,10 +280,10 @@ body {
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  animation: slide 40s linear infinite;
+  animation: slide 50s linear infinite;
 }
-.certificati .slider::-webkit-scrollbar {
-  display: none;
+.certificati .carousel-track:hover {
+  animation-play-state: paused;
 }
 @keyframes slide {
   from {
@@ -290,7 +293,7 @@ body {
     transform: translateX(-50%);
   }
 }
-.certificati .slider img {
+.certificati .carousel-track img {
   height: 300px;
   width: 300px;
   object-fit: contain;
@@ -560,20 +563,20 @@ body {
     font-size: 36px;
     text-align: center;
   }
-  .skils .slider, .certificati .slider {
+  .skils .carousel-track, .certificati .carousel-track {
     gap: 24px;
   }
-  .skils .slider .skil, .certificati .slider .skil {
+  .skils .carousel-track .skil, .certificati .carousel-track .skil {
     gap: 6px;
   }
-  .skils .slider .skil img, .certificati .slider .skil img {
+  .skils .carousel-track .skil img, .certificati .carousel-track .skil img {
     height: 36px;
     width: 36px;
   }
-  .skils .slider .skil p, .certificati .slider .skil p {
+  .skils .carousel-track .skil p, .certificati .carousel-track .skil p {
     font-size: 24px;
   }
-  .skils .slider img, .certificati .slider img {
+  .skils .carousel-track img, .certificati .carousel-track img {
     height: 200px;
     width: 200px;
   }
