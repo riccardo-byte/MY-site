@@ -1,11 +1,15 @@
-// Variables
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090;
+$deactivate-button-color: #909090; // Usato per bottoni che sembrano disattivati
+$submit-button-color: $secondary-color; // Colore per il bottone "invia", puoi cambiarlo
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
+$input-placeholder-color: #999;
+$input-border-color: #999;
+$input-focus-border-color: #333;
+
 
 // Typography
 $hFamily-font: "Figtree", "Arial", sans-serif;
@@ -15,7 +19,8 @@ $pFamily-font: 'Times New Roman', Times, serif;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 992px;
 
-// Reset and base styles
+
+// Reset and base styles (potrebbero essere in un file _reset.scss o _base.scss importato)
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -29,7 +34,20 @@ body {
   line-height: 1.5;
 }
 
-// Hero section
+// Stile per la classe visually-hidden (usata per le label del form per accessibilità)
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 .hero-section {
   width: 100%;
   height: auto;
@@ -42,6 +60,18 @@ body {
   top: 0;
   z-index: 100;
 
+  nav { // Contenitore per i link di navigazione
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-button-link, // Link specifico per il bottone home
+  .contact-menu {    // Link per il menu contatti
+    text-decoration: none;
+  }
+
   .home-button {
     background-color: transparent;
     border: none;
@@ -53,64 +83,62 @@ body {
     gap: 8px;
     cursor: pointer;
     transition: opacity 0.2s ease;
-    
+
     &:hover {
       opacity: 0.8;
     }
-    
+
     h1 {
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
+      color: $secondary-color; // Assicurati che il colore del testo sia definito
     }
-  }
-  
-  a {
-    text-decoration: none;
   }
 
   .logo {
     width: 32px;
     height: auto;
   }
-  
+
   .contact-menu {
     .desktop-text {
       display: inline;
     }
-
     .mobile-text {
       display: none;
     }
-
-    span {
+    span { // Stile per il testo nel bottone contatti
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
+      color: $secondary-color; // Assicurati che il colore del testo sia definito
+    }
+    .home-button span { // Per sovrascrivere eventuali colori di h1 se la classe home-button è riutilizzata
+        color: $secondary-color;
     }
   }
 }
 
-// Forum section
-.forum {
+
+
+.forum { 
   width: 100%;
   padding: 80px;
   display: flex;
   flex-direction: column;
-  
+
   .intro {
     margin-bottom: 60px;
-    
     p {
       font-size: 21px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px; // Questo era commentato nel CSS originale, l'ho rimosso
       text-align: center;
-      font-family: $pFamily-font;
+      font-family: $pFamily-font; // Corretto 'Times New Roman', Times, serif
       margin: 0;
     }
-    
     h1 {
       font-family: $hFamily-font;
       font-weight: 700;
@@ -118,88 +146,95 @@ body {
       text-align: center;
       margin: 0;
       line-height: 1;
+    }
   }
-  }
-  
+
   .message {
     width: 100%;
     height: auto;
-    padding: 0;
-    
-    .message-container {
+    padding: 0; // Era commentato, l'ho rimosso
+
+    .message-container { // Questo è il <form>
       display: flex;
       flex-direction: column;
       gap: 48px;
       width: 100%;
-      
+
       .message-block {
         display: flex;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: nowrap; // Mantenuto come da tuo stile
         gap: 16px;
         width: 100%;
-        
+
         .input {
           border: none;
-          border-bottom: 1px solid #999;
+          border-bottom: 1px solid $input-border-color;
           background: transparent;
           font-weight: 500;
           font-family: $pFamily-font;
-          font-size: 76px;
+          font-size: 76px; // Dimensione originale
           padding: 5px 0;
-          color: $text-color-muted;
-          flex: 1;
-          min-width: 100px;
-          
+          color: $text-color-muted; // Colore del testo inserito
+          flex: 1; // Occupa lo spazio disponibile
+          min-width: 100px; // Larghezza minima per evitare che diventi troppo piccolo
+
           &::placeholder {
-            color: #999;
+            color: $input-placeholder-color;
             font-style: italic;
             font-weight: 300;
           }
-          
           &:focus {
             outline: none;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid $input-focus-border-color;
           }
         }
       }
-      
-      h2 {
-        font-size: 76px;
+
+      h2 { // Stile per i testi "mi chiamo", "lavoro", ecc.
+        font-size: 76px; // Dimensione originale
         font-weight: 500;
-        margin: 10px 0;
+        margin: 10px 0; // Era 0 nel CSS, ma 10px 0 sembra più bilanciato con gli input
+        font-family: $hFamily-font; // Assicurati che il font sia corretto
       }
-      
-      .pulsante {
-        align-self: flex-end;
-        background-color: $deactivate-button-color;
+
+      .pulsante { // Bottone "invia"
+        align-self: flex-end; // Allinea a destra
+        background-color: $submit-button-color; // Usa la nuova variabile o $accent-color
         border: none;
         padding: 24px 40px;
-        font-size: 24px;
+        // font-size: 24px; // Ridondante se h5 ha già la sua dimensione
         border-radius: 100px;
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 12px;
-        
-        h5 {
-            font-family: $hFamily-font;
-            color: #FFFFFF;
-            font-size: 24px;
-            font-weight: 500;
-            margin: 0;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: lighten($submit-button-color, 10%);
+          // Se usi $accent-color per il bottone, potresti fare:
+          // background-color: darken($accent-color, 10%); o lighten($accent-color, 10%);
         }
 
+        h5 {
+          font-family: $hFamily-font;
+          color: $text-color-light;
+          font-size: 24px;
+          font-weight: 500;
+          margin: 0;
+        }
         .arrow {
           height: 24px;
           width: 24px;
+          filter: brightness(0) invert(1); // Per rendere la freccia bianca
         }
       }
     }
   }
 }
 
-// Footer section
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -212,7 +247,6 @@ body {
   background-color: $softgray-color;
   justify-content: flex-end;
 
-
   h4 {
     font-family: $hFamily-font;
     font-weight: 500;
@@ -220,37 +254,28 @@ body {
     margin: 0;
     font-size: 24px;
   }
-  
-  .footer-title {
-    font-size: 48px;
-    margin-top: auto;
-  }
 
   .social-area {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
 
     .social-link {
       gap: 8px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start; // Allineamento a sinistra come da immagine (o center se preferisci)
 
       a {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: line-through;
+        text-decoration: none; // Rimosso line-through
         transition: color 0.3s ease;
-        
+
         &:hover {
           color: $accent-color;
+          text-decoration: underline; // Aggiunto underline al hover per feedback
         }
       }
     }
@@ -261,21 +286,18 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
 
-    .button {
+    .button { // Contenitore dei bottoni
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: flex-start;
+      width: 100%; // Per far sì che i bottoni occupino la larghezza disponibile nel loro contenitore
 
       a {
         text-decoration: none;
-        width: 100%;
+        width: 100%; // L'anchor prende tutta la larghezza per rendere cliccabile tutta l'area del bottone
+        display: block; // Per far funzionare width: 100%
       }
 
       button {
@@ -283,45 +305,48 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; 
-        max-width: 400px; 
+        width: 100%; // Il bottone occupa tutta la larghezza dell'anchor
+        max-width: 400px; // Larghezza massima del bottone
         align-items: center;
         border-radius: 16px;
         gap: 16px;
         border: none;
-        background-color: $secondary-color;
+        background-color: $active-button-color; // Colore per bottoni attivi
         padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
-        
+
         &:hover {
-          background-color: lighten($accent-color, 10%);
+          background-color: lighten($accent-color, 10%); // Effetto hover che usa $accent-color
         }
-        
-        img {
+
+        img { // Icona freccia e icone interne
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1); // Per rendere le icone bianche
         }
-  
-        .area {
+
+        .area { // Contenitore per icona (se presente) e testo
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px;
-          
+          gap: 8px; // Spazio tra icona (se presente) e testo
+
+          img { // Stile specifico per l'icona interna al bottone (es. projects-icon, cv-icon)
+             filter: brightness(0) invert(1); // Assicura che sia bianca
+          }
+
           .text-zone {
             display: flex;
             flex-direction: column;
             text-align: start;
-    
+
             h6 {
               font-family: $hFamily-font;
               color: $text-color-light;
               font-size: 18px;
               margin: 0;
             }
-    
             p {
               font-family: $hFamily-font;
               color: $text-color-light;
@@ -331,86 +356,79 @@ body {
             }
           }
         }
-      }
-      
-      .deactivate {
-        background-color: $deactivate-button-color;
-        transition: background-color 0s;
-        
-        &:hover {
+
+        // Stile specifico per il bottone disattivato
+        &.deactivate {
           background-color: $deactivate-button-color;
+          cursor: not-allowed; // Cursore per indicare che non è cliccabile
+
+          &:hover {
+            background-color: $deactivate-button-color; // Nessun cambio colore al hover
+          }
         }
       }
     }
   }
 }
 
-// Global media queries
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
     padding: 16px;
-    
     .home-button h1 {
       font-size: 20px;
     }
-
     .contact-menu {
       .desktop-text {
         display: none;
       }
-
       .mobile-text {
         display: flex;
         align-items: center;
-        padding: 8px 40px;
+        padding: 8px 12px;
         border-radius: 100px;
         background-color: $secondary-color;
-      }
-
-      img {
-        height: 32px;
-        width: 32px;
+        img {
+          height: 24px;
+          width: 24px;
+          filter: brightness(0) invert(1);
+        }
       }
     }
   }
-  
+
   .forum {
     padding: 60px 16px;
-    
     .intro {
       h1 {
-        font-size: 43px;
-        letter-spacing: 0;
+        font-size: clamp(40px, 10vw, 50px); // Leggermente ridotto per mobile
+        // letter-spacing: 0; // Era nel CSS originale, ma 0 è il default
       }
-      
       p {
-        font-size: 21px;
+        font-size: 21px; // Mantenuto
       }
     }
-    
+
     .message {
       .message-container {
-        gap: 16px;
-
+        gap: 24px; // Gap ridotto tra i blocchi del form
+        h2 { // Testo "mi chiamo", "lavoro" etc. su mobile
+          font-size: 32px; // Ridotto per mobile
+          width: 100%; // Per far sì che vada a capo prima dell'input se necessario
+          text-align: left; // O center, a seconda delle preferenze
+        }
         .message-block {
-          flex-wrap: wrap;
-          
-          h1 {
-            font-size: 32px;
-          }
-          
+          flex-wrap: wrap; // Permette agli elementi di andare a capo
           .input {
-            font-size: 21px;
-            width: 100%;
+            font-size: 32px; // Input più piccolo per mobile
+            width: 100%; // Input prende tutta la larghezza
           }
         }
-        
-        h2 {
-          font-size: 32px;
-        }
-
         .pulsante {
-          padding: 16px 32px;
+          padding: 16px 32px; // Padding ridotto per il bottone
+          align-self: center; // Centra il bottone su mobile
+          h5 {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -419,16 +437,22 @@ body {
   .footer {
     flex-direction: column;
     padding: 40px 16px;
-    gap: 56px;
-    
-    .social-area {
+    gap: 40px;
+    align-items: center;
+
+    .social-area, .button-area {
       width: 100%;
       align-items: center;
+      text-align: center;
     }
-    
-    .button-area {
-      width: 100%;
-      align-items: center;
+    .social-area .social-link {
+        align-items: center;
+    }
+    .button-area .button {
+        align-items: center;
+        button {
+            max-width: 100%;
+        }
     }
   }
 }

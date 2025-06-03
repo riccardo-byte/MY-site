@@ -2,7 +2,8 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090;
+$deactivate-button-color: #909090; // Usato per bottoni che sembrano disattivati
+$active-button-color: $secondary-color; // Un colore per bottoni attivi, puoi cambiarlo se preferisci (es. $accent-color)
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
@@ -42,6 +43,18 @@ body {
   top: 0;
   z-index: 100;
 
+  nav { // Contenitore per i link di navigazione
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-button-link, // Link specifico per il bottone home
+  .contact-menu {    // Link per il menu contatti
+    text-decoration: none;
+  }
+
   .home-button {
     background-color: transparent;
     border: none;
@@ -53,42 +66,41 @@ body {
     gap: 8px;
     cursor: pointer;
     transition: opacity 0.2s ease;
-    
+
     &:hover {
       opacity: 0.8;
     }
-    
+
     h1 {
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
+      color: $secondary-color; // Assicurati che il colore del testo sia definito
     }
-  }
-  
-  a {
-    text-decoration: none;
   }
 
   .logo {
     width: 32px;
     height: auto;
   }
-  
+
   .contact-menu {
     .desktop-text {
       display: inline;
     }
-
     .mobile-text {
       display: none;
     }
-
-    span {
+    span { // Stile per il testo nel bottone contatti
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
+      color: $secondary-color;
+    }
+    .home-button span { // Per sovrascrivere eventuali colori di h1 se la classe home-button è riutilizzata
+        color: $secondary-color;
     }
   }
 }
@@ -130,7 +142,7 @@ body {
   h1 {
     font-family: $hFamily-font;
     font-weight: 700;
-    font-size: clamp(57px, 15vw, 76px);
+    font-size: clamp(57px, 15vw, 76px); // clamp è ottimo per la responsività del font
     line-height: 1;
     letter-spacing: 0;
     text-align: center;
@@ -183,7 +195,7 @@ body {
 
   .definition-cards {
     width: 100%;
-    
+
     p {
       text-align: center;
       margin: 0 0 16px 0;
@@ -193,23 +205,30 @@ body {
       color: $secondary-color;
     }
 
-    .container {
+    .container { // Bootstrap container
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .row {
+    .row { // Bootstrap row
       display: flex;
       flex-wrap: wrap;
-      margin: -15px;
+      margin-right: -15px; // Bootstrap gutter compensation
+      margin-left: -15px;  // Bootstrap gutter compensation
     }
 
-    .col {
-      flex: 1 0 300px;
-      padding: 15px;
-
-      @media (max-width: $tablet-breakpoint) {
-        flex: 1 0 100%;
+    .col { // Bootstrap column
+      position: relative;
+      width: 100%;
+      padding-right: 15px; // Bootstrap gutter
+      padding-left: 15px;  // Bootstrap gutter
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      // Per 3 colonne su desktop (come sembra dal tuo HTML)
+      @media (min-width: $tablet-breakpoint) { // o un breakpoint più specifico se hai col-md-4 etc.
+         flex: 0 0 33.333333%;
+         max-width: 33.333333%;
       }
     }
 
@@ -225,18 +244,18 @@ body {
       justify-content: center;
       gap: 20px;
       transition: transform 0.3s ease;
-      
+
       &:hover {
         transform: translateY(-5px);
       }
-      
+
       h2 {
         font-family: $pFamily-font;
         font-size: 28px;
         font-weight: 500;
         margin: 0;
       }
-      
+
       img {
         width: 240px;
         height: 240px;
@@ -246,13 +265,13 @@ body {
   }
 }
 
-// Sezione programmi tecnici con carosello infinito
+// Sezione programmi tecnici
 .programmi-tecnici {
   display: flex;
   flex-direction: column;
   padding: 60px 80px;
   gap: 40px;
-  
+
   h4 {
     margin: 0;
     font-family: $hFamily-font;
@@ -262,30 +281,27 @@ body {
     text-align: center;
   }
 
-  .container {
+  .container { // Questo .container è custom, non Bootstrap, attenzione se mischiati
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 20px 0;
-    max-width: fit-content;
-    
-    // Maschere gradient per effetto fade ai bordi (opzionale)
-    &::before,
-    &::after {
+    max-width: fit-content; // Per far sì che il gradiente non copra tutto se non c'è overflow
+
+    // Maschere gradient per effetto fade ai bordi
+    &::before, &::after {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 50px;
+      width: 50px; // Larghezza del fade
       z-index: 2;
-      pointer-events: none;
+      pointer-events: none; // Per non interferire con il mouse
     }
-    
     &::before {
       left: 0;
       background: linear-gradient(to right, $background-color, transparent);
     }
-    
     &::after {
       right: 0;
       background: linear-gradient(to left, $background-color, transparent);
@@ -294,115 +310,113 @@ body {
 
   .carousel {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; // Nasconde l'overflow orizzontale per permettere l'animazione
     position: relative;
   }
 
   .carousel-track {
-    display: flex;
-    width: fit-content;
+    display: flex; // Permette agli elementi di stare in linea
+    width: fit-content; // La larghezza si adatta al contenuto
     animation: scroll-infinite 60s linear infinite;
-    
-    // Pausa l'animazione al hover
+
     &:hover {
-      animation-play-state: paused;
+      animation-play-state: paused; // Pausa l'animazione al hover
     }
 
-    // Ogni elemento del carosello
     .programma {
-      flex: 0 0 auto;
+      flex: 0 0 auto; // Non crescere, non restringersi, base automatica
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 8px;
-      margin: 0 24px;
-      white-space: nowrap;
+      margin: 0 24px; // Spazio tra gli elementi
+      white-space: nowrap; // Impedisce al testo di andare a capo
       min-width: fit-content;
-      
+
       img {
         height: 32px;
         width: 32px;
         object-fit: contain;
-        flex-shrink: 0;
+        flex-shrink: 0; // Impedisce all'immagine di restringersi
       }
-      
-      h5, h6 {
+
+      h5, h6 { // Unificato lo stile per h5 e h6 qui
         font-size: 24px;
         font-weight: 400;
         margin: 0;
         text-align: left;
-        flex-shrink: 0;
+        flex-shrink: 0; // Impedisce al testo di restringersi
         font-family: $hFamily-font;
       }
     }
   }
+}
 
-  // Animazione infinita che si adatta dinamicamente
-  @keyframes scroll-infinite {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+// Animazione per il carosello infinito
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // Sposta il track della metà della sua larghezza.
+    // Questo funziona perché hai duplicato gli elementi nel track.
+    transform: translateX(-50%);
   }
 }
 
-// Sezione presentazione
+// Sezione presentazione profilo
 .presentazione-profilo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 80px;
   gap: 40px;
-  
+
   .presentation-intro {
     text-align: center;
-    max-width: max-content;
-    
+    max-width: max-content; // O una larghezza fissa se preferisci (es. 800px)
 
     h4 {
       font-family: $pFamily-font;
       font-size: clamp(21px, 5vw, 38px);
       font-weight: 500;
       line-height: 1.3;
+      // max-width: 70ch; // Considera una larghezza massima per la leggibilità
+      // margin: 0 auto;
     }
   }
-  
+
   .presentation-card {
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 100%;
+    width: 100%; // O una max-width per non farlo diventare troppo grande su schermi larghi
+    // max-width: 600px;
     border-radius: 8px;
     border: 1px solid $secondary-color;
     padding: 20px;
     margin-bottom: 32px;
-    
+
     img {
       max-width: 100%;
       height: auto;
-      max-height: 500px;
-      border-radius: 8px;
+      max-height: 500px; // Per evitare che l'immagine diventi troppo alta
+      border-radius: 8px; // Se vuoi angoli arrotondati sull'immagine stessa
     }
   }
 }
 
-// FAQ section
+// Sezione FAQ
 .faq {
   display: flex;
   flex-direction: row;
   width: 100%;
   padding: 80px;
   gap: 40px;
-  
-  @media (max-width: $mobile-breakpoint) {
-    flex-direction: column;
-  }
 
   .faq-leftContainer {
-    height: fit-content;
+    height: fit-content; // Si adatta al contenuto
     width: 40%;
     padding: 80px 40px;
     border-radius: 8px;
@@ -411,17 +425,13 @@ body {
     flex-direction: column;
     gap: 40px;
     text-align: center;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-    }
-    
+
     .faq-textContainer {
       display: flex;
       flex-direction: column;
       text-align: center;
       gap: 12px;
-      
+
       h4 {
         margin: 0;
         font-size: 32px;
@@ -429,7 +439,7 @@ body {
       }
     }
 
-    button {
+    button { // Bottone "Prenota una consulenza"
       height: fit-content;
       width: 100%;
       padding: 24px 40px;
@@ -440,23 +450,28 @@ body {
       justify-content: center;
       align-items: center;
       gap: 8px;
-      background-color: $deactivate-button-color;
-      //cursor: pointer;
-      //transition: background-color 0.3s ease;
-      
-      //&:hover {
-      //  background-color: lighten($secondary-color, 10%);
-      //}
-      
+      background-color: $deactivate-button-color; // Considera un colore più "attivo" qui se è un'azione primaria
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken($deactivate-button-color, 10%); // Leggero scurimento al hover
+        // Oppure usa $accent-color se vuoi un cambio più evidente
+        // background-color: $accent-color;
+      }
+
       img {
         height: 24px;
         width: 24px;
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1); // Per rendere l'icona bianca
       }
-      
+
       h5 {
         color: $text-color-light;
         margin: 0;
+        font-family: $hFamily-font; // Assicurati che il font sia consistente
+        font-size: 21px; // Esempio, adatta se necessario
+        font-weight: 500;
       }
     }
 
@@ -466,33 +481,41 @@ body {
       margin: 0;
     }
   }
-  
+
   .faq-rightContainer {
-    flex: 1;
-    
+    flex: 1; // Occupa lo spazio rimanente
+
     .accordion-item {
       margin-bottom: 16px;
       border: 1px solid $softgray-color;
       border-radius: 8px;
-      overflow: hidden;
+      overflow: hidden; // Per contenere i bordi arrotondati
     }
-    
+
     .accordion-header {
       margin: 0;
     }
-    
-    .accordion-button {
+
+    .accordion-button { // Stile per i bottoni dell'accordion di Bootstrap
       background-color: $background-color;
       font-family: $hFamily-font;
       font-weight: 500;
       font-size: 24px;
-      
+      color: $secondary-color; // Colore del testo del bottone
+
       &:focus {
         box-shadow: none;
-        border-color: $accent-color;
+        border-color: $accent-color; // Colore del bordo al focus
+      }
+      &:not(.collapsed) { // Quando è aperto
+        color: $accent-color;
+        background-color: lighten($softgray-color, 5%);
+        &::after { // Cambia colore dell'icona freccia di Bootstrap
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007AFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
       }
     }
-    
+
     .accordion-body {
       padding: 16px;
       font-family: $pFamily-font;
@@ -514,7 +537,6 @@ body {
   background-color: $softgray-color;
   justify-content: flex-end;
 
-
   h4 {
     font-family: $hFamily-font;
     font-weight: 500;
@@ -522,37 +544,28 @@ body {
     margin: 0;
     font-size: 24px;
   }
-  
-  .footer-title {
-    font-size: 48px;
-    margin-top: auto;
-  }
 
   .social-area {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
 
     .social-link {
       gap: 8px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start; // Allineamento a sinistra come da immagine (o center se preferisci)
 
       a {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: line-through;
+        text-decoration: none; // Rimosso line-through
         transition: color 0.3s ease;
-        
+
         &:hover {
           color: $accent-color;
+          text-decoration: underline; // Aggiunto underline al hover per feedback
         }
       }
     }
@@ -563,21 +576,18 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 100%;
-      align-items: center;
-    }
 
-    .button {
+    .button { // Contenitore dei bottoni
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: flex-start;
+      width: 100%; // Per far sì che i bottoni occupino la larghezza disponibile nel loro contenitore
 
       a {
         text-decoration: none;
-        width: 100%;
+        width: 100%; // L'anchor prende tutta la larghezza per rendere cliccabile tutta l'area del bottone
+        display: block; // Per far funzionare width: 100%
       }
 
       button {
@@ -585,45 +595,48 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; 
-        max-width: 400px; 
+        width: 100%; // Il bottone occupa tutta la larghezza dell'anchor
+        max-width: 400px; // Larghezza massima del bottone
         align-items: center;
         border-radius: 16px;
         gap: 16px;
         border: none;
-        background-color: $secondary-color;
+        background-color: $active-button-color; // Colore per bottoni attivi
         padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
-        
+
         &:hover {
-          background-color: lighten($accent-color, 10%);
+          background-color: lighten($accent-color, 10%); // Effetto hover che usa $accent-color
         }
-        
-        img {
+
+        img { // Icona freccia e icone interne
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1); // Per rendere le icone bianche
         }
-  
-        .area {
+
+        .area { // Contenitore per icona (se presente) e testo
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px;
-          
+          gap: 8px; // Spazio tra icona (se presente) e testo
+
+          img { // Stile specifico per l'icona interna al bottone (es. projects-icon, cv-icon)
+             filter: brightness(0) invert(1); // Assicura che sia bianca
+          }
+
           .text-zone {
             display: flex;
             flex-direction: column;
             text-align: start;
-    
+
             h6 {
               font-family: $hFamily-font;
               color: $text-color-light;
               font-size: 18px;
               margin: 0;
             }
-    
             p {
               font-family: $hFamily-font;
               color: $text-color-light;
@@ -633,97 +646,146 @@ body {
             }
           }
         }
-      }
-      
-      .deactivate {
-        background-color: $deactivate-button-color;
-        transition: background-color 0s;
-        
-        &:hover {
+
+        // Stile specifico per il bottone disattivato
+        &.deactivate {
           background-color: $deactivate-button-color;
+          cursor: not-allowed; // Cursore per indicare che non è cliccabile
+
+          &:hover {
+            background-color: $deactivate-button-color; // Nessun cambio colore al hover
+          }
         }
       }
     }
   }
 }
 
-// Global media queries
-@media (max-width: $mobile-breakpoint) {
+// Media Queries Globali (per responsività)
+@media (max-width: $mobile-breakpoint) { // Stili per mobile
   .hero-section {
     padding: 16px;
-    
+
     .home-button h1 {
       font-size: 20px;
     }
-
     .contact-menu {
       .desktop-text {
         display: none;
       }
-
       .mobile-text {
-        display: flex;
+        display: flex; // Mostra l'icona su mobile
         align-items: center;
-        padding: 8px 40px;
+        padding: 8px 40px; // Padding ridotto per l'icona
         border-radius: 100px;
-        background-color: $secondary-color;
-      }
-
-      img {
-        height: 32px;
-        width: 32px;
+        background-color: $secondary-color; // Sfondo per l'icona mobile
+        img {
+          height: 24px; // Dimensione icona messaggio mobile
+          width: 24px;
+          filter: brightness(0) invert(1); // Per renderla bianca
+        }
       }
     }
   }
-  
+
   .intro {
     padding: 60px 16px;
-    
-    .intro-comment{
+    .intro-comment {
       flex-direction: column;
       gap: 4px;
     }
-
     h1 {
       margin: 16px 0 0 0;
+      font-size: clamp(40px, 10vw, 57px); // Riduci un po' per mobile
     }
   }
 
   .definition {
     padding: 40px 16px;
     gap: 40px;
+    .definition-cards {
+        .col { // Su mobile, le card vanno una sotto l'altra
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 20px; // Spazio tra le card impilate
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .card {
+            height: auto; // Altezza automatica per adattarsi al contenuto
+            min-height: 300px; // Altezza minima
+            img {
+                width: 180px; // Immagini più piccole nelle card
+                height: 180px;
+            }
+        }
+    }
   }
-  
+
   .programmi-tecnici {
     padding: 40px 16px;
-
-    .carousel-track {
-      .programma {
-        margin: 0 15px;
-        
-        img {
-          height: 28px;
-          width: 28px;
-        }
-        
-        h6 {
-          font-size: 16px;
-        }
+    .container {
+      &::before, &::after {
+        width: 30px; // Fade più stretto su mobile
+      }
+    }
+    .carousel-track .programma {
+      margin: 0 15px;
+      img {
+        height: 28px;
+        width: 28px;
+      }
+      h5, h6 {
+        font-size: 18px; // Font più piccolo per i nomi dei programmi
       }
     }
   }
-  
+
   .presentazione-profilo {
     padding: 40px 16px;
+    .presentation-intro h4 {
+        font-size: clamp(18px, 4vw, 28px); // Font più piccolo per la presentazione
+    }
   }
 
   .faq {
-    padding: 80px 16px;
+    padding: 60px 16px; // Padding ridotto per la sezione FAQ
+    flex-direction: column; // FAQ a colonna su mobile
+    .faq-leftContainer {
+      width: 100%; // Occupa tutta la larghezza
+      padding: 40px 20px;
+      button h5 {
+        font-size: 18px; // Testo bottone più piccolo
+      }
+    }
+    .faq-rightContainer .accordion-button {
+        font-size: 20px; // Testo accordion più piccolo
+    }
+     .faq-rightContainer .accordion-body {
+        font-size: 18px;
+    }
   }
 
   .footer {
-    flex-direction: column;
+    flex-direction: column; // Footer a colonna
     padding: 40px 16px;
-    gap: 56px;
+    gap: 40px; // Gap ridotto tra le sezioni del footer
+    align-items: center; // Centra le aree del footer
+
+    .social-area, .button-area {
+      width: 100%;
+      align-items: center; // Centra il contenuto all'interno delle aree
+      text-align: center; // Centra il testo (es. "Canali social")
+    }
+    .social-area .social-link {
+        align-items: center; // Centra i link social
+    }
+    .button-area .button {
+        align-items: center; // Centra i bottoni
+        button {
+            max-width: 100%; // I bottoni possono occupare tutta la larghezza disponibile
+        }
+    }
   }
 }
