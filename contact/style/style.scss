@@ -42,8 +42,9 @@ body {
   border: 0;
 }
 
-.hero-section {
-  width: 100%;
+
+// Hero section
+.hero-section { 
   height: auto;
   padding: 24px 80px;
   background-color: $softgray-color;
@@ -54,15 +55,14 @@ body {
   top: 0;
   z-index: 100;
 
-  nav {
+  nav { 
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .home-button-link,
-  .contact-menu {
+  .home-button-link, .contact-menu {
     text-decoration: none;
   }
 
@@ -115,7 +115,6 @@ body {
 
 // Forum section (contact form area)
 .forum {
-  width: 100%;
   padding: 80px;
   display: flex;
   flex-direction: column;
@@ -224,7 +223,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   height: auto;
   align-items: flex-start;
   padding: 60px 80px;
@@ -357,28 +355,27 @@ body {
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
     padding: 16px;
-    .home-button h1 {
-      font-size: 20px;
-    }
-    .contact-menu {
-      .desktop-text {
-        display: none;
+      .home-button h1 {
+        font-size: 20px;
       }
-      .mobile-text {
-        display: flex;
-        align-items: center;
-        padding: 12px 40px;
-        border-radius: 100px;
-        background-color: $secondary-color;
-        img {
-          height: 24px;
-          width: 24px;
-          filter: brightness(0) invert(1);
-        }
+      .contact-menu {
+            .desktop-text {
+                display: none;
+            }
+            .mobile-text {
+                display: flex;
+                align-items: center;
+                padding: 12px 40px;
+                border-radius: 100px;
+                background-color: $secondary-color;
+                img {
+                    height: 24px;
+                    width: 24px;
+                    filter: brightness(0) invert(1);
+                }
+            }
       }
-
     }
-  }
 
   .forum {
     padding: 60px 16px;
