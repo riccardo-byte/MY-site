@@ -2,8 +2,8 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090; // Usato per bottoni che sembrano disattivati
-$active-button-color: $secondary-color; // Un colore per bottoni attivi, puoi cambiarlo se preferisci (es. $accent-color)
+$deactivate-button-color: #909090; 
+$active-button-color: $secondary-color;
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
@@ -16,10 +16,6 @@ $pFamily-font: 'Times New Roman', Times, serif;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 992px;
 
-// Reset and base styles
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
 body {
   background-color: $background-color;
@@ -43,15 +39,14 @@ body {
   top: 0;
   z-index: 100;
 
-  nav { // Contenitore per i link di navigazione
+  nav { 
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .home-button-link, // Link specifico per il bottone home
-  .contact-menu {    // Link per il menu contatti
+  .home-button-link, .contact-menu {
     text-decoration: none;
   }
 
@@ -76,7 +71,7 @@ body {
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-      color: $secondary-color; // Assicurati che il colore del testo sia definito
+      color: $secondary-color;
     }
   }
 
@@ -92,15 +87,12 @@ body {
     .mobile-text {
       display: none;
     }
-    span { // Stile per il testo nel bottone contatti
+    span {
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
       color: $secondary-color;
-    }
-    .home-button span { // Per sovrascrivere eventuali colori di h1 se la classe home-button è riutilizzata
-        color: $secondary-color;
     }
   }
 }
@@ -142,7 +134,7 @@ body {
   h1 {
     font-family: $hFamily-font;
     font-weight: 700;
-    font-size: clamp(57px, 15vw, 76px); // clamp è ottimo per la responsività del font
+    font-size: clamp(57px, 15vw, 76px);
     line-height: 1;
     letter-spacing: 0;
     text-align: center;
@@ -225,10 +217,9 @@ body {
       flex-basis: 0;
       flex-grow: 1;
       max-width: 100%;
-      // Per 3 colonne su desktop (come sembra dal tuo HTML)
-      @media (min-width: $tablet-breakpoint) { // o un breakpoint più specifico se hai col-md-4 etc.
-         flex: 0 0 33.333333%;
-         max-width: 33.333333%;
+      @media (min-width: $tablet-breakpoint) {
+         flex: 0 0 33.3%;
+         max-width: 33.3%;
       }
     }
 
@@ -352,14 +343,12 @@ body {
   }
 }
 
-// Animazione per il carosello infinito
+// Animazione per il carosello
 @keyframes scroll-infinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    // Sposta il track della metà della sua larghezza.
-    // Questo funziona perché hai duplicato gli elementi nel track.
     transform: translateX(-50%);
   }
 }
@@ -374,15 +363,13 @@ body {
 
   .presentation-intro {
     text-align: center;
-    max-width: max-content; // O una larghezza fissa se preferisci (es. 800px)
+    max-width: max-content;
 
     h4 {
       font-family: $pFamily-font;
       font-size: clamp(21px, 5vw, 38px);
       font-weight: 500;
       line-height: 1.3;
-      // max-width: 70ch; // Considera una larghezza massima per la leggibilità
-      // margin: 0 auto;
     }
   }
 
@@ -391,8 +378,7 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 100%; // O una max-width per non farlo diventare troppo grande su schermi larghi
-    // max-width: 600px;
+    width: 100%;
     border-radius: 8px;
     border: 1px solid $secondary-color;
     padding: 20px;
@@ -401,8 +387,8 @@ body {
     img {
       max-width: 100%;
       height: auto;
-      max-height: 500px; // Per evitare che l'immagine diventi troppo alta
-      border-radius: 8px; // Se vuoi angoli arrotondati sull'immagine stessa
+      max-height: 500px;
+      border-radius: 8px;
     }
   }
 }
@@ -416,7 +402,7 @@ body {
   gap: 40px;
 
   .faq-leftContainer {
-    height: fit-content; // Si adatta al contenuto
+    height: fit-content;
     width: 40%;
     padding: 80px 40px;
     border-radius: 8px;
@@ -439,7 +425,7 @@ body {
       }
     }
 
-    button { // Bottone "Prenota una consulenza"
+    button {
       height: fit-content;
       width: 100%;
       padding: 24px 40px;
@@ -450,27 +436,24 @@ body {
       justify-content: center;
       align-items: center;
       gap: 8px;
-      background-color: $deactivate-button-color; // Considera un colore più "attivo" qui se è un'azione primaria
+      background-color: $deactivate-button-color;
       cursor: pointer;
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: darken($deactivate-button-color, 10%); // Leggero scurimento al hover
-        // Oppure usa $accent-color se vuoi un cambio più evidente
-        // background-color: $accent-color;
+        background-color: darken($deactivate-button-color, 10%);
       }
 
       img {
         height: 24px;
         width: 24px;
-        filter: brightness(0) invert(1); // Per rendere l'icona bianca
       }
 
       h5 {
         color: $text-color-light;
         margin: 0;
-        font-family: $hFamily-font; // Assicurati che il font sia consistente
-        font-size: 21px; // Esempio, adatta se necessario
+        font-family: $hFamily-font;
+        font-size: 21px;
         font-weight: 500;
       }
     }
@@ -483,36 +466,33 @@ body {
   }
 
   .faq-rightContainer {
-    flex: 1; // Occupa lo spazio rimanente
+    flex: 1;
 
     .accordion-item {
       margin-bottom: 16px;
       border: 1px solid $softgray-color;
       border-radius: 8px;
-      overflow: hidden; // Per contenere i bordi arrotondati
+      overflow: hidden;
     }
 
     .accordion-header {
       margin: 0;
     }
 
-    .accordion-button { // Stile per i bottoni dell'accordion di Bootstrap
+    .accordion-button {
       background-color: $background-color;
       font-family: $hFamily-font;
       font-weight: 500;
       font-size: 24px;
-      color: $secondary-color; // Colore del testo del bottone
+      color: $secondary-color;
 
       &:focus {
         box-shadow: none;
-        border-color: $accent-color; // Colore del bordo al focus
+        border-color: $accent-color;
       }
-      &:not(.collapsed) { // Quando è aperto
+      &:not(.collapsed) {
         color: $accent-color;
         background-color: lighten($softgray-color, 5%);
-        &::after { // Cambia colore dell'icona freccia di Bootstrap
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007AFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-        }
       }
     }
 
@@ -554,18 +534,18 @@ body {
       gap: 8px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; // Allineamento a sinistra come da immagine (o center se preferisci)
+      align-items: flex-start;
 
       a {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none; // Rimosso line-through
+        text-decoration: none;
         transition: color 0.3s ease;
 
         &:hover {
           color: $accent-color;
-          text-decoration: underline; // Aggiunto underline al hover per feedback
+          text-decoration: underline;
         }
       }
     }
@@ -577,17 +557,17 @@ body {
     gap: 20px;
     align-items: flex-start;
 
-    .button { // Contenitore dei bottoni
+    .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: flex-start;
-      width: 100%; // Per far sì che i bottoni occupino la larghezza disponibile nel loro contenitore
+      width: 100%;
 
       a {
         text-decoration: none;
-        width: 100%; // L'anchor prende tutta la larghezza per rendere cliccabile tutta l'area del bottone
-        display: block; // Per far funzionare width: 100%
+        width: 100%;
+        display: block;
       }
 
       button {
@@ -595,35 +575,35 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; // Il bottone occupa tutta la larghezza dell'anchor
-        max-width: 400px; // Larghezza massima del bottone
+        width: 100%;
+        max-width: 400px;
         align-items: center;
         border-radius: 16px;
         gap: 16px;
         border: none;
-        background-color: $active-button-color; // Colore per bottoni attivi
+        background-color: $active-button-color;
         padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
 
         &:hover {
-          background-color: lighten($accent-color, 10%); // Effetto hover che usa $accent-color
+          background-color: lighten($accent-color, 10%);
         }
 
-        img { // Icona freccia e icone interne
+        img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Per rendere le icone bianche
+          filter: brightness(0) invert(1);
         }
 
-        .area { // Contenitore per icona (se presente) e testo
+        .area {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px; // Spazio tra icona (se presente) e testo
+          gap: 8px;
 
-          img { // Stile specifico per l'icona interna al bottone (es. projects-icon, cv-icon)
-             filter: brightness(0) invert(1); // Assicura che sia bianca
+          img {
+             filter: brightness(0) invert(1);
           }
 
           .text-zone {
@@ -650,10 +630,10 @@ body {
         // Stile specifico per il bottone disattivato
         &.deactivate {
           background-color: $deactivate-button-color;
-          cursor: not-allowed; // Cursore per indicare che non è cliccabile
+          cursor: not-allowed;
 
           &:hover {
-            background-color: $deactivate-button-color; // Nessun cambio colore al hover
+            background-color: $deactivate-button-color;
           }
         }
       }
@@ -662,10 +642,9 @@ body {
 }
 
 // Media Queries Globali (per responsività)
-@media (max-width: $mobile-breakpoint) { // Stili per mobile
+@media (max-width: $mobile-breakpoint) { 
   .hero-section {
     padding: 16px;
-
     .home-button h1 {
       font-size: 20px;
     }
@@ -674,15 +653,14 @@ body {
         display: none;
       }
       .mobile-text {
-        display: flex; // Mostra l'icona su mobile
+        display: flex;
         align-items: center;
-        padding: 8px 40px; // Padding ridotto per l'icona
+        padding: 12px 40px;
         border-radius: 100px;
-        background-color: $secondary-color; // Sfondo per l'icona mobile
+        background-color: $secondary-color;
         img {
-          height: 24px; // Dimensione icona messaggio mobile
+          height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Per renderla bianca
         }
       }
     }
@@ -696,7 +674,7 @@ body {
     }
     h1 {
       margin: 16px 0 0 0;
-      font-size: clamp(40px, 10vw, 57px); // Riduci un po' per mobile
+      font-size: clamp(40px, 10vw, 57px);
     }
   }
 
@@ -704,19 +682,19 @@ body {
     padding: 40px 16px;
     gap: 40px;
     .definition-cards {
-        .col { // Su mobile, le card vanno una sotto l'altra
+        .col {
             flex: 0 0 100%;
             max-width: 100%;
-            margin-bottom: 20px; // Spazio tra le card impilate
+            margin-bottom: 20px;
             &:last-child {
                 margin-bottom: 0;
             }
         }
         .card {
-            height: auto; // Altezza automatica per adattarsi al contenuto
-            min-height: 300px; // Altezza minima
+            height: auto;
+            min-height: 300px;
             img {
-                width: 180px; // Immagini più piccole nelle card
+                width: 180px;
                 height: 180px;
             }
         }
@@ -727,7 +705,7 @@ body {
     padding: 40px 16px;
     .container {
       &::before, &::after {
-        width: 30px; // Fade più stretto su mobile
+        width: 30px;
       }
     }
     .carousel-track .programma {
@@ -737,7 +715,7 @@ body {
         width: 28px;
       }
       h5, h6 {
-        font-size: 18px; // Font più piccolo per i nomi dei programmi
+        font-size: 18px;
       }
     }
   }
@@ -745,22 +723,22 @@ body {
   .presentazione-profilo {
     padding: 40px 16px;
     .presentation-intro h4 {
-        font-size: clamp(18px, 4vw, 28px); // Font più piccolo per la presentazione
+        font-size: clamp(18px, 4vw, 28px);
     }
   }
 
   .faq {
-    padding: 60px 16px; // Padding ridotto per la sezione FAQ
-    flex-direction: column; // FAQ a colonna su mobile
+    padding: 60px 16px;
+    flex-direction: column;
     .faq-leftContainer {
-      width: 100%; // Occupa tutta la larghezza
+      width: 100%;
       padding: 40px 20px;
       button h5 {
-        font-size: 18px; // Testo bottone più piccolo
+        font-size: 18px;
       }
     }
     .faq-rightContainer .accordion-button {
-        font-size: 20px; // Testo accordion più piccolo
+      font-size: 20px;
     }
      .faq-rightContainer .accordion-body {
         font-size: 18px;
@@ -768,24 +746,24 @@ body {
   }
 
   .footer {
-    flex-direction: column; // Footer a colonna
+    flex-direction: column;
     padding: 40px 16px;
-    gap: 40px; // Gap ridotto tra le sezioni del footer
-    align-items: center; // Centra le aree del footer
+    gap: 40px;
+    align-items: center;
 
     .social-area, .button-area {
       width: 100%;
-      align-items: center; // Centra il contenuto all'interno delle aree
-      text-align: center; // Centra il testo (es. "Canali social")
+      align-items: center;
+      text-align: center;
     }
     .social-area .social-link {
-        align-items: center; // Centra i link social
+        align-items: center;
     }
     .button-area .button {
-        align-items: center; // Centra i bottoni
-        button {
-            max-width: 100%; // I bottoni possono occupare tutta la larghezza disponibile
-        }
+      align-items: center;
+      button {
+        max-width: 100%;
+      }
     }
   }
 }

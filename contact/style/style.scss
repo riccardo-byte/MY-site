@@ -1,8 +1,8 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090; // Usato per bottoni che sembrano disattivati
-$submit-button-color: $secondary-color; // Colore per il bottone "invia", puoi cambiarlo
+$deactivate-button-color: #909090;
+$submit-button-color: $secondary-color;
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
 $text-color-muted: #767676;
@@ -19,11 +19,6 @@ $pFamily-font: 'Times New Roman', Times, serif;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 992px;
 
-
-// Reset and base styles (potrebbero essere in un file _reset.scss o _base.scss importato)
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
 body {
   background-color: $background-color;
@@ -47,7 +42,6 @@ body {
   border: 0;
 }
 
-
 .hero-section {
   width: 100%;
   height: auto;
@@ -60,15 +54,15 @@ body {
   top: 0;
   z-index: 100;
 
-  nav { // Contenitore per i link di navigazione
+  nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .home-button-link, // Link specifico per il bottone home
-  .contact-menu {    // Link per il menu contatti
+  .home-button-link,
+  .contact-menu {
     text-decoration: none;
   }
 
@@ -93,7 +87,7 @@ body {
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-      color: $secondary-color; // Assicurati che il colore del testo sia definito
+      color: $secondary-color;
     }
   }
 
@@ -109,22 +103,18 @@ body {
     .mobile-text {
       display: none;
     }
-    span { // Stile per il testo nel bottone contatti
+    span {
       font-family: $hFamily-font;
       font-weight: 300;
       font-size: 24px;
       margin: 0;
-      color: $secondary-color; // Assicurati che il colore del testo sia definito
-    }
-    .home-button span { // Per sovrascrivere eventuali colori di h1 se la classe home-button è riutilizzata
-        color: $secondary-color;
+      color: $secondary-color;
     }
   }
 }
 
-
-
-.forum { 
+// Forum section (contact form area)
+.forum {
   width: 100%;
   padding: 80px;
   display: flex;
@@ -134,9 +124,8 @@ body {
     margin-bottom: 60px;
     p {
       font-size: 21px;
-      // margin-bottom: 10px; // Questo era commentato nel CSS originale, l'ho rimosso
       text-align: center;
-      font-family: $pFamily-font; // Corretto 'Times New Roman', Times, serif
+      font-family: $pFamily-font;
       margin: 0;
     }
     h1 {
@@ -152,9 +141,9 @@ body {
   .message {
     width: 100%;
     height: auto;
-    padding: 0; // Era commentato, l'ho rimosso
+    padding: 0;
 
-    .message-container { // Questo è il <form>
+    .message-container {
       display: flex;
       flex-direction: column;
       gap: 48px;
@@ -163,7 +152,7 @@ body {
       .message-block {
         display: flex;
         align-items: center;
-        flex-wrap: nowrap; // Mantenuto come da tuo stile
+        flex-wrap: nowrap;
         gap: 16px;
         width: 100%;
 
@@ -173,11 +162,11 @@ body {
           background: transparent;
           font-weight: 500;
           font-family: $pFamily-font;
-          font-size: 76px; // Dimensione originale
+          font-size: 76px;
           padding: 5px 0;
-          color: $text-color-muted; // Colore del testo inserito
-          flex: 1; // Occupa lo spazio disponibile
-          min-width: 100px; // Larghezza minima per evitare che diventi troppo piccolo
+          color: $text-color-muted;
+          flex: 1;
+          min-width: 100px;
 
           &::placeholder {
             color: $input-placeholder-color;
@@ -191,19 +180,18 @@ body {
         }
       }
 
-      h2 { // Stile per i testi "mi chiamo", "lavoro", ecc.
-        font-size: 76px; // Dimensione originale
+      h2 {
+        font-size: 76px;
         font-weight: 500;
-        margin: 10px 0; // Era 0 nel CSS, ma 10px 0 sembra più bilanciato con gli input
-        font-family: $hFamily-font; // Assicurati che il font sia corretto
+        margin: 10px 0;
+        font-family: $hFamily-font;
       }
 
-      .pulsante { // Bottone "invia"
-        align-self: flex-end; // Allinea a destra
-        background-color: $submit-button-color; // Usa la nuova variabile o $accent-color
+      .pulsante {
+        align-self: flex-end;
+        background-color: $deactivate-button-color;
         border: none;
         padding: 24px 40px;
-        // font-size: 24px; // Ridondante se h5 ha già la sua dimensione
         border-radius: 100px;
         cursor: pointer;
         display: flex;
@@ -211,11 +199,9 @@ body {
         gap: 12px;
         transition: background-color 0.2s ease;
 
-        &:hover {
-          background-color: lighten($submit-button-color, 10%);
-          // Se usi $accent-color per il bottone, potresti fare:
-          // background-color: darken($accent-color, 10%); o lighten($accent-color, 10%);
-        }
+        //&:hover {
+        //  background-color: lighten($submit-button-color, 10%);
+        //}
 
         h5 {
           font-family: $hFamily-font;
@@ -227,7 +213,6 @@ body {
         .arrow {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Per rendere la freccia bianca
         }
       }
     }
@@ -255,6 +240,7 @@ body {
     font-size: 24px;
   }
 
+
   .social-area {
     display: flex;
     flex-direction: column;
@@ -264,18 +250,18 @@ body {
       gap: 8px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; // Allineamento a sinistra come da immagine (o center se preferisci)
+      align-items: flex-start;
 
       a {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
-        text-decoration: none; // Rimosso line-through
+        text-decoration: none;
         transition: color 0.3s ease;
 
         &:hover {
           color: $accent-color;
-          text-decoration: underline; // Aggiunto underline al hover per feedback
+          text-decoration: underline;
         }
       }
     }
@@ -287,17 +273,17 @@ body {
     gap: 20px;
     align-items: flex-start;
 
-    .button { // Contenitore dei bottoni
+    .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: flex-start;
-      width: 100%; // Per far sì che i bottoni occupino la larghezza disponibile nel loro contenitore
+      width: 100%;
 
       a {
         text-decoration: none;
-        width: 100%; // L'anchor prende tutta la larghezza per rendere cliccabile tutta l'area del bottone
-        display: block; // Per far funzionare width: 100%
+        width: 100%;
+        display: block;
       }
 
       button {
@@ -305,42 +291,41 @@ body {
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
-        width: 100%; // Il bottone occupa tutta la larghezza dell'anchor
-        max-width: 400px; // Larghezza massima del bottone
+        width: 100%;
+        max-width: 400px;
         align-items: center;
         border-radius: 16px;
         gap: 16px;
         border: none;
-        background-color: $active-button-color; // Colore per bottoni attivi
+        background-color: $secondary-color; // Colore default per bottoni attivi nel footer
         padding: 16px 24px;
         cursor: pointer;
         transition: background-color 0.1s ease;
 
         &:hover {
-          background-color: lighten($accent-color, 10%); // Effetto hover che usa $accent-color
+          background-color: lighten($accent-color, 10%);
         }
 
-        img { // Icona freccia e icone interne
+        img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Per rendere le icone bianche
+          filter: brightness(0) invert(1);
         }
 
-        .area { // Contenitore per icona (se presente) e testo
+        .area {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px; // Spazio tra icona (se presente) e testo
+          gap: 8px;
 
-          img { // Stile specifico per l'icona interna al bottone (es. projects-icon, cv-icon)
-             filter: brightness(0) invert(1); // Assicura che sia bianca
+          img { // Icone interne ai bottoni (projects, cv)
+             filter: brightness(0) invert(1);
           }
 
           .text-zone {
             display: flex;
             flex-direction: column;
             text-align: start;
-
             h6 {
               font-family: $hFamily-font;
               color: $text-color-light;
@@ -356,20 +341,18 @@ body {
             }
           }
         }
-
-        // Stile specifico per il bottone disattivato
         &.deactivate {
           background-color: $deactivate-button-color;
-          cursor: not-allowed; // Cursore per indicare che non è cliccabile
-
+          cursor: not-allowed;
           &:hover {
-            background-color: $deactivate-button-color; // Nessun cambio colore al hover
+            background-color: $deactivate-button-color;
           }
         }
       }
     }
   }
 }
+
 
 @media (max-width: $mobile-breakpoint) {
   .hero-section {
@@ -384,7 +367,7 @@ body {
       .mobile-text {
         display: flex;
         align-items: center;
-        padding: 8px 12px;
+        padding: 12px 40px;
         border-radius: 100px;
         background-color: $secondary-color;
         img {
@@ -393,6 +376,7 @@ body {
           filter: brightness(0) invert(1);
         }
       }
+
     }
   }
 
@@ -410,22 +394,22 @@ body {
 
     .message {
       .message-container {
-        gap: 24px; // Gap ridotto tra i blocchi del form
-        h2 { // Testo "mi chiamo", "lavoro" etc. su mobile
-          font-size: 32px; // Ridotto per mobile
-          width: 100%; // Per far sì che vada a capo prima dell'input se necessario
-          text-align: left; // O center, a seconda delle preferenze
+        gap: 24px;
+        h2 {
+          font-size: 32px;
+          width: 100%;
+          text-align: left;
         }
         .message-block {
-          flex-wrap: wrap; // Permette agli elementi di andare a capo
+          flex-wrap: wrap;
           .input {
-            font-size: 32px; // Input più piccolo per mobile
-            width: 100%; // Input prende tutta la larghezza
+            font-size: 32px;
+            width: 100%;
           }
         }
         .pulsante {
-          padding: 16px 32px; // Padding ridotto per il bottone
-          align-self: center; // Centra il bottone su mobile
+          padding: 16px 32px;
+          align-self: flex-end;
           h5 {
             font-size: 20px;
           }

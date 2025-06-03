@@ -2,7 +2,7 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D; // Colore testo principale, usato anche per bottoni "attivi" di default
 $softgray-color: #E4E4E4;   // Sfondo header e footer
-$deactivate-button-color: #909090; // Grigio per bottoni disattivati o meno importanti
+$deactivate-button-color: #909090; // Grigio per bottoni disattivati
 $current-page-button-color: #007AFF; // Blu per indicare la pagina corrente nel footer (come da immagine)
 $accent-color: #007AFF; // Colore accento generico
 $text-color-light: #FFFFFF; // Testo su sfondi scuri
@@ -16,11 +16,6 @@ $pFamily-font: 'Times New Roman', Times, serif;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 992px;
 
-
-// Reset and base styles
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
 body {
   background-color: $background-color;
@@ -71,9 +66,8 @@ body {
     &:hover {
       opacity: 0.8;
     }
-    // Stato :active per il click momentaneo (feedback visivo leggero)
     &:active {
-        opacity: 0.6; // Esempio: leggera trasparenza al click
+        opacity: 0.6;
     }
 
     h1 {
@@ -113,19 +107,17 @@ body {
 
   .area-destra {
     display: flex;
-    width: 500px;     // Dimensione fissa per desktop come da codice originale
-    height: 500px;    // Dimensione fissa per desktop
+    width: 500px;
+    height: 500px;
     border: 1px solid $secondary-color;
     border-radius: 32px;
     flex-shrink: 0;
-    overflow: hidden; // Per assicurare che l'immagine non sbordi se object-fit non la contiene perfettamente
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain; // Mantiene le proporzioni, potrebbe lasciare spazi vuoti se l'immagine non è quadrata
-                           // Se vuoi che riempia sempre, usa 'cover', ma potrebbe tagliare parti dell'immagine.
-      // border-radius: 32px; // Rimosso perché overflow:hidden sul parent gestisce gli angoli
+      object-fit: contain;
     }
   }
 
@@ -146,12 +138,12 @@ body {
         width: fit-content;
     }
 
-    button { // Bottone Download CV
+    button {
       width: fit-content;
       height: fit-content;
       padding: 24px 40px;
       border-radius: 100px;
-      background-color: $deactivate-button-color; // Grigio come da design originale
+      background-color: $deactivate-button-color;
       border: none;
       cursor: pointer;
       transition: background-color 0.2s ease, opacity 0.2s ease;
@@ -159,9 +151,9 @@ body {
       &:hover {
         background-color: darken($deactivate-button-color, 10%);
       }
-      &:active { // Feedback al click
+      &:active {
         opacity: 0.8;
-        transform: scale(0.98); // Leggero effetto "premuto"
+        transform: scale(0.98);
       }
 
       h5 {
@@ -175,7 +167,7 @@ body {
   }
 }
 
-// Sezione "Cosa faccio" (Obbiettivi)
+// Sezione "Cosa faccio"
 .obbiettivi {
   padding: 80px;
   gap: 40px;
@@ -456,24 +448,24 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    .button { // Contenitore dei due bottoni
+    .button {
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: flex-start;
-      width: 100%; // O una max-width se necessario
+      width: 100%;
       a {
         text-decoration: none;
-        width: 100%; // Fa sì che il link prenda la larghezza del bottone
-        display: block; // Necessario per width: 100% su <a>
+        width: 100%;
+        display: block;
       }
-      button { // Stile base per entrambi i bottoni
+      button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: fit-content;
         width: 100%;
-        max-width: 400px; // Come da design originale
+        max-width: 400px;
         align-items: center;
         border-radius: 16px;
         gap: 16px;
@@ -482,19 +474,18 @@ body {
         cursor: pointer;
         transition: background-color 0.1s ease, opacity 0.1s ease, transform 0.1s ease;
 
-        // Stato base per i bottoni non "current-page"
-        background-color: $secondary-color; // Nero/Grigio scuro per il bottone "attivo" ma non pagina corrente
+        background-color: $secondary-color;
 
-        &:active { // Feedback al click momentaneo
+        &:active {
             opacity: 0.8;
             transform: scale(0.98);
         }
 
-        img { // Freccia e icone interne
+        img {
           height: 24px;
           width: 24px;
-          filter: brightness(0) invert(1); // Bianche
         }
+
         .area {
           display: flex;
           flex-direction: row;
@@ -521,20 +512,19 @@ body {
           }
         }
 
-        // Bottone "Progetti in corso" (grigio, meno importante/disattivato)
+
         &.deactivate {
           background-color: $deactivate-button-color; // Grigio
-          cursor: default; // O 'not-allowed' se è veramente disabilitato
+          cursor: default;
           &:hover {
-            background-color: $deactivate-button-color; // Nessun cambio al hover
+            background-color: $deactivate-button-color;
           }
           &:active {
-            opacity: 1; // Nessun feedback al click se disattivato
+            opacity: 1;
             transform: scale(1);
           }
         }
 
-        // Bottone per la pagina corrente (es. "Il mio curriculum vitae" quando si è sulla pagina CV)
         &.current-page {
           background-color: $current-page-button-color; // Blu
           &:hover {
@@ -557,7 +547,7 @@ body {
             grid-template-columns: 1fr;
         }
     }
-    .introduction { // Aggiustamenti per tablet
+    .introduction {
         padding: 60px 40px;
         .area-destra {
             width: 350px;
@@ -576,8 +566,11 @@ body {
     .contact-menu {
       .desktop-text { display: none; }
       .mobile-text {
-        display: flex; align-items: center; padding: 8px 12px;
-        border-radius: 100px; background-color: $secondary-color;
+        display: flex; 
+        align-items: center; 
+        padding: 12px 40px;
+        border-radius: 100px; 
+        background-color: $secondary-color;
         img { height: 24px; width: 24px; filter: brightness(0) invert(1); }
       }
     }
@@ -591,7 +584,7 @@ body {
       width: 100%;
       max-width: 300px;
       height: 300px;
-      margin-bottom: 20px; // Spazio tra immagine e testo su mobile
+      margin-bottom: 20px;
     }
     .area-sinistra {
       width: 100%;
@@ -621,7 +614,7 @@ body {
 
   .skills-carousel-section,
   .certificates-carousel-section {
-    padding: 40px 16px; // Meno padding laterale
+    padding: 40px 16px;
     h3 { font-size: 36px; text-align: center; }
     .container {
         padding: 10px 0;

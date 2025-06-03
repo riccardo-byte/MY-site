@@ -34,14 +34,14 @@
     <!-- Intestazione principale con navigazione -->
     <header class="hero-section">
         <nav aria-label="Navigazione principale">
-            <a href="index.html" class="home-button-link"> <!-- Aggiunta classe per eventuale styling specifico se necessario -->
+            <a href="index.html" class="home-button-link">
                 <button class="home-button" aria-label="Torna alla home">
                     <img class="logo" src="img/Logo-V3.png" alt="Logo professionale">
                     <h1>HOME</h1>
                 </button>
             </a>
             <a href="contact/" class="contact-menu">
-                <button class="home-button" aria-label="Contattami"> <!-- Mantenuto home-button class se lo stile è condiviso, altrimenti usa una classe più specifica -->
+                <button class="home-button" aria-label="Contattami">
                     <span class="desktop-text">CONTATTAMI</span>
                     <span class="mobile-text"><img src="img/bubble.png" alt="Icona messaggio"></span>
                 </button>
@@ -263,10 +263,9 @@
         <section class="faq">
             <div class="faq-leftContainer">
                 <div class="faq-textContainer">
-                    <h4>Bisogno di aiuto specializzato?</h4> <!-- Corretto il tag di chiusura -->
+                    <h4>Bisogno di aiuto specializzato?</h4>
                     <p>Iniziamo con una breve chiacchierata introduttiva</p>
                 </div>
-                <!-- Se questo bottone deve linkare, considera di avvolgerlo in un <a> -->
                 <button aria-label="Prenota una consulenza">
                     <h5>Prenota una consulenza</h5>
                     <img src="img/arrow.png" alt="Freccia">
@@ -323,7 +322,6 @@
         <div class="social-area">
             <h4>Canali social</h4>
             <div class="social-link">
-                <!--! IMPORTANTE: Aggiungi gli href ai tuoi profili social -->
                 <a href="#" aria-label="Instagram">Instagram</a>
                 <a href="#" aria-label="Facebook">Facebook</a>
                 <a href="#" aria-label="LinkedIn">LinkedIn</a>
@@ -334,13 +332,9 @@
             <h4>Scopri anche</h4>
             
             <div class="button">
-                <!-- Se "Progetti in corso" non è un link ma un'indicazione, considera di non usare <a>
-                     o usa un href="#" con un ruolo="button" per accessibilità se gestito da JS.
-                     Per ora, lascio <a> ma senza href specifico. -->
-                <a href="#"> <!--! VALUTA: Se questo bottone non linka, rimuovi <a> o usa href="#" e gestisci con JS -->
-                    <button class="deactivate" aria-label="Progetti correnti (attualmente non disponibili)"> <!-- Modificato aria-label per chiarezza -->
+                <a href="#">
+                    <button class="deactivate" aria-label="Progetti correnti (attualmente non disponibili)">
                         <div class="area">
-                            <!--! IMPORTANTE: Sostituisci con il percorso a un'icona per "progetti" o rimuovi img se non necessaria -->
                             <img src="img/icons/projects-icon.png" alt="Icona progetti">
                             <div class="text-zone">
                                 <h6>Progetti in corso</h6>
@@ -353,7 +347,6 @@
                 <a href="curriculum/">
                     <button aria-label="Curriculum vitae">
                         <div class="area">
-                            <!--! IMPORTANTE: Sostituisci con il percorso a un'icona per "curriculum" o rimuovi img se non necessaria -->
                             <img src="img/icons/cv-icon.png" alt="Icona curriculum">
                             <div class="text-zone">
                                 <h6>Il mio curriculum vitae</h6>
