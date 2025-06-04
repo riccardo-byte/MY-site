@@ -1,21 +1,21 @@
-// Variables
-$background-color: #FFFFFF; // Sfondo
-$secondary-color: #1D1D1D; // Colore testo principale, usato anche per bottoni "attivi" di default
-$softgray-color: #E4E4E4; // Sfondo header e footer
-$deactivate-button-color: #909090; // bottoni disattivati
-$active-button-color: $secondary-color; 
-$current-page-button-color: #007AFF; // interazione con il componente
-$text-color-light: #FFFFFF; // Testo su sfondi scuri
-$text-color-muted: #767676; // Testo secondario o didascalie
+$background-color: #FFFFFF;
+$secondary-color: #1D1D1D;
+$softgray-color: #E4E4E4;
+$deactivate-button-color: #909090;
+$active-button-color: $secondary-color;
+$current-page-button-color: #007AFF;
+$text-color-light: #FFFFFF;
+$text-color-muted: #767676;
 
-// Typography
 $hFamily-font: "Figtree", "Arial", sans-serif;
 $pFamily-font: 'Times New Roman', Times, serif;
 
-// Breakpoints
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 992px;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   background-color: $background-color;
@@ -26,11 +26,10 @@ body {
   line-height: 1.5;
 }
 
-// Hero section
 .hero-section {
   width: 100%;
   height: auto;
-  padding: 24px 80px;
+  padding: 1.5rem 5rem;
   background-color: $softgray-color;
   display: flex;
   justify-content: space-between;
@@ -39,31 +38,35 @@ body {
   top: 0;
   z-index: 100;
 
-  nav { 
+  nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .home-button-link, .contact-menu {
+  .home-button-link,
+  .contact-menu {
     text-decoration: none;
   }
 
   .home-button {
     background-color: transparent;
     border: none;
-    height: 50px;
+    height: 3.125rem;
     width: auto;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     cursor: pointer;
     transition: opacity 0.2s ease;
 
     &:hover {
       opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
     }
 
     h1 {
@@ -76,17 +79,13 @@ body {
   }
 
   .logo {
-    width: 32px;
+    width: 2rem;
     height: auto;
   }
 
   .contact-menu {
-    .desktop-text {
-      display: inline;
-    }
-    .mobile-text {
-      display: none;
-    }
+    .desktop-text { display: inline; }
+    .mobile-text { display: none; }
     span {
       font-family: $hFamily-font;
       font-weight: 300;
@@ -97,10 +96,9 @@ body {
   }
 }
 
-// Introduction section
 .intro {
   width: 100%;
-  padding: 80px;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,17 +108,16 @@ body {
   .intro-comment {
     width: auto;
     height: auto;
-    gap: 8px;
+    gap: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
 
     .intro-logo {
-      height: 24px;
-      width: 24px;
+      height: 1.5rem;
+      width: 1.5rem;
       object-fit: contain;
     }
-
     p {
       font-family: $pFamily-font;
       font-size: 21px;
@@ -138,48 +135,23 @@ body {
     line-height: 1;
     letter-spacing: 0;
     text-align: center;
-    margin: 32px 0 0 0;
+    margin: 2rem 0 0 0;
     text-transform: lowercase;
   }
 }
 
-// Definition section
 .definition {
   display: flex;
   flex-direction: column;
-  padding: 60px 80px;
-  max-width: 1400px;
+  padding: 3.75rem 5rem;
+  max-width: 87.5rem;
   margin: 0 auto;
-  gap: 60px;
-
-  .definition-intro {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-
-    p {
-      font-family: $pFamily-font;
-      font-size: 21px;
-      font-weight: 300;
-      text-align: center;
-      margin: 0;
-    }
-
-    h1 {
-      font-family: $hFamily-font;
-      font-size: clamp(24px, 5vw, 57px);
-      font-weight: 400;
-      text-align: center;
-      margin: 0;
-    }
-  }
+  gap: 3.75rem;
 
   .definition-img {
     max-width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 31.25rem;
     display: block;
     margin: 0 auto;
     object-fit: contain;
@@ -187,57 +159,56 @@ body {
 
   .definition-cards {
     width: 100%;
-
     p {
       text-align: center;
-      margin: 0 0 16px 0;
+      margin: 0 0 1rem 0;
       font-weight: normal;
       font-size: 16px;
       font-family: $pFamily-font;
       color: $secondary-color;
     }
 
-    .container { // Bootstrap container
-      max-width: 1200px;
+    .container {
+      max-width: 75rem;
       margin: 0 auto;
     }
 
-    .row { // Bootstrap row
+    .row {
       display: flex;
       flex-wrap: wrap;
-      margin-right: -15px; // Bootstrap gutter compensation
-      margin-left: -15px;  // Bootstrap gutter compensation
+      margin-right: -0.9375rem;
+      margin-left: -0.9375rem;
     }
-
-    .col { // Bootstrap column
+    
+    .col {
       position: relative;
       width: 100%;
-      padding-right: 15px; // Bootstrap gutter
-      padding-left: 15px;  // Bootstrap gutter
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem;
       flex-basis: 0;
       flex-grow: 1;
       max-width: 100%;
       @media (min-width: $tablet-breakpoint) {
-         flex: 0 0 33.3%;
-         max-width: 33.3%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
       }
     }
 
     .card {
-      height: 400px;
+      height: 25rem;
       width: 100%;
-      border: 1px solid $secondary-color;
-      border-radius: 8px;
-      padding: 30px;
+      border: 0.0625rem solid $secondary-color;
+      border-radius: 0.5rem;
+      padding: 1.875rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 1.25rem;
       transition: transform 0.3s ease;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
       }
 
       h2 {
@@ -246,22 +217,20 @@ body {
         font-weight: 500;
         margin: 0;
       }
-
       img {
-        width: 240px;
-        height: 240px;
+        width: 15rem;
+        height: 15rem;
         object-fit: contain;
       }
     }
   }
 }
 
-// Sezione programmi tecnici
 .programmi-tecnici {
   display: flex;
   flex-direction: column;
-  padding: 60px 80px;
-  gap: 40px;
+  padding: 3.75rem 5rem;
+  gap: 2.5rem;
 
   h4 {
     margin: 0;
@@ -272,22 +241,21 @@ body {
     text-align: center;
   }
 
-  .container { // Questo .container è custom, non Bootstrap, attenzione se mischiati
+  .container {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 20px 0;
-    max-width: fit-content; // Per far sì che il gradiente non copra tutto se non c'è overflow
+    padding: 1.25rem 0;
+    max-width: fit-content;
 
-    // Maschere gradient per effetto fade ai bordi
     &::before, &::after {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 50px; // Larghezza del fade
+      width: 3.125rem;
       z-index: 2;
-      pointer-events: none; // Per non interferire con il mouse
+      pointer-events: none;
     }
     &::before {
       left: 0;
@@ -301,49 +269,47 @@ body {
 
   .carousel {
     width: 100%;
-    overflow: hidden; // Nasconde l'overflow orizzontale per permettere l'animazione
+    overflow: hidden;
     position: relative;
   }
 
   .carousel-track {
-    display: flex; // Permette agli elementi di stare in linea
-    width: fit-content; // La larghezza si adatta al contenuto
+    display: flex;
+    width: fit-content;
     animation: scroll-infinite 60s linear infinite;
 
     &:hover {
-      animation-play-state: paused; // Pausa l'animazione al hover
+      animation-play-state: paused;
     }
 
     .programma {
-      flex: 0 0 auto; // Non crescere, non restringersi, base automatica
+      flex: 0 0 auto;
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 8px;
-      margin: 0 24px; // Spazio tra gli elementi
-      white-space: nowrap; // Impedisce al testo di andare a capo
+      gap: 0.5rem;
+      margin: 0 1.5rem;
+      white-space: nowrap;
       min-width: fit-content;
 
       img {
-        height: 32px;
-        width: 32px;
+        height: 2rem;
+        width: 2rem;
         object-fit: contain;
-        flex-shrink: 0; // Impedisce all'immagine di restringersi
+        flex-shrink: 0;
       }
-
-      h5, h6 { // Unificato lo stile per h5 e h6 qui
+      h5, h6 {
         font-size: 24px;
         font-weight: 400;
         margin: 0;
         text-align: left;
-        flex-shrink: 0; // Impedisce al testo di restringersi
+        flex-shrink: 0;
         font-family: $hFamily-font;
       }
     }
   }
 }
 
-// Animazione per il carosello
 @keyframes scroll-infinite {
   0% {
     transform: translateX(0);
@@ -353,13 +319,12 @@ body {
   }
 }
 
-// Sezione presentazione profilo
 .presentazione-profilo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px;
-  gap: 40px;
+  padding: 5rem;
+  gap: 2.5rem;
 
   .presentation-intro {
     text-align: center;
@@ -379,44 +344,43 @@ body {
     align-items: center;
     height: auto;
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid $secondary-color;
-    padding: 20px;
-    margin-bottom: 32px;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid $secondary-color;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
 
     img {
       max-width: 100%;
       height: auto;
-      max-height: 500px;
-      border-radius: 8px;
+      max-height: 31.25rem;
+      border-radius: 0.5rem;
     }
   }
 }
 
-// Sezione FAQ
 .faq {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 80px;
-  gap: 40px;
+  padding: 5rem;
+  gap: 2.5rem;
 
   .faq-leftContainer {
     height: fit-content;
     width: 40%;
-    padding: 80px 40px;
-    border-radius: 8px;
-    border: 1px solid $secondary-color;
+    padding: 5rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid $secondary-color;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
     text-align: center;
 
     .faq-textContainer {
       display: flex;
       flex-direction: column;
       text-align: center;
-      gap: 12px;
+      gap: 0.75rem;
 
       h4 {
         margin: 0;
@@ -424,40 +388,41 @@ body {
         font-weight: 500;
       }
     }
-
     button {
       height: fit-content;
       width: 100%;
-      padding: 24px 40px;
-      border-radius: 100px;
+      padding: 1.5rem 2.5rem;
+      border-radius: 6.25rem;
       border: none;
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
+      gap: 0.5rem;
       background-color: $deactivate-button-color;
       cursor: pointer;
-      transition: background-color 0.2s ease;
-
+      transition: background-color 0.2s ease, opacity 0.2s ease;
+      
       &:hover {
-        background-color: darken($deactivate-button-color, 10%);
+          background-color: darken($deactivate-button-color, 10%);
+      }
+      &:active {
+          opacity: 0.8;
+          transform: scale(0.98);
       }
 
       img {
-        height: 24px;
-        width: 24px;
+        height: 1.5rem;
+        width: 1.5rem;
+        filter: brightness(0) invert(1);
       }
-
       h5 {
         color: $text-color-light;
-        margin: 0;
-        font-family: $hFamily-font;
         font-size: 21px;
         font-weight: 500;
+        margin: 0;
       }
     }
-
     p {
       font-family: $pFamily-font;
       font-size: 21px;
@@ -469,42 +434,39 @@ body {
     flex: 1;
 
     .accordion-item {
-      margin-bottom: 16px;
-      border: 1px solid $softgray-color;
-      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 0.0625rem solid $softgray-color;
+      border-radius: 0.5rem;
       overflow: hidden;
-    }
 
-    .accordion-header {
-      margin: 0;
-    }
-
-    .accordion-button {
-      background-color: $background-color;
-      font-family: $hFamily-font;
-      font-weight: 500;
-      font-size: 24px;
-      color: $secondary-color;
-
-      &:focus {
-        box-shadow: none;
-        border-color: $current-page-button-color;
+      .accordion-header {
+        margin: 0;
       }
-      &:not(.collapsed) {
-        color: $current-page-button-color;
-        background-color: lighten($softgray-color, 5%);
-      }
-    }
+      .accordion-button {
+        background-color: $background-color;
+        font-family: $hFamily-font;
+        font-weight: 500;
+        font-size: 24px;
+        color: $secondary-color;
 
-    .accordion-body {
-      padding: 16px;
-      font-family: $pFamily-font;
-      font-size: 21px;
+        &:focus {
+          box-shadow: none;
+          border-color: $current-page-button-color;
+        }
+        &:not(.collapsed) {
+          color: $current-page-button-color;
+          background-color: lighten($softgray-color, 5%);
+        }
+      }
+      .accordion-body {
+        padding: 1rem;
+        font-family: $pFamily-font;
+        font-size: 21px;
+      }
     }
   }
 }
 
-// Footer section
 .footer {
   display: flex;
   flex-direction: row;
@@ -512,8 +474,8 @@ body {
   width: 100%;
   height: auto;
   align-items: flex-start;
-  padding: 60px 80px;
-  gap: 80px;
+  padding: 3.75rem 5rem;
+  gap: 5rem;
   background-color: $softgray-color;
   justify-content: flex-end;
 
@@ -528,21 +490,19 @@ body {
   .social-area {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 
     .social-link {
-      gap: 8px;
+      gap: 0.5rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-
       a {
         font-family: $pFamily-font;
         color: $secondary-color;
         font-size: 24px;
         text-decoration: none;
         transition: color 0.3s ease;
-
         &:hover {
           color: $current-page-button-color;
           text-decoration: underline;
@@ -554,13 +514,13 @@ body {
   .button-area {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: flex-start;
 
     .button {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 1rem;
       align-items: flex-start;
       width: 100%;
 
@@ -576,41 +536,41 @@ body {
         justify-content: space-between;
         height: fit-content;
         width: 100%;
-        max-width: 400px;
+        max-width: 25rem;
         align-items: center;
-        border-radius: 16px;
-        gap: 16px;
+        border-radius: 1rem;
+        gap: 1rem;
         border: none;
-        background-color: $active-button-color;
-        padding: 16px 24px;
+        padding: 1rem 1.5rem;
         cursor: pointer;
-        transition: background-color 0.1s ease;
+        transition: background-color 0.1s ease, opacity 0.1s ease, transform 0.1s ease;
+        background-color: $active-button-color;
 
         &:hover {
-          background-color: lighten($current-page-button-color, 10%);
+           background-color: lighten($current-page-button-color, 10%);
+        }
+         &:active {
+          opacity: 0.8;
+          transform: scale(0.98);
         }
 
         img {
-          height: 24px;
-          width: 24px;
+          height: 1.5rem;
+          width: 1.5rem;
           filter: brightness(0) invert(1);
         }
-
         .area {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px;
-
+          gap: 0.5rem;
           img {
              filter: brightness(0) invert(1);
           }
-
           .text-zone {
             display: flex;
             flex-direction: column;
             text-align: start;
-
             h6 {
               font-family: $hFamily-font;
               color: $text-color-light;
@@ -626,14 +586,25 @@ body {
             }
           }
         }
-
-        // Stile specifico per il bottone disattivato
         &.deactivate {
           background-color: $deactivate-button-color;
           cursor: not-allowed;
-
           &:hover {
             background-color: $deactivate-button-color;
+          }
+           &:active {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        &.current-page {
+          background-color: $current-page-button-color;
+          &:hover {
+            background-color: darken($current-page-button-color, 5%);
+          }
+          &:active {
+            background-color: darken($current-page-button-color, 10%);
+            transform: scale(0.98);
           }
         }
       }
@@ -641,10 +612,39 @@ body {
   }
 }
 
-// Media Queries Globali (per responsività)
-@media (max-width: $mobile-breakpoint) { 
+@media (max-width: $tablet-breakpoint) {
+    .definition {
+        .definition-cards {
+            .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+                 margin-bottom: 1.25rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .introduction {
+        padding: 3.75rem 2.5rem;
+        .area-destra {
+            width: 21.875rem;
+            height: 21.875rem;
+        }
+        .area-sinistra p {
+            font-size: 30px;
+        }
+    }
+     .obbiettivi {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
   .hero-section {
-    padding: 16px;
+    padding: 1rem;
     .home-button h1 {
       font-size: 20px;
     }
@@ -655,64 +655,57 @@ body {
       .mobile-text {
         display: flex;
         align-items: center;
-        padding: 12px 40px;
-        border-radius: 100px;
+        padding: 0.75rem 2.5rem;
+        border-radius: 6.25rem;
         background-color: $secondary-color;
         img {
-          height: 24px;
-          width: 24px;
+          height: 1.5rem;
+          width: 1.5rem;
+          filter: brightness(0) invert(1);
         }
       }
     }
   }
 
   .intro {
-    padding: 60px 16px;
+    padding: 3.75rem 1rem;
     .intro-comment {
       flex-direction: column;
-      gap: 4px;
+      gap: 0.25rem;
     }
     h1 {
-      margin: 16px 0 0 0;
+      margin: 1rem 0 0 0;
       font-size: clamp(40px, 10vw, 57px);
     }
   }
 
   .definition {
-    padding: 40px 16px;
-    gap: 40px;
-    .definition-cards {
-        .col {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+    padding: 2.5rem 1rem;
+    gap: 2.5rem;
+     .definition-cards {
         .card {
             height: auto;
-            min-height: 300px;
-            img {
-                width: 180px;
-                height: 180px;
+            min-height: 18.75rem;
+             img {
+                width: 11.25rem;
+                height: 11.25rem;
             }
         }
     }
   }
-
+  
   .programmi-tecnici {
-    padding: 40px 16px;
-    .container {
-      &::before, &::after {
-        width: 30px;
-      }
+    padding: 2.5rem 1rem;
+     .container {
+        &::before, &::after {
+            width: 1.875rem;
+        }
     }
     .carousel-track .programma {
-      margin: 0 15px;
+      margin: 0 0.9375rem;
       img {
-        height: 28px;
-        width: 28px;
+        height: 1.75rem;
+        width: 1.75rem;
       }
       h5, h6 {
         font-size: 18px;
@@ -721,34 +714,34 @@ body {
   }
 
   .presentazione-profilo {
-    padding: 40px 16px;
+    padding: 2.5rem 1rem;
     .presentation-intro h4 {
         font-size: clamp(18px, 4vw, 28px);
     }
   }
 
   .faq {
-    padding: 60px 16px;
+    padding: 3.75rem 1rem;
     flex-direction: column;
     .faq-leftContainer {
       width: 100%;
-      padding: 40px 20px;
+      padding: 2.5rem 1.25rem;
       button h5 {
         font-size: 18px;
       }
     }
     .faq-rightContainer .accordion-button {
-      font-size: 20px;
+        font-size: 20px;
     }
-     .faq-rightContainer .accordion-body {
+    .faq-rightContainer .accordion-body {
         font-size: 18px;
     }
   }
 
   .footer {
     flex-direction: column;
-    padding: 40px 16px;
-    gap: 40px;
+    padding: 2.5rem 1rem;
+    gap: 2.5rem;
     align-items: center;
 
     .social-area, .button-area {
@@ -760,10 +753,10 @@ body {
         align-items: center;
     }
     .button-area .button {
-      align-items: center;
-      button {
-        max-width: 100%;
-      }
+        align-items: center;
+        button {
+            max-width: 100%;
+        }
     }
   }
 }
