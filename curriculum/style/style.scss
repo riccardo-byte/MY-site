@@ -1,10 +1,9 @@
 // Variables
-$background-color: #FFFFFF;
+$background-color: #FFFFFF; // Sfondo
 $secondary-color: #1D1D1D; // Colore testo principale, usato anche per bottoni "attivi" di default
 $softgray-color: #E4E4E4;   // Sfondo header e footer
 $deactivate-button-color: #909090; // Grigio per bottoni disattivati
-$current-page-button-color: #007AFF; // Blu per indicare la pagina corrente nel footer (come da immagine)
-$accent-color: #007AFF; // Colore accento generico
+$current-page-button-color: #007AFF; // interazione con il componente
 $text-color-light: #FFFFFF; // Testo su sfondi scuri
 $text-color-muted: #767676; // Testo secondario o didascalie
 
@@ -436,7 +435,7 @@ body {
         text-decoration: none;
         transition: color 0.3s ease;
         &:hover {
-          color: $accent-color;
+          color: $current-page-button-color;
           text-decoration: underline;
         }
       }

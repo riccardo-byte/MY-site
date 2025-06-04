@@ -1,12 +1,12 @@
 // Variables
-$background-color: #FFFFFF;
-$secondary-color: #1D1D1D;
-$softgray-color: #E4E4E4;
-$deactivate-button-color: #909090; 
-$active-button-color: $secondary-color;
-$accent-color: #007AFF;
-$text-color-light: #FFFFFF;
-$text-color-muted: #767676;
+$background-color: #FFFFFF; // Sfondo
+$secondary-color: #1D1D1D; // Colore testo principale, usato anche per bottoni "attivi" di default
+$softgray-color: #E4E4E4; // Sfondo header e footer
+$deactivate-button-color: #909090; // bottoni disattivati
+$active-button-color: $secondary-color; 
+$current-page-button-color: #007AFF; // interazione con il componente
+$text-color-light: #FFFFFF; // Testo su sfondi scuri
+$text-color-muted: #767676; // Testo secondario o didascalie
 
 // Typography
 $hFamily-font: "Figtree", "Arial", sans-serif;
@@ -488,10 +488,10 @@ body {
 
       &:focus {
         box-shadow: none;
-        border-color: $accent-color;
+        border-color: $current-page-button-color;
       }
       &:not(.collapsed) {
-        color: $accent-color;
+        color: $current-page-button-color;
         background-color: lighten($softgray-color, 5%);
       }
     }
@@ -544,7 +544,7 @@ body {
         transition: color 0.3s ease;
 
         &:hover {
-          color: $accent-color;
+          color: $current-page-button-color;
           text-decoration: underline;
         }
       }
@@ -587,7 +587,7 @@ body {
         transition: background-color 0.1s ease;
 
         &:hover {
-          background-color: lighten($accent-color, 10%);
+          background-color: lighten($current-page-button-color, 10%);
         }
 
         img {

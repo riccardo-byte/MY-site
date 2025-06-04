@@ -1,11 +1,11 @@
-$background-color: #FFFFFF;
-$secondary-color: #1D1D1D;
-$softgray-color: #E4E4E4;
-$deactivate-button-color: #909090;
+$background-color: #FFFFFF; // Sfondo
+$secondary-color: #1D1D1D; // Colore testo principale, usato anche per bottoni "attivi" di default
+$softgray-color: #E4E4E4; // Sfondo header e footer
+$deactivate-button-color: #909090; // bottoni disattivati
 $submit-button-color: $secondary-color;
-$accent-color: #007AFF;
-$text-color-light: #FFFFFF;
-$text-color-muted: #767676;
+$accent-color: #007AFF; // interazione con il componente
+$text-color-light: #FFFFFF; // Testo su sfondi scuri
+$text-color-muted: #767676; // Testo secondario o didascalie
 $input-placeholder-color: #999;
 $input-border-color: #999;
 $input-focus-border-color: #333;
