@@ -302,16 +302,13 @@ body {
         img {
           height: 1.5rem;
           width: 1.5rem;
-          filter: brightness(0) invert(1);
         }
         .area {
           display: flex;
           flex-direction: row;
           align-items: center;
           gap: 0.5rem;
-          img { 
-            filter: brightness(0) invert(1);
-          }
+
           .text-zone {
             display: flex;
             flex-direction: column;

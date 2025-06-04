@@ -262,16 +262,12 @@ body {
 .footer .button-area .button button img {
   height: 1.5rem;
   width: 1.5rem;
-  filter: brightness(0) invert(1);
 }
 .footer .button-area .button button .area {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-}
-.footer .button-area .button button .area img {
-  filter: brightness(0) invert(1);
 }
 .footer .button-area .button button .area .text-zone {
   display: flex;
