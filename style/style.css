@@ -356,16 +356,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: #909090;
+  background-color: #f0f0f0;
   cursor: pointer;
   transition: background-color 0.2s ease, opacity 0.2s ease;
-}
-.faq .faq-leftContainer button:hover {
-  background-color: #777777;
-}
-.faq .faq-leftContainer button:active {
-  opacity: 0.8;
-  transform: scale(0.98);
 }
 .faq .faq-leftContainer button img {
   height: 1.5rem;
@@ -531,11 +524,11 @@ body {
   opacity: 0.8;
 }
 .footer .button-area .button button.deactivate {
-  background-color: #909090;
+  background-color: #f0f0f0;
   cursor: not-allowed;
 }
 .footer .button-area .button button.deactivate:hover {
-  background-color: #909090;
+  background-color: #f0f0f0;
 }
 .footer .button-area .button button.deactivate:active {
   opacity: 1;

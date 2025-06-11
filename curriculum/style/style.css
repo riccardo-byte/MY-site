@@ -118,7 +118,7 @@ body {
   height: fit-content;
   padding: 1.5rem 2.5rem;
   border-radius: 6.25rem;
-  background-color: #909090;
+  background-color: #f0f0f0;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
@@ -460,11 +460,11 @@ body {
   opacity: 0.8;
 }
 .footer .button-area .button button.deactivate {
-  background-color: #909090;
+  background-color: #f0f0f0;
   cursor: not-allowed;
 }
 .footer .button-area .button button.deactivate:hover {
-  background-color: #909090;
+  background-color: #f0f0f0;
 }
 .footer .button-area .button button.deactivate:active {
   opacity: 1;

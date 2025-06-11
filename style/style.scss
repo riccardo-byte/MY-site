@@ -1,7 +1,7 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090;
+$deactivate-button-color: #f0f0f0;
 $active-button-color: $secondary-color;
 $current-page-button-color: #007AFF;
 $text-color-light: #FFFFFF;
@@ -403,13 +403,13 @@ body {
       cursor: pointer;
       transition: background-color 0.2s ease, opacity 0.2s ease;
       
-      &:hover {
-          background-color: darken($deactivate-button-color, 10%);
-      }
-      &:active {
-          opacity: 0.8;
-          transform: scale(0.98);
-      }
+//      &:hover {
+//          background-color: darken($deactivate-button-color, 10%);
+//      }
+//      &:active {
+//          opacity: 0.8;
+//          transform: scale(0.98);
+//      }
 
       img {
         height: 1.5rem;

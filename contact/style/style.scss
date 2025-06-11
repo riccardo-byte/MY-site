@@ -1,7 +1,7 @@
 $background-color: #FFFFFF;
 $secondary-color: #1D1D1D;
 $softgray-color: #E4E4E4;
-$deactivate-button-color: #909090;
+$deactivate-button-color: #f0f0f0;
 $submit-button-color: $secondary-color;
 $accent-color: #007AFF;
 $text-color-light: #FFFFFF;
@@ -195,9 +195,9 @@ body {
         gap: 0.75rem;
         transition: background-color 0.2s ease;
 
-        &:hover {
-           background-color: lighten($submit-button-color, 10%);
-        }
+//        &:hover {
+//           background-color: lighten($submit-button-color, 10%);
+//        }
 
         h5 {
           font-family: $hFamily-font;
